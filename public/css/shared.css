@@ -1,0 +1,111 @@
+#homeIcon {
+	margin-right: 15px;
+}
+
+body, .container, html{
+	height: 100%;
+}
+
+#navBar {
+	font-family: 'Noto Serif', serif;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -63px;
+}
+
+.container{
+	font-family: 'Roboto Slab', serif;
+}
+
+#wrapper-top{
+	margin-top: 50px;
+	margin-bottom: auto;
+	padding-bottom: 20px;
+}
+
+#menuButton{
+	text-align: left;
+	border-top: dashed white 1px;
+	border-bottom: dashed white 1px;
+}
+
+#menuButton a{
+	color: white;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      height: 305px;
+      margin: auto;
+}
+
+#wrapper-middle{
+	margin-top: 20px;
+}
+
+#wrapper-middle-content{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#wrapper-bottom-content{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#pic-wrapper ul{
+	list-style-type: none;
+}
+
+#pic-wrapper li{
+	  padding: 10px;
+}
+
+#pic-wrapper img {
+	width: 100%;
+	height: 250px;
+  	border: 0 none;
+  	display: inline-block;
+}
+
+#pic-wrapper img:hover{
+	opacity:  0.4;
+	filter: alpha(opacity=40);
+}
+
+#imagebox{
+	float: left;
+	width: 23%;
+	border: 1px gray solid;
+	margin: 10px;
+}
+
+#middleSlide{
+	margin-top: 35px;
+	border-top: gray 1px dashed;
+}
+
+.footer{
+	background-color: #4e5d6c;
+	height: 20%;
+	border-top:1px solid #e5e5e5;
+}
+
+
+.footer .container,.footer h1 {
+	font-family: 'Noto Serif', serif;
+}
+
+.footer h3{
+	font-family: 'Roboto Slab', serif;
+	font-style: oblique;
+}
+
+#footer-bottom{
+	margin-top: 30px;
+}

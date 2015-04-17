@@ -15,8 +15,10 @@ class CreateAccountTable extends Migration {
 		Schema::create("account",function($table)
 		{
 			$table->increments("id");
+			$table->string("username");
 			$table->string("email");
 			$table->string("password");
+			$table->string("fullname");
 			$table->timestamps();
 			$table->dateTime("deleted_at");
 		});

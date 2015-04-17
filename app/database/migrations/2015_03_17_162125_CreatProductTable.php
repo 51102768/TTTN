@@ -16,8 +16,15 @@ class CreatProductTable extends Migration {
 		{
 			$table->increments("id");
 			$table->string("name");
+			$table->string("url");
+			$table->string("origin");
+			$table->float("weight");
+			$table->string("material");
+			$table->string("color");
+			$table->integer("guarantee");
 			$table->integer("stock");
 			$table->float("price");
+			$table->integer("buytime");
 			$table->integer("category_id");
 			$table->timestamps();
 			$table->dateTime("deleted_at");

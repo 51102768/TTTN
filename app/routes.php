@@ -13,7 +13,5 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
 });
-
-Route::get('mainpage',array('uses'=>'IndexController@indexAction'));

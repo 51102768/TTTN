@@ -9,7 +9,7 @@ Work Task 1:
 - Phạm Nguyễn Thành Công: đọc database, xây dựng thêm bảng nếu cần thiết, nhập dữ liệu cho database.
 - Đỗ Phạm Quang Trí: Làm phần đăng nhập. (Đăng nhập, xác thực ...)
 - Nguyễn Thành Quân: Làm backend và trang quản lí bên trong.
-
+- Phạm Đăng Khoa: Design và làm trang "Liên hệ", "Hướng dẫn"
 
 
 ##############################

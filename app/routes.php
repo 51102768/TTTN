@@ -16,6 +16,4 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('authors', array('uses'=>'AuthorsController@getIndex'));
-
 Route::get('mainpage',array('uses'=>'IndexController@indexAction'));

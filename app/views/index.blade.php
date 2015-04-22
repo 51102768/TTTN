@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -22,6 +22,11 @@
       type="text/css"
       rel="stylesheet"
       href="{{ asset("css/shared.css") }}"
+    />
+     <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ asset("css/footer.css") }}"
     />
     <link 
       href='http://fonts.googleapis.com/css?family=Noto+Serif|Roboto+Slab&subset=latin,vietnamese' 

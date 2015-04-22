@@ -12,18 +12,26 @@
   text-align: center;
 }
 
+.social-cont h2{
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 5%;
+}
+
 .social-item{
 	display: inline-block;
   	min-width: 32px;
   	min-height: 100px;
   	text-align: middle;
+  	background-color: transparent;
 }
 
 .social-item img{
 	  
 		margin: auto;
 		margin-top: 50%;
-		margin-bottom: 50%;
+		margin-bottom: 30%;
 	  vertical-align: middle;
 	  height: 100%;
 }

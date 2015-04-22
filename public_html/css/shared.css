@@ -10,6 +10,14 @@ body, .container, html{
 	font-family: 'Noto Serif', serif;
 }
 
+
+.content {
+	background: url("../img/decor/background-1.jpg") scroll transparent;
+	background-position: bottom;
+	background-repeat: repeat-y;
+	background-size: 100%;
+}
+
 .wrapper {
     min-height: 100%;
     height: auto !important;
@@ -91,7 +99,7 @@ body, .container, html{
 }
 
 .footer{
-	background-color: #4e5d6c;
+	background:transparent;
 	height: 20%;
 	border-top:1px solid #e5e5e5;
 }

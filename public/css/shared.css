@@ -7,15 +7,18 @@ body, .container, html{
 }
 
 #navBar {
+	background-color: #323440;
 	font-family: 'Noto Serif', serif;
+	border-bottom: 0px;
 }
 
 
 .content {
-	background: url("../img/background.jpg");
-	background-position: bottom;
-	background-repeat: repeat-y;
-	background-size: 100%;
+	background: url("../img/background.jpg") no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;	
 }
 
 .wrapper {
@@ -26,17 +29,11 @@ body, .container, html{
 }
 
 .container{
-	background-color: #454859;
-	box-shadow:20px 20px 60px 20px gray;
-	border-style:groove;
-	border-width: 2px;
-	border-top: 0px;
-	border-bottom: 0px;
 	font-family: 'Roboto Slab', serif;
 }
 
 #wrapper-top{
-	margin-top: 50px;
+	margin-top: 70px;
 	margin-bottom: auto;
 	padding-bottom: 20px;
 }
@@ -45,6 +42,7 @@ body, .container, html{
 	text-align: left;
 	border-top: dashed white 1px;
 	border-bottom: dashed white 1px;
+	background: transparent;
 }
 
 #menuButton a{
@@ -53,9 +51,16 @@ body, .container, html{
 
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 100%;
       height: 305px;
       margin: auto;
+      width: 70%;
+}
+
+#menuSideBar{
+	background: url("../img/border-decor.png") no-repeat;
+	background-position: top right;
+	height: 305px;
+	
 }
 
 #wrapper-middle{

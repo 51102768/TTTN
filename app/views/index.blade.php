@@ -33,11 +33,13 @@
       rel="stylesheet"
       href="{{ asset("css/header.css") }}"
     />
+    <!-->
     <link 
       href='http://fonts.googleapis.com/css?family=Noto+Serif|Roboto+Slab&subset=latin,vietnamese' 
       rel='stylesheet' 
       type='text/css'
     />
+    -->
     <script
       type="text/javascript"
       src="{{ asset("js/jquery-1.11.2.min.js") }}"
@@ -48,39 +50,11 @@
     ></script>
   </head>
   <body>
-    @include('temp.header')
+    @include('temp.navbar')
     <div class = "content">
     <div class = "container">
       <div class ="row" id = "wrapper-top">
-        <div class = "col-md-3">
-          <div class = "btn-group-vertical" role = "group" id = "menuSideBar">
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm mới</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm bán chạy</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm được đề xuất</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm khuyến mãi</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Loa</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Tai nghe</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Máy nghe nhạc</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Các sản phẩm khác</a></button>
-            </div>
-          </div>
-        </div>
-        <div class = "col-md-9">
+        <div class = "col-md-8">
           <div id = "myCarousel" class = "carousel slide" data-ride = "carousel"> 
             <!-- Indicator -->
             <ol class="carousel-indicators">
@@ -117,6 +91,35 @@
             </a>
           </div>
         </div>
+        <div class = "col-md-4" id = "menuSideBar">
+          <div class = "btn-group-vertical" role = "group" >
+            <div class = "btn-group">
+              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm mới</a></button>
+            </div>
+            <div class = "btn-group">
+              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm bán chạy</a></button>
+            </div>
+            <div class = "btn-group">
+              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm được đề xuất</a></button>
+            </div>
+            <div class = "btn-group">
+              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm khuyến mãi</a></button>
+            </div>
+            <div class = "btn-group">
+              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Loa</a></button>
+            </div>
+            <div class = "btn-group">
+              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Tai nghe</a></button>
+            </div>
+            <div class = "btn-group">
+              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Máy nghe nhạc</a></button>
+            </div>
+            <div class = "btn-group">
+              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Các sản phẩm khác</a></button>
+            </div>
+          </div>
+        </div>
+        
       </div>
       <div class = "row" id = "wrapper-middle">
         <div class = "col-md-3">

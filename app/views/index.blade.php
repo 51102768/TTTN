@@ -28,6 +28,11 @@
       rel="stylesheet"
       href="{{ asset("css/footer.css") }}"
     />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ asset("css/header.css") }}"
+    />
     <link 
       href='http://fonts.googleapis.com/css?family=Noto+Serif|Roboto+Slab&subset=latin,vietnamese' 
       rel='stylesheet' 

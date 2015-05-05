@@ -6,13 +6,13 @@
 					<div class = "social-cont">
 						<div class = "social">
 						  <a href="http://www.facebook.com" class = "social-item">
-						    <img src="img/fbicon.png" width="50%" height="50%" class="img-responsive" alt="Responsive image"/>
+						    <img src="img/rsz_fbicon.png" class="img-responsive" alt="Responsive image"/>
 						  </a>
 						  <a href="http://www.twitter.com" class = "social-item">
-						    <img src="img/twicon.png" width="50%" height="50%" class="img-responsive" alt="Responsive image"/>
+						    <img src="img/rsz_twiticon.png" class="img-responsive" alt="Responsive image"/>
 						  </a>
 						  <a href= "http://www.skype.com" class = "social-item">
-						    <img src="img/skype.png"  width="50%" height="50%" class="img-responsive" alt="Responsive image"/>
+						    <img src="img/rsz_skypicon.png" class="img-responsive" alt="Responsive image"/>
 						  </a>
 						   </ul>        
 						</div>

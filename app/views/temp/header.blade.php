@@ -1,5 +1,5 @@
 <nav class = "navbar navbar-default navbar-fixed-top" id = "navBar">
-      <div class = "container-fluid">
+      <div class = "container-fluid" id = "nav-Bar">
         <div class = "navbar-header">
           <a class = "navbar-brand" href="#">Mỡ Shop</a>
         </div>

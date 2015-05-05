@@ -12,7 +12,7 @@ body, .container, html{
 
 
 .content {
-	background: url("../img/decor/background-1.jpg") scroll transparent;
+	background: url("../img/background.jpg");
 	background-position: bottom;
 	background-repeat: repeat-y;
 	background-size: 100%;
@@ -26,7 +26,12 @@ body, .container, html{
 }
 
 .container{
-	background-color: #CCCCCC;
+	background-color: #454859;
+	box-shadow:20px 20px 60px 20px gray;
+	border-style:groove;
+	border-width: 2px;
+	border-top: 0px;
+	border-bottom: 0px;
 	font-family: 'Roboto Slab', serif;
 }
 

@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'shopsql',
 			'username'  => 'root',
-			'password'  => 'quan12345',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

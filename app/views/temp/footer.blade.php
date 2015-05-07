@@ -5,7 +5,7 @@
 				<div  class="col col-xs-12 col-sm-12 col-md-12 col-lg-12" >
 					<div class = "social-cont">
 						<div class = "social">
-						  <a href="http://www.facebook.com" class = "social-item">
+						  <a href="http://www.facebook.com" class = "social-item" >
 						    <img src="img/rsz_fbicon.png" class="img-responsive" alt="Responsive image"/>
 						  </a>
 						  <a href="http://www.twitter.com" class = "social-item">

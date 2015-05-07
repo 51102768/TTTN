@@ -55,6 +55,7 @@
     <div class = "container">
       <div class ="row" id = "wrapper-top">
         <div class = "col-md-8">
+          <div id = "carouselWrapper">
           <div id = "myCarousel" class = "carousel slide" data-ride = "carousel"> 
             <!-- Indicator -->
             <ol class="carousel-indicators">
@@ -67,16 +68,16 @@
             <!-- Wrapper for slide -->
             <div class = "carousel-inner" role = "listbox">
               <div class = "item active">
-                <a href="#"><img src="img\sanpham1.png" width="750px" height="650px"></a>
+                <a href="#"><img src="img\sanpham1.png" width="750px" height="550px"></a>
               </div>
               <div class = "item">
-                <a href="#"><img src="img\product\Soundmax\2.1 Soundmax A820.png" width="750px" height="650px"></a>
+                <a href="#"><img src="img\product\Soundmax\2.1 Soundmax A820.png" width="750px" height="550px"></a>
               </div>
               <div class = "item">
-                <a href="#"><img src="img\product\Soundmax\2.1 SOUNDMAX A2116.png" width="750px" height="650px"></a>
+                <a href="#"><img src="img\product\Soundmax\2.1 SOUNDMAX A2116.png" width="750px" height="550px"></a>
               </div>
               <div class = "item">
-                <a href="#"><img src="img\product\PartyHouse\Professional\GT-A 1.jpg" width="750px" height="650px"></a>
+                <a href="#"><img src="img\product\PartyHouse\Professional\GT-A 1.jpg" width="750px" height="550px"></a>
               </div>
             </div>
 
@@ -91,36 +92,33 @@
             </a>
           </div>
         </div>
+        </div>
         <div class = "col-md-4" id = "menuSideBar">
-          <div class = "btn-group-vertical" role = "group" >
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm mới</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm bán chạy</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm được đề xuất</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Sản phẩm khuyến mãi</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Loa</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Tai nghe</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Máy nghe nhạc</a></button>
-            </div>
-            <div class = "btn-group">
-              <button type = "button" class = "btn btn-default" id = "menuButton"><a href="#">Các sản phẩm khác</a></button>
-            </div>
-          </div>
+          <h3>
+            Tin công nghệ 
+          </h3>
+          <ul class="list-group">
+            <li  class="list-group-item news"> 
+
+            </li>
+            <li  class="list-group-item news"> 
+                
+            </li>
+            <li  class="list-group-item news"> 
+                
+            </li>
+            <li  class="list-group-item news"> 
+                
+            </li>
+            <li  class="list-group-item news"> 
+                
+            </li>
+          </ul>
         </div>
         
       </div>
+      <div class = "row">
+      <div class = "col-xs-8 col-sm-8 col-md-8 col-lg-8" >
       <div class = "row" id = "wrapper-middle">
         <div class = "col-md-3">
           <h3>Sản phẩm bán chạy</h3>
@@ -226,7 +224,13 @@
             </div>
           </ul>
         </div>
+        </div>
       </div> 
+      <div class = "col-xs-4 col-sm-4 col-md-4 col-lg-4" >
+          <div class = "">
+          </div>
+      </div>
+      </div>
     </div>
     </div>
     @include('temp.footer')

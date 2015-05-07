@@ -15,8 +15,8 @@ class CreateCategoryTable extends Migration {
 		Schema::create("category", function($table)
 		{
 			$table->increments("id");
-			$table->string("type");
 			$table->string("brand");
+			$table->string("url");
 			$table->timestamps();
 			$table->dateTime("deleted_at");
 		});

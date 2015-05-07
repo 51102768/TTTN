@@ -38,6 +38,8 @@ body, .container, html{
 	padding-bottom: 20px;
 }
 
+
+
 #menuButton{
 	text-align: left;
 	border-top: dashed white 1px;
@@ -49,9 +51,20 @@ body, .container, html{
 	color: white;
 }
 
+#carouselWrapper{
+	background: url("../img/border-pic.png") no-repeat;
+	background-position: top left;
+	height: 305px;	
+	
+}
+
+#myCarousel{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      height: 305px;
       margin: auto;
       width: 70%;
 }
@@ -62,6 +75,20 @@ body, .container, html{
 	height: 305px;
 	
 }
+
+#menuSideBar h3 {
+	margin-top: -5px;
+}
+
+.news{
+	background: transparent;
+	border: dashed 1px;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	width: 90%;
+}
+
 
 #wrapper-middle{
 	margin-top: 20px;

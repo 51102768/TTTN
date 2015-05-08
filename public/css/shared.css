@@ -2,13 +2,16 @@
 	margin-right: 15px;
 }
 
-body, .container, html{
+body{
+	font-family: 'Arial', Times, serif;
+}
+
+body, .content, html{
 	height: 100%;
 }
 
 #navBar {
 	background-color: #323440;
-	font-family: 'Noto Serif', serif;
 	border-bottom: 0px;
 }
 
@@ -19,6 +22,7 @@ body, .container, html{
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;	
+	  padding-top: 2%;
 }
 
 .wrapper {
@@ -29,7 +33,7 @@ body, .container, html{
 }
 
 .container{
-	font-family: 'Roboto Slab', serif;
+	margin-top: 2%;
 }
 
 #wrapper-top{
@@ -140,16 +144,6 @@ body, .container, html{
 	background:transparent;
 	height: 20%;
 	border-top:1px solid #e5e5e5;
-}
-
-
-.footer .container,.footer h1 {
-	font-family: 'Noto Serif', serif;
-}
-
-.footer h3{
-	font-family: 'Roboto Slab', serif;
-	font-style: oblique;
 }
 
 #footer-bottom{

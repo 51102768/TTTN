@@ -1,4 +1,5 @@
-	<!doctype html>
+
+    <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -12,11 +13,6 @@
       type="text/css"
       rel="stylesheet"
       href="{{ asset("bootstrap/dist/css/bootstrap.min.css") }}"
-    />
-    <link
-		type="text/css"
-      rel="stylesheet"
-      href="{{ asset("bootstrap/dist/css/bootstrap.theme.min.css") }}"
     />
     <link
       type="text/css"
@@ -33,13 +29,6 @@
       rel="stylesheet"
       href="{{ asset("css/header.css") }}"
     />
-    <!-->
-    <link 
-      href='http://fonts.googleapis.com/css?family=Noto+Serif|Roboto+Slab&subset=latin,vietnamese' 
-      rel='stylesheet' 
-      type='text/css'
-    />
-    -->
     <script
       type="text/javascript"
       src="{{ asset("js/jquery-1.11.2.min.js") }}"

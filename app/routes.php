@@ -12,12 +12,10 @@
 */
 Route::get('/', 'HomeController@showWelcome');
 
-Route::get('register', function(){
-	return View::make('register');
+Route::get('login', function(){
+	return View::make('user.login');
 });
 
-Route::post('register_action', function()
-{
-        $obj = new RegisterController() ;
-        return $obj->store();
-});
+Route::get('register', 'RegisterController@index');
+
+Route::post('register','RegisterController@store');

@@ -9,7 +9,7 @@ class RegisterController extends BaseController {
 	 */
 	public function index()
 	{
-		//
+		return View::make('user.register');	
 	}
 
 
@@ -31,29 +31,41 @@ class RegisterController extends BaseController {
 	 */
 	public function store()
 	{
-	            $data =  Input::except(array('_token')) ;
-	            $rule  =  array(
-	                    'fullname'       	=> 'required|unique:registered_users',
-	                    'email'      	=> 'required|email|unique:registered_users',
-	                    'username'	=> 'required|min:6|unique:registered_users',
-	                    'password'   	=> 'required|min:6|same:cpassword',
-	                    'cpassword'  	=> 'required|min:6'
-	                ) ;
+		$input = Input::all();
 
-	            $validator = Validator::make($data,$rule);
+		$rules = array('username' 	=> 'required|unique:account|min:6',
+				'email'		=> 'required|unique:account|email',
+				'fullname'	=> 'required',
+				'password'   => 'required|min:6',
+                  			'cpassword'  => 'required|min:6|same:password');
 
-	            if ($validator->fails())
-	            {
-	                    return Redirect::to('register')
-	                            ->withErrors($validator->messages());
-	            }
-	            else
-	            {
-	                    Register::saveFormData(Input::except(array('_token','cpassword')));
+		$messages = array(
+			'username.required'    => 'Mời bạn điền tên đăng nhập đầy đủ.',
+			'username.unique'    => 'Tên đăng nhập này đã tồn tại.',
+			'username.min' => 'Tên đăng nhập tối thiểu :min kí tự.',
+			'email.required'      => 'Mời bạn điền email đầy đủ.',
+			'email.unique'		=> 'Email này đã tồn tại.',
+			'email.email'		=> 'Email không hợp lệ.',
+			'fullname.required'	=> 'Mời bạn điền tên đầy đủ.',
+			'password.require'	=> 'Mời bạn điền mật khẩu đầy đủ.',
+			'password.min'	=> 'Mật khẩu tối thiểu là :min kí tự.',
+			'cpassword.required'=> 'Mời bạn điền lại mật khẩu.',
+			'cpassword.min'	=> 'Mật khẩu tối thiểu là :min kí tự.',
+			'cpassword.same'	=> 'Mật khẩu phải giống nhau.',
+		);
 
-	                    return Redirect::to('register')
-	                            ->withMessage('Data inserted');
-	            }
+		$validator = Validator::make($input, $rules,$messages);
+
+		if($validator->passes()){
+			 Register::saveFormData(Input::except(array('_token','cpassword')));
+
+		                    return Redirect::to('/')
+		                            ->withMessage('Bạn đã đăng kí thành công!');
+		}
+
+		else{
+			return Redirect::to('register')->withInput()->withErrors($validator->messages());
+		}
 	}
 
 	/**

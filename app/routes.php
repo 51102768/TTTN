@@ -10,8 +10,14 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('/', 'HomeController@showWelcome');
 
-Route::get('/', function()
+Route::get('register', function(){
+	return View::make('register');
+});
+
+Route::post('register_action', function()
 {
-	return View::make('index');
+        $obj = new RegisterController() ;
+        return $obj->store();
 });

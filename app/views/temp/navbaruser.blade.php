@@ -10,12 +10,18 @@
 				<li><a href="#">Liên hệ</a></li>
 		</ul>
 		<ul class = "nav navbar-nav navbar-right">
-			<li>
-				{{ucwords(Auth::user()->fullname)}}
-			</li>
-			<li>
-				<a href="user">Thông tin</a>
-			</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" id="dropdownUser" data-toggle="dropdown" aria-expanded="true">
+					{{ucwords(Auth::user()->fullname)}}
+					<span class="caret"></span>
+					</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownUser">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Thông tin</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Đơn hàng</a></li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="logout">Đăng xuất</a></li>
+				</ul>
+				</li>
 			<li>
 				<a href="logout">Đăng xuất</a>
 			</li>

@@ -13,8 +13,8 @@ body, .content, html{
 #navBar {
 	background-color: #323440;
 	border-bottom: 0px;
+	max-height: 10px;
 }
-
 
 .content {
 	background: url("../img/background.jpg") no-repeat center center fixed; 
@@ -42,7 +42,10 @@ body, .content, html{
 	padding-bottom: 20px;
 }
 
-
+a.dropdownUser{
+	height: 100%;
+	margin: auto;
+}
 
 #menuButton{
 	text-align: left;

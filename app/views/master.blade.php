@@ -37,6 +37,10 @@
 		type="text/javascript"
 		src="{{ asset("bootstrap/js/modal.js") }}"
 		></script>
+		<script
+		type="text/javascript"
+		src="{{ asset("bootstrap/js/dropdown.js") }}"
+		></script>
 	</head>
 	<body>
 		@if(!Auth::user())

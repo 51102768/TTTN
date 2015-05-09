@@ -19,3 +19,11 @@ Route::post('login','LoginController@login');
 Route::get('register', 'RegisterController@index');
 
 Route::post('register','RegisterController@store');
+
+Route::get('logout', array('as' => 'logout', function () { 
+	Auth::logout();
+
+	return Redirect::to('/')->with('message', 'Bạn đã đăng xuất thành công');
+ }));
+
+Route::get('profile', array('as' => 'profile', function () { }));

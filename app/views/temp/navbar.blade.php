@@ -10,11 +10,11 @@
 			<li><a href="#">Liên hệ</a></li>
 	</ul>
 	<ul class = "nav navbar-nav navbar-right">
-	<li><a href="login"  role = "button" class="btn btn-default" >
+	<li><a href="login"  role = "button" >
 		<span class="glyphicon glyphicon-user"></span> Đăng nhập
 		</a>
 	</li>
-	<li><a href="register" role = "button" class="btn btn-default">
+	<li><a href="register" role = "button">
 		<span class="glyphicon glyphicon-plus"></span> Đăng kí
 		</a>
 	</li>

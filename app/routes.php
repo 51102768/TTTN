@@ -12,9 +12,9 @@
 */
 Route::get('/', 'HomeController@showWelcome');
 
-Route::get('login', function(){
-	return View::make('user.login');
-});
+Route::get('login', 'LoginController@index');
+
+Route::post('login','LoginController@login');
 
 Route::get('register', 'RegisterController@index');
 

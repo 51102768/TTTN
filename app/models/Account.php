@@ -19,8 +19,13 @@ class Account extends Eloquent implements UserInterface, RemindableInterface
 
 	protected $guarded = ["id"];
 
+	public static $rules = ['username' => 'required', 'id' => 'required', 'email' => 'required', 'fullname' => 'required'];
+
+	protected $fillable = ['username', 'email', 'fullname', 'password'];
+
+
 	public function getAuthIdentifier(){
-		return $this->getKey();
+		return $this->id;
 	}
 
 	public function getAuthPassword(){

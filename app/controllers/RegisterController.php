@@ -57,15 +57,22 @@ class RegisterController extends BaseController {
 		$validator = Validator::make($input, $rules,$messages);
 
 		if($validator->passes()){
-			 Register::saveFormData(Input::except(array('_token','cpassword')));
+			$password = $input['password'];
+			$password = Hash::make($password);
 
-		                    return Redirect::to('/')
-		                            ->withMessage('Bạn đã đăng kí thành công!');
+			$user = new User();
+			$user->username = $input['username'];
+			$user->email = $input['email'];
+			$user->password = $password;
+			$user->fullname = $input['fullname'];
+			$user->save();
+
+			return Redirect::to('/')->with('message','Chúc mừng bạn đã đăng kí thành công!');
 		}
 
 		else{
 			return Redirect::to('register')->withInput()->withErrors($validator->messages());
-		}
+		}	
 	}
 
 	/**

@@ -17,22 +17,22 @@
             <legend>Đăng kí</legend>
             {{Form::open(array('url' => 'register'))}}
             <div class="form-group">
-                {{Form::label('username','Tên đăng nhập :')}}
+                {{Form::label('username','Tên đăng nhập:')}}
                 {{ Form::text('username','',array('class'=>'form-control','placeholder'=>'Enter Username'))}}
                  @if ($errors->has('username')) <p class="help-block">{{ $errors->first('username') }}</p> @endif
             </div>
             <div class="form-group">
-                {{Form::label('password','Mật khẩu :')}}
-                {{ Form::text('password','',array('class'=>'form-control','placeholder'=>'Enter Password'))}}
+                {{Form::label('password','Mật khẩu:')}}
+                {{ Form::password('password',array('class'=>'form-control','placeholder'=>'Enter Password'))}}
                 @if ($errors->has('password')) <p class="help-block">{{ $errors->first('password') }}</p> @endif
             </div>
             <div class="form-group">
                 {{Form::label('cpassword','Nhập lại mật khẩu:')}}
-                {{ Form::text('cpassword','',array('class'=>'form-control','placeholder'=>'Enter Password Again'))}}
+                {{ Form::password('cpassword',array('class'=>'form-control','placeholder'=>'Enter Password Again'))}}
                 @if ($errors->has('cpassword')) <p class="help-block">{{ $errors->first('cpassword') }}</p> @endif
             </div>
             <div class="form-group">
-                {{Form::label('fullname','Tên đầy đủ :')}}
+                {{Form::label('fullname','Tên đầy đủ:')}}
                 {{ Form::text('fullname','',array('class'=>'form-control','placeholder'=>'Enter Fullname'))}}
                 @if ($errors->has('fullname')) <p class="help-block">{{ $errors->first('fullname') }}</p> @endif
             </div>

@@ -23,12 +23,12 @@
 			</div>
 			@endif
 			<div class="form-group">
-				{{Form::label('username','Username:')}}
+				{{Form::label('username','Tên đăng nhập:')}}
 				{{ Form::text('username','',array('class'=>'form-control','placeholder'=>'Username'))}}
 			</div>
 			<div class="form-group">
-				{{Form::label('password','Password:')}}
-				{{ Form::text('password','',array('class'=>'form-control','placeholder'=>'Password'))}}
+				{{Form::label('password','Mật khẩu:')}}
+				{{ Form::password('password',array('class'=>'form-control','placeholder'=>'Password'))}}
 			</div>
 			{{Form::submit('Đăng nhập',array('class'=>'btn btn-success'))}}
 			<a href="register" class = "btn btn-primary">Đăng kí</a>
@@ -36,5 +36,10 @@
 		</div>
 	</div>
 </div>
+@if(Session::has('message'))
+	<script>
+		alert('{{Session::get("message");}}');
+	</script>
+@endif
 
 @stop

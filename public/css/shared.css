@@ -16,7 +16,7 @@ body, .content, html{
 	max-height: 10px;
 }
 
-.content {
+body {
 	background: url("../img/background.jpg") no-repeat center center fixed; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -34,6 +34,7 @@ body, .content, html{
 
 .container{
 	margin-top: 2%;
+	height: 100%;
 }
 
 #wrapper-top{

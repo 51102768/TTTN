@@ -5,7 +5,7 @@
 	</div>
 	<div class="collapse navbar-collapse">
 		<ul class = "nav navbar-nav">
-			<li class = "active"><a href="#"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
+			<li><a href="#"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
 			<li><a href="#">Hướng dẫn</a></li>
 			<li><a href="#">Liên hệ</a></li>
 	</ul>

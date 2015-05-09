@@ -17,29 +17,38 @@
             <legend>Đăng kí</legend>
             {{Form::open(array('url' => 'register'))}}
             <div class="form-group">
-                {{Form::label('username','Tên đăng nhập:')}}
+                {{Form::label('username','Tên đăng Nhập:')}}
                 {{ Form::text('username','',array('class'=>'form-control','placeholder'=>'Enter Username'))}}
-                 @if ($errors->has('username')) <p class="help-block">{{ $errors->first('username') }}</p> @endif
+                 @if  ($errors->has('username')) <p><div class="alert alert-danger" role="alert">{{ $errors->first('username') }}</div></p>@endif
             </div>
             <div class="form-group">
                 {{Form::label('password','Mật khẩu:')}}
                 {{ Form::password('password',array('class'=>'form-control','placeholder'=>'Enter Password'))}}
-                @if ($errors->has('password')) <p class="help-block">{{ $errors->first('password') }}</p> @endif
+                @if ($errors->has('password')) <p><div class="alert alert-danger" role="alert">{{ $errors->first('password') }}</div> </p>@endif
             </div>
             <div class="form-group">
                 {{Form::label('cpassword','Nhập lại mật khẩu:')}}
                 {{ Form::password('cpassword',array('class'=>'form-control','placeholder'=>'Enter Password Again'))}}
-                @if ($errors->has('cpassword')) <p class="help-block">{{ $errors->first('cpassword') }}</p> @endif
+                @if ($errors->has('cpassword'))<p><div class="alert alert-danger" role="alert">{{ $errors->first('cpassword') }}</div></p> @endif
             </div>
             <div class="form-group">
                 {{Form::label('fullname','Tên đầy đủ:')}}
                 {{ Form::text('fullname','',array('class'=>'form-control','placeholder'=>'Enter Fullname'))}}
-                @if ($errors->has('fullname')) <p class="help-block">{{ $errors->first('fullname') }}</p> @endif
+                @if ($errors->has('fullname')) <p><div class="alert alert-danger" role="alert">{{ $errors->first('fullname') }}</div> </p>@endif
             </div>
             <div class="form-group">
                 {{Form::label('email','Email:')}}
                 {{ Form::text('email','',array('class'=>'form-control','placeholder'=>'Enter Email'))}}
-                @if ($errors->has('email')) <p class="help-block">{{ $errors->first('email') }}</p> @endif
+                @if ($errors->has('email')) <p><div class="alert alert-danger" role="alert">{{ $errors->first('email') }}</div></p> @endif
+            </div>
+            <div class="form-group">
+                {{Form::label('phone','Phone Number:')}}
+                {{ Form::text('phone','',array('class'=>'form-control','placeholder'=>'Enter Phone Number'))}}
+                @if ($errors->has('phone')) <p><div class="alert alert-danger" role="alert">{{ $errors->first('phone') }}</div> </p>@endif
+            </div>
+             <div class="form-group">
+                {{Form::label('address','Address:')}}
+                {{ Form::text('address','',array('class'=>'form-control','placeholder'=>'Enter Phone Number'))}}
             </div>
             {{Form::submit('Đăng kí',array('class'=>'btn btn-success'))}}
             <a href="/" class = "btn btn-primary">Hủy</a>

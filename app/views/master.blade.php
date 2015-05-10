@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Mỡ shop</title>
-		@yield('header')
 		<link
 		type="text/css"
 		rel="stylesheet"
@@ -19,6 +18,14 @@
 		rel="stylesheet"
 		href="{{ asset("bootstrap/dist/css/bootstrap.theme.min.css") }}"
 		/>
+		<script
+		type="text/javascript"
+		src="{{ asset("js/jquery-1.11.2.min.js") }}"
+		></script>
+		<script
+		type="text/javascript"
+		src="{{ asset("bootstrap/dist/js/bootstrap.js") }}"
+		></script>
 		<link
 		type="text/css"
 		rel="stylesheet"
@@ -29,18 +36,7 @@
 		rel="stylesheet"
 		href="{{ asset("css/footer.css") }}"
 		/>
-		<script
-		type="text/javascript"
-		src="{{ asset("js/jquery-1.11.2.min.js") }}"
-		></script>
-		<script
-		type="text/javascript"
-		src="{{ asset("bootstrap/js/modal.js") }}"
-		></script>
-		<script
-		type="text/javascript"
-		src="{{ asset("bootstrap/js/dropdown.js") }}"
-		></script>
+		@yield('header')
 	</head>
 	<body>
 		@if(!Auth::user())

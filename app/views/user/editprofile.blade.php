@@ -12,7 +12,13 @@
 
 <div class="row ">
 	<div class="col-md-4 col-centered text-center">
-		<img src="img/user.jpg" class="img-thumbnail" alt="User"> 
+		<div class="row">
+			@if(is_null(Auth::user()->url))
+				<img src="img\avatar\user.jpg" class="img-thumbnail" alt="User">
+			@else
+				<img src="{{Auth::user()->url}}" class="img-thumbnail" alt="User">
+			@endif
+		</div>
 	</div>
 	<div class="col-md-8 well">
 		<h4>Thông tin người dùng</h4>

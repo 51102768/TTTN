@@ -18,28 +18,31 @@
 		<h4>Thông tin người dùng</h4>
 		<hr>
 		<div class="row">
-			<table class="table table-hover">
-				<tr class="active">
+			<table class="table table-hover table-striped">
+				<tr>
 					<td>Tên đăng nhập</td>
 					<td>{{Auth::user()->username}}</td>
 				</tr>
-				<tr class="success">
+				<tr>
 					<td>Tên đầy đủ</td>
 					<td>{{Auth::user()->fullname}}</td>
 				</tr>
-				<tr class="info">
+				<tr>
 					<td>Email</td>
 					<td>{{Auth::user()->email}}</td>
 				</tr>
-				<tr class="warning">
+				<tr>
 					<td>Số điện thoại</td>
 					<td>{{Auth::user()->phone}}</td>
 				</tr>
-				<tr class="danger">
+				<tr>
 					<td>Địa chỉ</td>
 					<td>{{Auth::user()->address}}</td>
 				</tr>
 			</table>
+		</div>
+		<div class="row">
+			<a href="editprofile" class = "btn btn-success">Chỉnh sửa</a>
 		</div>
 	</div>
 </div>

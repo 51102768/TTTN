@@ -26,6 +26,8 @@ Route::get('logout', array('as' => 'logout', function () {
 	return Redirect::to('/')->with('message', 'Bạn đã đăng xuất thành công');
  }));
 
-Route::get('profile', array('as' => 'profile', function () { 
-	return View::make('user.profile');
-}));
+Route::get('profile', 'ProfileController@indexProfile');
+
+Route::get('editprofile','ProfileController@indexEditProfile');
+
+Route::post('editprofile','ProfileController@postEditProfile');

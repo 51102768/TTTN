@@ -32,7 +32,7 @@
                 @if ($errors->has('cpassword'))<p><div class="alert alert-danger" role="alert">{{ $errors->first('cpassword') }}</div></p> @endif
             </div>
             <div class="form-group">
-                {{Form::label('fullname','Tên đầy đủ:')}}
+                {{Form::label('fullname','Họ và tên:')}
                 {{ Form::text('fullname','',array('class'=>'form-control','placeholder'=>'Enter Fullname'))}}
                 @if ($errors->has('fullname')) <p><div class="alert alert-danger" role="alert">{{ $errors->first('fullname') }}</div> </p>@endif
             </div>

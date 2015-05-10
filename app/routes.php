@@ -28,6 +28,10 @@ Route::get('logout', array('as' => 'logout', function () {
 
 Route::get('profile', 'ProfileController@indexProfile');
 
+Route::post('image-submit','ProfileController@postProfile');
+
 Route::get('editprofile','ProfileController@indexEditProfile');
 
 Route::post('editprofile','ProfileController@postEditProfile');
+
+Route::get('manager','ManagerController@index');

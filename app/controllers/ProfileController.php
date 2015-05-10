@@ -6,6 +6,26 @@ class ProfileController extends \BaseController {
 		return View::make('user.profile');
 	}
 
+	public function postProfile(){
+		$user = Auth::user();
+
+		if (Input::hasFile('image'))
+		{
+			$file = Input::file('image');
+			$destinationPath = public_path().'/img/avatar';
+			$filename = str_random(6) . '_' .$file->getClientOriginalName();
+			$uploadSuccess   = Input::file('image')->move($destinationPath, $filename);
+
+			 $image = Image::make("img/avatar/" . $filename)->resize(200, 200)->save();
+
+			$user->url = "img/avatar/" . $filename;
+			$user->save();
+
+			return Redirect::to('profile')->with('message','Chúc mừng bạn đã chỉnh sửa thành công!');
+		}
+		else return Redirect::to('profile')->with('message','Tải lên thất bại!');
+	}
+
 	public function indexEditProfile(){
 		return View::make('user.editprofile');
 	}
@@ -14,14 +34,10 @@ class ProfileController extends \BaseController {
 		$input = Input::all();
 
 		$rules = array(
-				'email'		=> 'required|unique:account|email',
 				'fullname'	=> 'required',
                   			'phone'	=> 'numeric');
 
 		$messages = array(
-			'email.required'      	=> 'Mời bạn điền email đầy đủ.',
-			'email.unique'		=> 'Email này đã tồn tại.',
-			'email.email'		=> 'Email không hợp lệ.',
 			'fullname.required'	=> 'Mời bạn điền tên đầy đủ.',
 			'phone.numeric'	=>'Điện thoại phải là chuỗi số'
 		);
@@ -30,7 +46,6 @@ class ProfileController extends \BaseController {
 
 		if($validator->passes()){
 			$user = Auth::user();
-			$user->email = $input['email'];
 			$user->fullname = $input['fullname'];
 			$user->phone = $input['phone'];
 			$user->address = $input['address'];

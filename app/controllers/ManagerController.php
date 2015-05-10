@@ -1,6 +1,6 @@
 <?php
 
-class LoginController extends \BaseController {
+class ManagerController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,7 @@ class LoginController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('user.login');
+		return View::make('manager.index');
 	}
 
 
@@ -32,38 +32,6 @@ class LoginController extends \BaseController {
 	public function store()
 	{
 		//
-	}
-
-
-	public function login(){
-		$input = Input::all();
-
-		$rules = array(
-			'username' => 'required',
-			'password' => 'required'
-			);
-
-		$messages = array(
-			'username.required' => 'Vui lòng gõ tên đăng nhập',
-			'password.required' => 'Vui lòng gõ mật khẩu'
-			);
-
-		$validator = Validator::make($input, $rules, $messages);
-
-		if($validator->passes()){
-			$credentials = array('username' => Input::get('username'),
-						'password' => Input::get('password'));
-
-			if(Auth::attempt($credentials)){
-				return Redirect::to('/')->with('message','Chúc mừng bạn đã đăng nhập thành công');
-			}
-			else{
-				return Redirect::to('login')->with('failed','Đăng nhập thất bại!');
-			}
-		}
-		else{
-			return Redirect::to('login')->withErrors($validator->messages());
-		}
 	}
 
 

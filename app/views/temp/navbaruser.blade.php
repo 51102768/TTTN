@@ -1,13 +1,13 @@
 <nav class = "navbar navbar-default navbar-fixed-top" id = "navBar">
 	<div class = "container-fluid" id = "nav-Bar">
 		<div class = "navbar-header">
-			<a class = "navbar-brand" href="#">Mỡ Shop</a>
+			<a class = "navbar-brand" href="/">Mỡ Shop</a>
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class = "nav navbar-nav">
-				<li><a href="#"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
-				<li><a href="#">Hướng dẫn</a></li>
-				<li><a href="#">Liên hệ</a></li>
+				<li><a href="/"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
+				<li><a href="intruction">Hướng dẫn</a></li>
+				<li><a href="contact">Liên hệ</a></li>
 		</ul>
 		<ul class = "nav navbar-nav navbar-right">
 				<li class="dropdown">
@@ -18,6 +18,11 @@
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownUser">
 					<li role="presentation"><a role="menuitem" tabindex="-1" href="profile">Thông tin người dùng</a></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Đơn hàng</a></li>
+					@if(Auth::user()->authority == "admin")
+					<li role="presentation">
+						<a  role="menuitem" tabindex="-1"  href="manager">Trang quản lí</a>
+					</li>
+					@endif
 					<li role="presentation" class="divider"></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1" href="logout">Đăng xuất</a></li>
 				</ul>

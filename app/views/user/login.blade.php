@@ -15,6 +15,7 @@
 	<div class="col-md-8 col-centered">
 		<div class="well centered">
 			<legend>Đăng nhập</legend>
+			@if  (Session::has("failed")) <p><div class="alert alert-danger" role="alert">{{ Session::get("failed") }}</div></p>@endif
 			{{Form::open(array('url' => 'login'))}}
 			<div class="form-group">
 				{{Form::label('username','Tên đăng nhập:')}}

@@ -21,6 +21,8 @@ class CreateAccountTable extends Migration {
 			$table->string("fullname");
 			$table->string('phone');
 			$table->string('address');
+			$table->string('authority');
+			$table->string('url')->nullable();
 			$table->rememberToken();
 			$table->timestamps();
 			$table->dateTime("deleted_at");

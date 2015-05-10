@@ -9,5 +9,14 @@ class AccountTableSeeder extends DatabaseSeeder {
 	 */
 	public function run()
 	{
+		DB::table('account')->delete();
+
+		User::create([
+			"username"=>"admin",
+			"password"=>Hash::make("admin"),
+			"fullname"=>"Nguyen Thanh Quan",
+			"email"=>"nt.quan1704@gmail.com",
+			"authority"=>"admin"
+		]);
 	}
 }

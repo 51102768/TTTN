@@ -69,6 +69,8 @@ class RegisterController extends BaseController {
 			$user->fullname = $input['fullname'];
 			$user->phone = $input['phone'];
 			$user->address = $input['address'];
+			$user->authority = "user";
+			$user->url = NULL;
 			$user->save();
 
 			return Redirect::to('/')->with('message','Chúc mừng bạn đã đăng kí thành công!');

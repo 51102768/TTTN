@@ -9,6 +9,14 @@ class User
 {
   protected $table  = "account";
   protected $hidden = ["password"];
+
+  public function orders(){
+    return $this->hasMany("Order");
+  }
+
+  public function message(){
+    return $this->hasMany("Message");
+  }
   
   public function getAuthIdentifier()
   {

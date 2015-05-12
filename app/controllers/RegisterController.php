@@ -70,7 +70,7 @@ class RegisterController extends BaseController {
 			$user->phone = $input['phone'];
 			$user->address = $input['address'];
 			$user->authority = "user";
-			$user->url = NULL;
+			$user->url = 'img\avatar\user.jpg';	
 			$user->save();
 
 			return Redirect::to('/')->with('message','Chúc mừng bạn đã đăng kí thành công!');

@@ -16,7 +16,8 @@ class AccountTableSeeder extends DatabaseSeeder {
 			"password"=>Hash::make("admin"),
 			"fullname"=>"Nguyen Thanh Quan",
 			"email"=>"nt.quan1704@gmail.com",
-			"authority"=>"admin"
+			"authority"=>"admin",
+			"url"=>"img\avatar\user.jpg"
 		]);
 	}
 }

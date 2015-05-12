@@ -9,7 +9,10 @@ class ManagerController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('manager.index');
+		$messages = Message::orderBy('created_at','desc')->get();
+		$num_mess = Message::all()->count();
+		return View::make('manager.index')->with("messages",$messages)
+							->with("num_mess",$num_mess);
 	}
 
 

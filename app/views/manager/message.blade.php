@@ -15,7 +15,7 @@
                 <div class="col-lg-12">
 
                     <!-- /.panel -->
-                    <div class="chat-panel panel panel-default">
+                    <div class="chat-panel panel panel-primary">
                         <div class="panel-heading">
                             <i class="fa fa-envelope fa-fw"></i>
                             Tin nhắn

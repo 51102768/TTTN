@@ -53,12 +53,17 @@ class LoginController extends \BaseController {
 		if($validator->passes()){
 			$credentials = array('username' => Input::get('username'),
 						'password' => Input::get('password'));
-
-			if(Auth::attempt($credentials)){
-				return Redirect::to('/')->with('message','Chúc mừng bạn đã đăng nhập thành công');
+			$user = User::where('username', '=', Input::get('username'))->firstOrFail();
+			if($user->block == false){
+				if(Auth::attempt($credentials)){
+					return Redirect::to('/')->with('message','Chúc mừng bạn đã đăng nhập thành công');
+				}
+				else{
+					return Redirect::to('login')->with('failed','Đăng nhập thất bại!');
+				}
 			}
 			else{
-				return Redirect::to('login')->with('failed','Đăng nhập thất bại!');
+				return Redirect::to('login')->with('failed','Tài khoản này không có quyền đăng nhập!');
 			}
 		}
 		else{

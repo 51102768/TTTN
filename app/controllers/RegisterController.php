@@ -71,6 +71,7 @@ class RegisterController extends BaseController {
 			$user->address = $input['address'];
 			$user->authority = "user";
 			$user->url = 'img\avatar\user.jpg';	
+			$user->block = false;
 			$user->save();
 
 			return Redirect::to('/')->with('message','Chúc mừng bạn đã đăng kí thành công!');

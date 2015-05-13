@@ -1,0 +1,31 @@
+.img-custom{
+	height: 50%;
+	width: 50%;
+}
+
+.custom-img{
+	max-width: 100px;
+}
+
+.list{	
+	height: 300px;
+	overflow: auto;
+}
+
+.customer{
+    padding: 0;
+}
+
+#customer-content {
+	padding: 15px;
+}
+
+#customer-content p {
+	
+	font-family: 'Bowlby One SC';
+	font-size: 11px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 9px;
+}

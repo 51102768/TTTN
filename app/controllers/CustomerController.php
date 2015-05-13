@@ -11,7 +11,10 @@ class CustomerController extends \BaseController {
 	{
 		$messages = Message::orderBy('created_at','desc')->get();
 
-		return View::make("manager.customer")->with("messages",$messages);
+		$users = User::all();
+
+		return View::make("manager.customer")->with("messages",$messages)
+								->with("users",$users);
 	}
 
 

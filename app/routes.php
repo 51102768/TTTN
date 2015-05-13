@@ -43,3 +43,43 @@ Route::post('message','MessageController@store');
 Route::post('message_checked','MessageController@delete');
 
 Route::get('customer','CustomerController@index');
+
+Route::get('user',function(){
+
+	if(Request::ajax()){
+		$input = Input::all();
+
+		if($input["action"] == "remove"){
+			$user =  User::destroy($input['user_id']);
+			return "Success!";
+		}
+		else if($input["action"] == "open"){
+			$user =  User::find($input['user_id']);
+
+			$data = array("username"=>$user->username,
+					"fullname"=>$user->fullname,
+					"email"=>$user->email,
+					"phone"=>$user->phone,
+					"address"=>$user->address,
+					"url"=>$user->url);
+
+			return Response::json($data);
+		}
+		else if($input["action"] == "block"){
+			$user =  User::find($input['user_id']);
+
+			$user->block = true;
+			$user->save();
+
+			return "Success Block!";
+		}
+		else if($input["action"] == "unblock"){
+			$user =  User::find($input['user_id']);
+
+			$user->block = false;
+			$user->save();
+			
+			return "Success Block!";
+		}
+	}
+});

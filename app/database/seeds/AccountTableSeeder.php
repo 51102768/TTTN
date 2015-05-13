@@ -17,6 +17,47 @@ class AccountTableSeeder extends DatabaseSeeder {
 			"fullname"=>"Nguyen Thanh Quan",
 			"email"=>"nt.quan1704@gmail.com",
 			"authority"=>"admin",
+			"block"=>false,
+			"url"=>"img\avatar\user.jpg"
+		]);
+
+		User::create([
+			"username"=>"ntq170493",
+			"password"=>Hash::make("123456"),
+			"fullname"=>"Nguyen Thanh Quan",
+			"email"=>"quan1704@gmail.com",
+			"authority"=>"user",
+			"block"=>false,
+			"url"=>"img\avatar\user.jpg"
+		]);
+
+		User::create([
+			"username"=>"ddasda",
+			"password"=>Hash::make("123456"),
+			"fullname"=>"Nguyen Thanh Quan",
+			"email"=>"asdasd@gmail.com",
+			"authority"=>"user",
+			"block"=>false,
+			"url"=>"img\avatar\user.jpg"
+		]);
+
+		User::create([
+			"username"=>"dasdasd",
+			"password"=>Hash::make("asdasd"),
+			"fullname"=>"Nguyen Thanh Quan",
+			"email"=>"nt.asdasdasd@gmail.com",
+			"authority"=>"user",
+			"block"=>false,
+			"url"=>"img\avatar\user.jpg"
+		]);
+
+		User::create([
+			"username"=>"asdasdad",
+			"password"=>Hash::make("asdasdasdsa"),
+			"fullname"=>"asdasdasdad",
+			"email"=>"nt.asdasdasd@gmail.com",
+			"authority"=>"user",
+			"block"=>false,
 			"url"=>"img\avatar\user.jpg"
 		]);
 	}

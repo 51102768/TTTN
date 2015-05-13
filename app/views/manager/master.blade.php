@@ -76,7 +76,7 @@
                                         <em>{{$message->user->created_at}}</em>
                                     </span>
                                 </div>
-                                <div>{{substr($message->text,0,35)."..."}}</div>
+                                <div>{{substr($message->text,0,10)."..."}}</div>
                                 </a>
                         </li>
                         <li class="divider"></li>

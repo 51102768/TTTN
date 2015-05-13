@@ -22,6 +22,7 @@ class CreateAccountTable extends Migration {
 			$table->string('phone');
 			$table->string('address');
 			$table->string('authority');
+			$table->boolean('block');
 			$table->string('url')->nullable();
 			$table->rememberToken();
 			$table->timestamps();

@@ -61,7 +61,8 @@ Route::get('user',function(){
 					"email"=>$user->email,
 					"phone"=>$user->phone,
 					"address"=>$user->address,
-					"url"=>$user->url);
+					"url"=>$user->url,
+					"authority"=>$user->authority);
 
 			return Response::json($data);
 		}
@@ -79,7 +80,15 @@ Route::get('user',function(){
 			$user->block = false;
 			$user->save();
 			
-			return "Success Block!";
+			return "Success  Unblock!";
+		}
+		else if ($input["action"] == "changeAuth") {
+			$user =  User::find($input['user_id']);
+
+			$user->authority = strtolower($input["authority"]);
+			$user->save();
+			
+			return "Success  change author!";
 		}
 	}
 });

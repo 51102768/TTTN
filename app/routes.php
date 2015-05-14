@@ -92,3 +92,5 @@ Route::get('user',function(){
 		}
 	}
 });
+
+Route::get("customer-statistics","CustomerController@indexStatistics");

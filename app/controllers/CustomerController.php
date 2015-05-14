@@ -8,7 +8,9 @@ class CustomerController extends \BaseController {
 	 * @return Response
 	 */
 	public function index()
-	{
+	{	
+		
+		
 		$messages = Message::orderBy('created_at','desc')->get();
 
 		$users = User::all();
@@ -87,5 +89,27 @@ class CustomerController extends \BaseController {
 		//
 	}
 
+	public function indexStatistics(){
+		$messages = Message::orderBy('created_at','desc')->get();
+
+		$users = User::all();
+		$count_user = $users->count();
+		$count_user_nomal = count(DB::select('select * from account where authority = "user"'));
+		$count_user_vip = count(DB::select('select * from account where authority = "vip"'));
+		$user_new = DB::select("select * from account where created_at between DATE_SUB(CURDATE(),INTERVAL (DAY(CURDATE())-1) DAY) and LAST_DAY(NOW())");
+		$count_user_new = count($user_new);
+		$count_messages = $messages->count();
+
+		return View::make("manager.customer-stats",
+			array("users"=>$users,
+				"messages"=>$messages,
+				"count_user"=>$count_user,
+				"count_user_nomal"=>$count_user_nomal,
+				"count_user_vip"=>$count_user_vip,
+				"count_messages"=>$count_messages,
+				"count_user_new"=>$count_user_new,
+				"user_new"=>$user_new));
+
+	}
 
 }

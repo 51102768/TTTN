@@ -11,8 +11,15 @@ class ManagerController extends \BaseController {
 	{
 		$messages = Message::orderBy('created_at','desc')->get();
 		$num_mess = Message::all()->count();
-		return View::make('manager.index')->with("messages",$messages)
-							->with("num_mess",$num_mess);
+
+		$user_new = DB::select("select * from account where created_at between DATE_SUB(CURDATE(),INTERVAL (DAY(CURDATE())-1) DAY) and LAST_DAY(NOW())");
+		$count_user_new = count($user_new);
+
+		return View::make('manager.index',
+			array("messages"=>$messages,
+				"num_mess"=>$num_mess,
+				"count_user_new"=>$count_user_new,
+				"user_new"=>$user_new));
 	}
 
 

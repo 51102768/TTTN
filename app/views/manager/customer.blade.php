@@ -120,7 +120,7 @@
 					$("#email").html(data.email);
 					$("#phone").html(data.phone);
 					$("#address").html(data.address);
-					$("#customerWrap").slideDown(500);	
+					$("#customerWrap").slideDown(300);	
 				}
 			});
     		});
@@ -195,6 +195,7 @@
 						$("#btn_upgrade").attr("data-upgrade","upgrade");
 						$("#btn_upgrade").html("Nâng cấp");
 						$("#upgradeWrapper").fadeOut(500);
+						location.reload();
 						console.log(data);
 					}
 	    			});

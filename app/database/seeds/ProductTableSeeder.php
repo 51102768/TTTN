@@ -9,7 +9,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 	 */
 	public function run()
 	{
-		DB::table('category')->delete();
+		DB::table('product')->delete();
 
 		$categories = Category::all();
 

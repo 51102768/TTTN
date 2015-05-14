@@ -62,7 +62,7 @@
                         <div class="panel-body customer">
                         <div class="list-group list ">
                         @foreach($user_new as $user)
-		    <a href="#" data-user-id="{{$user->id}}" class="list-group-item link">
+		    <a data-user-id="{{$user->id}}" class="list-group-item link">
                                     <span class = "custom-img pull-left">
                                     <img src="{{$user->url}}" alt="User Avatar" class="img-thumbnail img-custom" />
                                     </span>

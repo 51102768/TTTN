@@ -19,7 +19,6 @@
 				<img src="{{Auth::user()->url}}" class="img-thumbnail" alt="User">
 			@endif
 		</div>
-	</div>
 	<div class="col-md-8 well">
 		<h4>Thông tin người dùng</h4>
 		<hr>

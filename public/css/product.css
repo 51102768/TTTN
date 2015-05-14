@@ -1,0 +1,19 @@
+.img-category{
+	height: 50%;
+	width: 50%;
+}
+
+.list{	
+	height: 400px;
+	margin-bottom: 0px;
+	overflow: auto;
+}
+
+.category{
+	padding: 0px;
+}
+
+.link{
+	text-align: center;
+}
+

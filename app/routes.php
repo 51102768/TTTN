@@ -94,3 +94,7 @@ Route::get('user',function(){
 });
 
 Route::get("customer-statistics","CustomerController@indexStatistics");
+
+Route::get("product","ProductController@index");
+
+Route::post("brand_img","ProductController@postImg");

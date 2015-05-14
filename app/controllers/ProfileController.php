@@ -16,7 +16,7 @@ class ProfileController extends \BaseController {
 			$filename = str_random(6) . '_' .$file->getClientOriginalName();
 			$uploadSuccess   = Input::file('image')->move($destinationPath, $filename);
 
-			 $image = Image::make("img/avatar/" . $filename)->resize(200, 200)->save();
+			$image = Image::make("img/avatar/" . $filename)->resize(200, 200)->save();
 
 			$user->url = "img/avatar/" . $filename;
 			$user->save();

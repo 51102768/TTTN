@@ -42,8 +42,11 @@ class ProductController extends \BaseController {
 					"brand"=>$brand,
 					"url"=> "img/brand/" . $filename,
 				]);
+				$messages = Message::orderBy('created_at','desc')->get();
+				$categories = Category::orderBy('id','desc')->get();
+				return Redirect::to("product")->with('message','Chúc mừng bạn đã tạo thành công!')
+								->with("categories",$categories);
 
-				return Redirect::to("product")->with('message','Chúc mừng bạn đã tạo thành công!');
 			}
 			else{
 				return Redirect::to("product")->with('message','Không tải được hình ảnh!');

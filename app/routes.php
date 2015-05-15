@@ -114,3 +114,13 @@ Route::get("product_info",function(){
 		}
 	}
 });
+
+Route::get("category_remove",function(){
+	if(Request::ajax()){
+		$input = Input::all();
+
+		DB::delete('delete from category where id ='.$input['category_id']);
+
+		return "Success!";
+	}
+});

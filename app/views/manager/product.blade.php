@@ -101,6 +101,7 @@
 		 <div class="panel-footer ">
 			<div class="row text-center">
 				<button class = "btn btn-success" data-toggle="modal" data-target="#addModal">Thêm</button>
+				<button class = "btn btn-danger" id = "removeCategory">Xóa</button>
 			</div>
 		</div>
 		 </div>
@@ -141,7 +142,7 @@
 		</div>
 		<div class="modal-body">	
 			 <div class="form-group">
-				{{Form::label('brand','Thương hiệu :')}}
+				{{Form::label('brand','Thương hiệu:')}}
 				{{ Form::text('brand','',array('class'=>'form-control','placeholder'=>'Gõ tên thương hiệu'))}}
 			</div>
 			<div class="form-group">
@@ -286,6 +287,20 @@
 					
 				}
 			});
+    		});
+    		$("#removeCategory").click(function(e){
+    			e.preventDefault();
+    			
+    			$.ajax({
+    				type:'GET',
+    				url:'category_remove',
+    				data:"category_id="+d,
+    				success:function(data){
+    					tag.slideUp("500", function() { $(this).remove(); } );
+    					$("#productWrapper").slideUp(500);
+    					console.log(data);
+    				}
+    			});
     		});
     	});
     </script>

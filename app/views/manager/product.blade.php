@@ -127,6 +127,39 @@
 		</div>
 		 </div>
 	</div>
+
+	<div class="col-lg-4" id = "productInfoWrapper">
+		<table class = "table table-striped table-bordered">
+			<tr>
+				<td>Tên sản phẩm</td>
+				<td><div  id="nameProduct"></div></td>
+			</tr>
+			<tr>
+				<td>Xuất xứ</td>
+				<td><div id="originProduct"></div></td>
+			</tr>
+			<tr>
+				<td>Trọng lượng</td>
+				<td><div id="weightProduct"></div></td>
+			</tr>
+			<tr>
+				<td>Màu</td>
+				<td><div id="colorProduct"></div></td>
+			</tr>
+			<tr>
+				<td>Bảo hành</td>
+				<td><div id="guaranteeProduct"></div></td>
+			</tr>
+			<tr>
+				<td>Số lượng</td>
+				<td><div id="stockProduct"></div></td>
+			</tr>
+			<tr>
+				<td>Giá</td>
+				<td><div id = "priceProduct"></div></td>
+			</tr>
+		</table>
+	</div>
 	
 
 </div>
@@ -262,6 +295,8 @@
     	$(document).ready(function(){
     		var d = "";
     		var tag = "";
+    		var d_product = "";
+    		var tag_product = "";
     		$(".link").click(function(e){
 			e.preventDefault();
 			tag = $(this);
@@ -274,7 +309,6 @@
 				data:"category_id="+d+"&action=open",
 				success: function(data){
 					$(".list-product").html("");
-					console.log(data);
 					if(data.length>0){
 						for(var i in data){
 							$(".list-product").append('<a href="#" data-product-id='+data[i].id+' class="list-group-item link-product"> <span class = "product-img pull-left"><img src='+data[i].url+' alt="User Avatar" class="img-thumbnail img-product" /></span><div><strong class="primary-font">'+data[i].name+'</strong><p><medium>'+data[i].origin+'</medium></p></div></a>');
@@ -292,15 +326,38 @@
     			e.preventDefault();
     			
     			$.ajax({
-    				type:'GET',
+    				type:'POST',
     				url:'category_remove',
     				data:"category_id="+d,
     				success:function(data){
     					tag.slideUp("500", function() { $(this).remove(); } );
     					$("#productWrapper").slideUp(500);
-    					console.log(data);
     				}
     			});
+    		});
+    		$(document).on("click",".link-product",function(e){
+    			console.log("hello");
+			e.preventDefault();
+			tag_product = $(this);
+			$("#productInfoWrapper").hide();
+			d_product = $(this).attr("data-product-id");
+			
+			$.ajax({
+				type:'GET',
+				url:'product_info_table',
+				data:"product_id="+d_product,
+				success: function(data){
+					console.log(data);
+					$("#nameProduct").html(data.name);
+					$("#originProduct").html(data.origin);
+					$("#weightProduct").html(data.weight);
+					$("#colorProduct").html (data.color);
+					$("#guaranteeProduct").html(data.guarantee);
+					$("#stockProduct").html(data.stock);
+					$("#priceProduct").html(data.price);
+					$("#productInfoWrapper").show(300);
+				}
+			});
     		});
     	});
     </script>

@@ -98,3 +98,17 @@ Route::get("customer-statistics","CustomerController@indexStatistics");
 Route::get("product","ProductController@index");
 
 Route::post("brand_img","ProductController@postImg");
+
+Route::get("product_info",function(){
+	if(Request::ajax()){
+		$input = Input::all();
+		$category_id = $input['category_id'];
+
+		if($input["action"] == "open"){
+			$products =  DB::select('select * from product where category_id = "'.$category_id.'" order by id desc');
+			$data = [];
+			
+			return Response::json($products);
+		}
+	}
+});

@@ -19,7 +19,6 @@ class CreatProductTable extends Migration {
 			$table->string("url");
 			$table->string("origin");
 			$table->float("weight");
-			$table->string("material");
 			$table->string("color");
 			$table->integer("guarantee");
 			$table->integer("stock");

@@ -10,7 +10,7 @@ class ProductController extends \BaseController {
 	public function index()
 	{
 		$messages = Message::orderBy('created_at','desc')->get();
-		$categories = Category::all();
+		$categories = Category::orderBy('id','desc')->get();
 
 		return View::make('manager.product',
 			array("messages"=>$messages,

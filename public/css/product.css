@@ -17,3 +17,25 @@
 	text-align: center;
 }
 
+#productWrapper{
+	display: none;
+}
+
+.img-product{
+	height: 25%;
+	width: 25%;
+}
+
+.list-product{	
+	height: 400px;
+	margin-bottom: 0px;
+	overflow: auto;
+}
+
+.product{
+	padding: 0px;
+}
+
+.product{
+	text-align: center;
+}

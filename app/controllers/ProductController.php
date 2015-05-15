@@ -52,6 +52,34 @@ class ProductController extends \BaseController {
 		else return Redirect::to('product')->withInput()->withErrors($validator->messages());
 	}
 
+	public function postAdd(){
+		$input = Input::all();
+
+		$product = new Product();
+		$product->name = $input['name'];
+		$product->origin = $input['origin'];
+		$product->weight = $input['weight'];
+		$product->color = $input['color'];
+		$product->guarantee = $input['guarantee'];
+		$product->stock = $input['stock'];
+		$product->price = $input["price"];
+		$product->category_id = $input["category_id"];
+
+		$file = Input::file('product_image');
+		$destinationPath = public_path().'/img/product';
+		$filename = str_random(6) . '_' .$file->getClientOriginalName();
+		$uploadSuccess   = Input::file('product_image')->move($destinationPath, $filename);
+
+		$image = Image::make("img/product/" . $filename)->resize(400, 400)->save();
+
+		$product->url = "img/product/" . $filename;
+
+		$product->save();
+
+		
+		return Redirect::to("product");
+	}
+
 
 	/**
 	 * Show the form for creating a new resource.

@@ -39,3 +39,7 @@
 .product{
 	text-align: center;
 }
+
+#name-error{
+	display: none;
+}

@@ -11,7 +11,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 	{
 		DB::table('product')->delete();
 
-		$categories = Category::all();
+		$categories = Category::where("brand", "=","Sennheiser")->first();
 
 		Product::create([
 			"name"		=>"Sennheiser MX 686G Sport",
@@ -21,7 +21,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"23",
 			"color"		=>"Green",
 			"price"		=>"69.95",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id
 		]);
 		Product::create([
 			"name"		=>"Sennheiser Momentum",
@@ -31,7 +32,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"16",
 			"color"		=>"Red and Black",
 			"price"		=>"99.95",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id
 		]);
 		Product::create([
 			"name"		=>"Sennheiser CX200 Street II",
@@ -41,7 +43,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"5",
 			"color"		=>"Black",
 			"price"		=>"35",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id
 		]);
 		Product::create([
 			"name"		=>"Sennheiser HDR 120 Expansion",
@@ -51,7 +54,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"229",
 			"color"		=>"Black",
 			"price"		=>"69",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id
 		]);
 		Product::create([
 			"name"		=>"Sennheiser HD 280 Pro",
@@ -61,8 +65,11 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"220",
 			"color"		=>"Black",
 			"price"		=>"80",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id
 		]);
+		$categories = Category::where("brand", "=","Audio Technica")->first();
+
 		Product::create([
 			"name"		=>"Audio Technica ATH-M50x Professional Foldable Studio Monitor Headphones - Black",
 			"stock"		=>"25",
@@ -71,8 +78,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"285",
 			"color"		=>"Black",
 			"price"		=>"173.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id
 		]);
+
 		Product::create([
 			"name"		=>"Audio Technica ATH-M30x Professional Monitor Headphones - Black",
 			"stock"		=>"35",
@@ -81,7 +90,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"220",
 			"color"		=>"Black",
 			"price"		=>"69",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Audio Technica ATH-SPORT 3",
@@ -91,7 +101,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"9.5",
 			"color"		=>"Black and Silver",
 			"price"		=>"49.5",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Audio Technica ATH-M40x Professional Monitor Headphones - Black",
@@ -101,7 +112,9 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"240",
 			"color"		=>"Black",
 			"price"		=>"124",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
+
 		]);
 		Product::create([
 			"name"		=>"Audio Technica ATH-IM50 Dual Symphonic",
@@ -111,8 +124,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"3",
 			"color"		=>"Black",
 			"price"		=>"57.7",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
+		$categories = Category::where("brand", "=","Bose")->first();
 		Product::create([
 			"name"		=>"Bose IE2 In-Ear only Headphones - Black/White",
 			"stock"		=>"11",
@@ -121,7 +136,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"18.4",
 			"color"		=>"Black and White",
 			"price"		=>"120",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Bose SIE2 sport headphones (Green)",
@@ -131,7 +147,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"17",
 			"color"		=>"Green",
 			"price"		=>"70",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Bose QuietComfort QC25 Acoustic Noise Cancelling",
@@ -141,7 +158,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"195",
 			"color"		=>"Black",
 			"price"		=>"228.77",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"BOSE SoundLink Mini Bluetooth Music Player Sterio Wireless Speaker",
@@ -151,7 +169,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"680",
 			"color"		=>"Grey",
 			"price"		=>"175",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"BOSE Companion® 2 Series III multimedia speaker system",
@@ -161,8 +180,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"1800",
 			"color"		=>"Black",
 			"price"		=>"99.95",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
+		$categories = Category::where("brand", "=","Philips")->first();
 		Product::create([
 			"name"		=>"Phillips Fidelio On-ear headband headset",
 			"stock"		=>"7",
@@ -171,7 +192,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"166",
 			"color"		=>"Black",
 			"price"		=>"229.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Phillips SHE3595PP/28",
@@ -181,7 +203,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"10.95",
 			"color"		=>"Purple",
 			"price"		=>"99.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Phillips Vibe 8GB MP3/MP4 player Fullsound",
@@ -191,7 +214,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"33",
 			"color"		=>"Black",
 			"price"		=>"49.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Phillips Raga 4GB MP3 Player",
@@ -201,7 +225,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"33",
 			"color"		=>"Blue or Black",
 			"price"		=>"39.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Phillips Ariaz 16GB MP3 Player",
@@ -211,8 +236,11 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"65",
 			"color"		=>"Black",
 			"price"		=>"99.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
+
 		]);
+		$categories = Category::where("brand", "=","Apple")->first();
 		Product::create([
 			"name"		=>"Apple iPod Shuffle",
 			"stock"		=>"79",
@@ -221,7 +249,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"12.5",
 			"color"		=>"Multiple Colors",
 			"price"		=>"49",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Apple iPod Nano",
@@ -231,7 +260,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"31",
 			"color"		=>"Multiple Colors",
 			"price"		=>"149",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Apple iPod Touch",
@@ -241,7 +271,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"88",
 			"color"		=>"Multiple Colors",
 			"price"		=>"199",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Apple EarPods with Remote and Mic",
@@ -251,7 +282,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"10",
 			"color"		=>"White",
 			"price"		=>"29",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Apple In-Ear Headphones with Remote and Mic",
@@ -261,8 +293,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"10.2",
 			"color"		=>"White",
 			"price"		=>"79",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
+		$categories = Category::where("brand", "=","Lehman Audio")->first();
 		Product::create([
 			"name"		=>"LEHMANN AUDIO LINEAR - HEADPHONE AMPLIFIER",
 			"stock"		=>"11",
@@ -271,7 +305,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"1500",
 			"color"		=>"Black",
 			"price"		=>"399",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"LEHMANN AUDIO TRAVELLER - PORTABLE HEADPHONE AMPLIFIER",
@@ -281,7 +316,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"196",
 			"color"		=>"Black",
 			"price"		=>"599",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"LEHMANN AUDIO - BLACK CUBE SE II",
@@ -291,7 +327,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"400",
 			"color"		=>"Black",
 			"price"		=>"799",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"LEHMANN AUDIO - RHINELANDER",
@@ -301,7 +338,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"400",
 			"color"		=>"Silver",
 			"price"		=>"529",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"LEHMANN AUDIO LINEAR SE - HEADPHONE AMPLIFIER",
@@ -311,8 +349,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"2200",
 			"color"		=>"Silver",
 			"price"		=>"799",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
+		$categories = Category::where("brand", "=","Astelln Kern")->first();
 		Product::create([
 			"name"		=>"AK 120",
 			"stock"		=>"18",
@@ -321,7 +361,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"143",
 			"color"		=>"Black",
 			"price"		=>"789",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"AK 240",
@@ -331,7 +372,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"185",
 			"color"		=>"Black",
 			"price"		=>"1189",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"AK 500N",
@@ -341,7 +383,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"11385",
 			"color"		=>"Black",
 			"price"		=>"10000",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"AK JR",
@@ -351,7 +394,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"93",
 			"color"		=>"White",
 			"price"		=>"894",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"AK 100 II",
@@ -361,8 +405,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"122",
 			"color"		=>"Black",
 			"price"		=>"699",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
+		$categories = Category::where("brand", "=","Braven")->first();
 		Product::create([
 			"name"		=>"Braven BRV HD",
 			"stock"		=>"22",
@@ -371,7 +417,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"1820",
 			"color"		=>"Black",
 			"price"		=>"299.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Braven 805",
@@ -381,7 +428,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"1270",
 			"color"		=>"Multiple Colors",
 			"price"		=>"199.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Braven 770",
@@ -391,7 +439,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"907",
 			"color"		=>"Black",
 			"price"		=>"149.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Braven 570",
@@ -401,7 +450,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"312",
 			"color"		=>"Blue",
 			"price"		=>"99.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Braven BRV Bank",
@@ -411,8 +461,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"278",
 			"color"		=>"Black",
 			"price"		=>"99.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
+		$categories = Category::where("brand", "=","NuForce")->first();
 		Product::create([
 			"name"		=>"NuForce Primo 8",
 			"stock"		=>"42",
@@ -421,7 +473,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"19.3",
 			"color"		=>"Black and Blue",
 			"price"		=>"499",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"NuForce NE750M",
@@ -431,7 +484,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"14",
 			"color"		=>"Black and Red",
 			"price"		=>"99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"NuForce NE800M",
@@ -441,7 +495,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"18",
 			"color"		=>"Black and Gold",
 			"price"		=>"169",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"NuForce uDAC3",
@@ -451,7 +506,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"250",
 			"color"		=>"Red",
 			"price"		=>"129",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"NuForce HA-200",
@@ -461,8 +517,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"2200",
 			"color"		=>"Black",
 			"price"		=>"349",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
+		$categories = Category::where("brand", "=","Shure")->first();
 		Product::create([
 			"name"		=>"Shure SRH940",
 			"stock"		=>"19",
@@ -471,7 +529,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"320",
 			"color"		=>"Black",
 			"price"		=>"299.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Shure SE846",
@@ -481,7 +540,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"30",
 			"color"		=>"White",
 			"price"		=>"999",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Shure SE112",
@@ -491,7 +551,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"32",
 			"color"		=>"Black",
 			"price"		=>"49.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Shure SE535LTD",
@@ -501,7 +562,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"48",
 			"color"		=>"Red",
 			"price"		=>"549.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 		Product::create([
 			"name"		=>"Shure SRH750DJ",
@@ -511,7 +573,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"weight"	=>"227",
 			"color"		=>"Black",
 			"price"		=>"149.99",
-			"guarantee"	=>'2"'
+			"guarantee"	=>'2"',
+			"category_id" =>$categories->id,
 		]);
 	}
 }

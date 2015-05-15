@@ -99,6 +99,8 @@ Route::get("product","ProductController@index");
 
 Route::post("brand_img","ProductController@postImg");
 
+Route::post("product_add","ProductController@postAdd");
+
 Route::get("product_info",function(){
 	if(Request::ajax()){
 		$input = Input::all();

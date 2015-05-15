@@ -120,6 +120,7 @@ Route::post("category_remove",function(){
 		$input = Input::all();
 
 		DB::delete('delete from category where id ='.$input['category_id']);
+		DB::delete('delete from product where category_id ='.$input['category_id']);
 
 		return "Success!";
 	}
@@ -132,5 +133,15 @@ Route::get("product_info_table",function(){
 		$data = Product::find($input["product_id"]);
 
 		return Response::json($data);
+	}
+});
+
+Route::post("product_remove",function(){
+	if(Request::ajax()){
+		$input = Input::all();
+
+		DB::delete('delete from product where id ='.$input['product_id']);
+
+		return "Success!";
 	}
 });

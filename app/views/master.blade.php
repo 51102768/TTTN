@@ -13,11 +13,6 @@
 		rel="stylesheet"
 		href="{{ asset("bootstrap/dist/css/bootstrap.min.css") }}"
 		/>
-		<link
-		type="text/css"
-		rel="stylesheet"
-		href="{{ asset("bootstrap/dist/css/bootstrap.theme.min.css") }}"
-		/>
 		<script
 		type="text/javascript"
 		src="{{ asset("js/jquery-1.11.2.min.js") }}"

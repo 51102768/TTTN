@@ -68,19 +68,22 @@ class ProductController extends \BaseController {
 		$product->price = $input["price"];
 		$product->category_id = $input["category_id"];
 
-		$file = Input::file('product_image');
-		$destinationPath = public_path().'/img/product';
-		$filename = str_random(6) . '_' .$file->getClientOriginalName();
-		$uploadSuccess   = Input::file('product_image')->move($destinationPath, $filename);
+		if(Input::hasFile('product_image')){
+			$file = Input::file('product_image');
+			$destinationPath = public_path().'/img/product';
+			$filename = str_random(6) . '_' .$file->getClientOriginalName();
+			$uploadSuccess   = Input::file('product_image')->move($destinationPath, $filename);
 
-		$image = Image::make("img/product/" . $filename)->resize(400, 400)->save();
+			$image = Image::make("img/product/" . $filename)->resize(400, 400)->save();
 
-		$product->url = "img/product/" . $filename;
+			$product->url = "img/product/" . $filename;
 
-		$product->save();
+			$product->save();
 
-		
-		return Redirect::to("product");
+			
+			return Redirect::to("product");
+		}
+		else return Redirect::to("product")->with("message","Không tải được file");
 	}
 
 

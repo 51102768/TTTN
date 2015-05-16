@@ -56,6 +56,8 @@ class LoginController extends \BaseController {
 			$user = User::where('username', '=', Input::get('username'))->firstOrFail();
 			if($user->block == false){
 				if(Auth::attempt($credentials)){
+					DB::update("UPDATE page  SET login = login + 1  WHERE id = 1");
+
 					return Redirect::to('/')->with('message','Chúc mừng bạn đã đăng nhập thành công');
 				}
 				else{

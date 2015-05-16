@@ -9,9 +9,11 @@ class OrderItemTableSeeder extends DatabaseSeeder {
 	 */
 	public function run()
 	{
+		DB::table('order_item')->delete();
+
 		$faker = $this->getFaker();
 
-		$orders = Oder::all();
+		$orders = Order::all();
 		$products = Product::all()->toArray();
 
 		foreach ($orders as $order){

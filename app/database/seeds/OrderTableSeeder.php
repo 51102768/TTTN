@@ -9,16 +9,16 @@ class OrderTableSeeder extends DatabaseSeeder {
 	 */
 	public function run()
 	{
+		DB::table('order')->delete();
+
 		$faker = $this->getFaker();
 
 		$accounts = Account::all();
 
-		foreach($accounts as $account){
-			for($i = 0; $i < rand(1,5); $i++){
-				Oder::create([
-					"account_id" => $account->id,
-				]);
-			}
+		for($i = 0; $i < rand(10,20); $i++){
+			Order::create([
+				"account_id" => rand(1,5)
+			]);
 		}
 	}
 }

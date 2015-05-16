@@ -11,10 +11,12 @@ class ProductController extends \BaseController {
 	{
 		$messages = Message::orderBy('created_at','desc')->get();
 		$categories = Category::orderBy('id','desc')->get();
+		$order_num = Order::all()->count();
 
 		return View::make('manager.product',
 			array("messages"=>$messages,
-				"categories"=>$categories));
+				"categories"=>$categories,
+				"order_num"=>$order_num));
 	}
 
 	public function postImg(){

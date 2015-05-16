@@ -8,9 +8,10 @@ class MessageController extends BaseController {
 	 * @return Response
 	 */
 	public function index()
-	{	
+	{	$order_num = Order::all()->count();
 		$messages = Message::orderBy('created_at','desc')->get();
-		return View::make("manager.message")->with('messages',$messages);
+		return View::make("manager.message")->with('messages',$messages)
+								->with("order_num",$order_num);
 	}
 
 

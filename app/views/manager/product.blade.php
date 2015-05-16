@@ -205,38 +205,38 @@
 
 @section("script")
 
-<!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- jQuery -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+	<!-- Metis Menu Plugin JavaScript -->
+	<script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-    
-    <!-- Custom Theme JavaScript -->
-    <script src="dist/js/sb-admin-2.js"></script>
 
-    <script type="text/javascript" src="js\form-validator\jquery.form-validator.min.js"></script>
+	<!-- Custom Theme JavaScript -->
+	<script src="dist/js/sb-admin-2.js"></script>
 
-    <script>
-    	$.validate({
+	<script type="text/javascript" src="js\form-validator\jquery.form-validator.min.js"></script>
+
+	<script>
+		$.validate({
 		form : '#brandForm, #productForm'
 	});
-    </script>
+	</script>
 
-     <script>     
-     	function isInArray(value, array) {
+	 <script>     
+	 	function isInArray(value, array) {
 	  return array.indexOf(value) > -1;
 	}
 
-    	$(document).ready(function(){
-    		var d = "";
-    		var tag = "";
-    		var d_product = "";
-    		var tag_product = "";
-    		$(".link").click(function(e){
+		$(document).ready(function(){
+			var d = "";
+			var tag = "";
+			var d_product = "";
+			var tag_product = "";
+			$(".link").click(function(e){
 			e.preventDefault();
 			tag = $(this);
 			$("#productInfoWrapper").hide(300);
@@ -261,23 +261,23 @@
 					
 				}
 			});
-    		});
-    		$("#removeCategory").click(function(e){
-    			e.preventDefault();
-    			
-    			$.ajax({
-    				type:'POST',
-    				url:'category_remove',
-    				data:"category_id="+d,
-    				success:function(data){
-    					tag.slideUp("500", function() { $(this).remove(); } );
-    					$("#productWrapper").slideUp(500);
-    					$("#productInfoWrapper").slideUp(200);
-    				}
-    			});
-    		});
-    		$(document).on("click",".link-product",function(e){
-    			console.log("hello");
+			});
+			$("#removeCategory").click(function(e){
+				e.preventDefault();
+				
+				$.ajax({
+					type:'POST',
+					url:'category_remove',
+					data:"category_id="+d,
+					success:function(data){
+						tag.slideUp("500", function() { $(this).remove(); } );
+						$("#productWrapper").slideUp(500);
+						$("#productInfoWrapper").slideUp(200);
+					}
+				});
+			});
+			$(document).on("click",".link-product",function(e){
+				console.log("hello");
 			e.preventDefault();
 			tag_product = $(this);
 			$("#productInfoWrapper").hide();
@@ -299,20 +299,20 @@
 					$("#productInfoWrapper").show(300);
 				}
 			});
-    		});
-    		$("#removeProduct").click(function(e){
-    			e.preventDefault();
-    			
-    			$.ajax({
-    				type:'POST',
-    				url:'product_remove',
-    				data:"product_id="+d_product,
-    				success:function(data){
-    					tag_product.slideUp("500", function() { $(this).remove(); } );
-    					$("#productInfoWrapper").slideUp(200);
-    				}
-    			});
-    		});
-    	});
-    </script>
+			});
+			$("#removeProduct").click(function(e){
+				e.preventDefault();
+				
+				$.ajax({
+					type:'POST',
+					url:'product_remove',
+					data:"product_id="+d_product,
+					success:function(data){
+						tag_product.slideUp("500", function() { $(this).remove(); } );
+						$("#productInfoWrapper").slideUp(200);
+					}
+				});
+			});
+		});
+	</script>
 @stop

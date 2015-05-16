@@ -47,3 +47,16 @@
 #productInfoWrapper{
 	display: none;
 }
+
+.product-high{
+	padding: 0px;
+}
+
+.product-high table{
+	margin-bottom: 0px;
+}
+
+.panel{
+	margin-left: 10px;
+	margin-right: 10px;
+}

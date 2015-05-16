@@ -1,0 +1,17 @@
+.order{	
+	height: 300px;
+	overflow: auto;
+}
+
+.row-order{
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border-bottom: 1px solid #5cb85c;
+	height: auto;
+}
+
+.col-order{
+	margin: auto;
+	height: 100%;
+	 word-wrap: break-word;
+	}

@@ -145,3 +145,22 @@ Route::post("product_remove",function(){
 		return "Success!";
 	}
 });
+
+Route::get("product_statistics","ProductStatController@index");
+
+
+Route::get("order","OrderController@index");
+
+Route::get("order_check",function(){
+	if(Request::ajax()){	
+		$input = Input::all();
+
+		$order = Order::find($input["order_id"]);
+
+		$order->forceDelete();
+
+		$order->orderItems()->forceDelete();
+
+		return "Success!";
+	}
+});

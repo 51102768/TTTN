@@ -6,7 +6,7 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Oder extends Eloquent {
+class Order extends Eloquent {
 	use SoftDeletingTrait;
 
 	protected $table = "order";

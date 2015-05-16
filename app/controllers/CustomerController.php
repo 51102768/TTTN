@@ -13,10 +13,13 @@ class CustomerController extends \BaseController {
 		
 		$messages = Message::orderBy('created_at','desc')->get();
 
+		$order_num = Order::all()->count();
+
 		$users = User::all();
 
 		return View::make("manager.customer")->with("messages",$messages)
-								->with("users",$users);
+								->with("users",$users)
+								->with("order_num",$order_num);
 	}
 
 
@@ -92,6 +95,8 @@ class CustomerController extends \BaseController {
 	public function indexStatistics(){
 		$messages = Message::orderBy('created_at','desc')->get();
 
+		$order_num = Order::all()->count();
+
 		$users = User::all();
 		$count_user = $users->count();
 		$count_user_nomal = count(DB::select('select * from account where authority = "user"'));
@@ -108,7 +113,8 @@ class CustomerController extends \BaseController {
 				"count_user_vip"=>$count_user_vip,
 				"count_messages"=>$count_messages,
 				"count_user_new"=>$count_user_new,
-				"user_new"=>$user_new));
+				"user_new"=>$user_new,
+				"order_num"=>$order_num));
 
 	}
 

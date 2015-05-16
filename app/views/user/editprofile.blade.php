@@ -11,7 +11,7 @@
 @section('content')
 
 <div class="row ">
-	<div class="col-md-4 col-centered text-center">
+	<div class="col-md-4 col-lg-4 col-centered text-center">
 		<div class="row">
 			@if(is_null(Auth::user()->url))
 				<img src="img\avatar\user.jpg" class="img-thumbnail" alt="User">
@@ -19,7 +19,8 @@
 				<img src="{{Auth::user()->url}}" class="img-thumbnail" alt="User">
 			@endif
 		</div>
-	<div class="col-md-8 well">
+	</div>
+	<div class="col-md-8 col-lg-8 well">
 		<h4>Thông tin người dùng</h4>
 		<hr>
 		<p style = "color:red">Bỏ trống để xóa thông tin</p>

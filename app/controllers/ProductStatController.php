@@ -1,6 +1,6 @@
 <?php
 
-class ManagerController extends \BaseController {
+class ProductStatController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -10,19 +10,23 @@ class ManagerController extends \BaseController {
 	public function index()
 	{
 		$messages = Message::orderBy('created_at','desc')->get();
-		$num_mess = Message::all()->count();
 
-		$user_new = DB::select("select * from account where created_at between DATE_SUB(CURDATE(),INTERVAL (DAY(CURDATE())-1) DAY) and LAST_DAY(NOW())");
-		$count_user_new = count($user_new);
+		$high_products = Product::orderBy('buytime','desc')->take(10)->get();
+
+		$new_products = Product::orderBy('created_at','desc')->take(10)->get();
 
 		$order_num = Order::all()->count();
 
-		return View::make('manager.index',
-			array("messages"=>$messages,
-				"num_mess"=>$num_mess,
-				"count_user_new"=>$count_user_new,
-				"user_new"=>$user_new,
-				"order_num"=>$order_num));
+		$categories = Category::all();
+
+		$count=1;
+		return View::make("manager.product-stats",
+						array('messages'=>$messages,
+							'high_products'=>$high_products,
+							"new_products"=>$new_products,
+							"categories" => $categories,
+							'count'=>$count,
+							"order_num"=>$order_num));
 	}
 
 

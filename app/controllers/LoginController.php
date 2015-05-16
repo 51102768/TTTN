@@ -57,7 +57,9 @@ class LoginController extends \BaseController {
 			if($user->block == false){
 				if(Auth::attempt($credentials)){
 					DB::update("UPDATE page  SET login = login + 1  WHERE id = 1");
-
+					$user = Auth::user();
+					$user->login = date("Y-m-d H:i:s");
+					$user->save();
 					return Redirect::to('/')->with('message','Chúc mừng bạn đã đăng nhập thành công');
 				}
 				else{

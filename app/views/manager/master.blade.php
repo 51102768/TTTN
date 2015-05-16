@@ -170,7 +170,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Quản lí trang</a>
+                            <a href="page"><i class="fa fa-files-o fa-fw"></i> Quản lí trang</a>
                         </li>
                     </ul>
                 </div>

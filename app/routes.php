@@ -62,7 +62,8 @@ Route::get('user',function(){
 					"phone"=>$user->phone,
 					"address"=>$user->address,
 					"url"=>$user->url,
-					"authority"=>$user->authority);
+					"authority"=>$user->authority,
+					"block" => $user->block);
 
 			return Response::json($data);
 		}
@@ -164,3 +165,5 @@ Route::get("order_check",function(){
 		return "Success!";
 	}
 });
+
+Route::get("page","PageController@index");

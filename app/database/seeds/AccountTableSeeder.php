@@ -18,7 +18,8 @@ class AccountTableSeeder extends DatabaseSeeder {
 			"email"=>"nt.quan1704@gmail.com",
 			"authority"=>"admin",
 			"block"=>false,
-			"url"=>"img\avatar\user.jpg"
+			"url"=>"img\avatar\user.jpg",
+			"login"=>date('Y-m-d H:m:s'),
 		]);
 
 		User::create([
@@ -28,7 +29,8 @@ class AccountTableSeeder extends DatabaseSeeder {
 			"email"=>"quan1704@gmail.com",
 			"authority"=>"user",
 			"block"=>false,
-			"url"=>"img\avatar\user.jpg"
+			"url"=>"img\avatar\user.jpg",
+			"login"=>date('Y-m-d H:m:s'),
 		]);
 
 		User::create([
@@ -38,7 +40,8 @@ class AccountTableSeeder extends DatabaseSeeder {
 			"email"=>"asdasd@gmail.com",
 			"authority"=>"user",
 			"block"=>false,
-			"url"=>"img\avatar\user.jpg"
+			"url"=>"img\avatar\user.jpg",
+			"login"=>date('Y-m-d H:m:s'),
 		]);
 
 		User::create([
@@ -48,7 +51,8 @@ class AccountTableSeeder extends DatabaseSeeder {
 			"email"=>"nt.asdasdasd@gmail.com",
 			"authority"=>"user",
 			"block"=>false,
-			"url"=>"img\avatar\user.jpg"
+			"url"=>"img\avatar\user.jpg",
+			"login"=>date('Y-m-d H:m:s'),
 		]);
 
 		User::create([
@@ -58,7 +62,8 @@ class AccountTableSeeder extends DatabaseSeeder {
 			"email"=>"nt.asdasdasd@gmail.com",
 			"authority"=>"user",
 			"block"=>false,
-			"url"=>"img\avatar\user.jpg"
+			"url"=>"img\avatar\user.jpg",
+			"login"=>date('Y-m-d H:m:s'),
 		]);
 	}
 }

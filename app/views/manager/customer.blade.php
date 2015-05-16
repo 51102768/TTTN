@@ -74,7 +74,7 @@
 				<div class="row text-center">
 					<div class="btn-group" role="group" aria-label="...">
 						<button type="button" class="btn btn-danger" id = "btn_remove">Xóa</button>
-						<button type="button" class="btn btn-primary" id = "btn_block" data-user-status="unblocked">Chặn</button>
+						<button type="button" class="btn btn-primary" id = "btn_block" data-user-status="unblocked"></button>
 						<button type="button" class="btn btn-success" id = "btn_upgrade" data-upgrade = "upgrade">Nâng cấp</button>
 					</div>
 				</div>
@@ -120,6 +120,12 @@
 					$("#email").html(data.email);
 					$("#phone").html(data.phone);
 					$("#address").html(data.address);
+					if(data.block == true){
+						$("#btn_block").html("Bỏ Chặn");
+					}
+					else {
+						$("#btn_block").html("Chặn");
+					}
 					$("#customerWrap").slideDown(300);	
 				}
 			});
@@ -169,7 +175,7 @@
     		});
     		$("#btn_upgrade").click(function(e){
     			e.preventDefault();
-    			$("#upgradeWrapper").fadeIn(500);
+    			
     			var userupgrade = $("#btn_upgrade").attr("data-upgrade");
 	    		if(userupgrade == "upgrade"){	
 	    			$.ajax({
@@ -180,6 +186,7 @@
 						$("#authority").html("Level: "+data.authority);
 						$("#btn_upgrade").attr("data-upgrade","change");
 						$("#btn_upgrade").html("Thay đổi");
+						$("#upgradeWrapper").fadeIn(500);
 					}
 				});
 	    		}

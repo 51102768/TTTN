@@ -17,12 +17,15 @@ class ManagerController extends \BaseController {
 
 		$order_num = Order::all()->count();
 
+		$num_view = Page::find(1)->view;
+
 		return View::make('manager.index',
 			array("messages"=>$messages,
 				"num_mess"=>$num_mess,
 				"count_user_new"=>$count_user_new,
 				"user_new"=>$user_new,
-				"order_num"=>$order_num));
+				"order_num"=>$order_num,
+				"num_view"=>$num_view));
 	}
 
 

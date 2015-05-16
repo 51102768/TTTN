@@ -68,9 +68,3 @@
 		form : '#loginForm'
 	});
     </script>
-
-@if(Session::has('message'))
-	<script>
-		alert('{{Session::get("message");}}');
-	</script>
-@endif

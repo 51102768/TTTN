@@ -12,7 +12,7 @@ class PageTableSeeder extends DatabaseSeeder {
 		DB::table('page')->delete();
 
 		Page::create([
-			"id"=>1;
+			"id"=>1,
 			"view"=>0,
 			"login"=>0,
 		]);

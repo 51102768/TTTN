@@ -1,4 +1,5 @@
-.title{
+.title{	
+	margin-left: 15px;
 	padding: 1px;
 	border: solid 1px yellow;
 	margin-bottom: 10px;
@@ -14,6 +15,7 @@
 }
 
 .category{
+	margin-left: 10px;
 	background-color: white;
 }
 .category ul{
@@ -51,9 +53,54 @@
 .product ul li.last{
 	margin-right: 0px;
 }
-.lable{
-	float: left;
-}
+
 .content{
 	float: left;
+}
+
+.carousel-inner > .item > a > img {	
+	margin: auto;
+	width: 200px;
+	height: 150px;
+}
+
+.carousel-inner > .item > img {	
+	margin: auto;
+	width: 200px;
+	height: 150px;
+}
+
+#title-product{
+	margin-left: 15px;
+}
+
+.right-wrapper{
+	padding-left: 40px;
+}
+
+.hot-product{
+	float:left;
+	margin-left: 0px;
+}
+
+#product-hot{
+	float: left;
+	padding-left: 0px;
+
+}
+
+
+.hot-product ul{
+	list-style-type: none;
+}
+
+.hot-product li{
+	float: left;
+	height: 20%;
+	width: 20%;
+}
+
+.hot-product img{
+	height: 50%;
+	width: 50%;
 }

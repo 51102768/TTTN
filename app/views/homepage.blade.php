@@ -1,18 +1,13 @@
 @extends('master')
 
 @section('header')
-	<link
-		type="text/css"
-		rel="stylesheet"
-		href="{{ asset("css/carousel.css") }}"
-		/>
+
 <<<<<<< HEAD
 	<link
 	type="text/css"
 	rel="stylesheet"
 	href="{{ asset("css/content.css") }}"
 	/>
-	<script type="text/javascript" src="{{ asset("js/jquery.jcarousel.pack.js")}}"></script>
 =======
 >>>>>>> df8dae5556c7d0ce311f8f68b811033d3d9d3083
 @stop
@@ -67,23 +62,15 @@
 		</div>
 	</div>
 
-	<!--Row 1-->
-	<div class="row label">
-		<div class="col-md-3">			
-			<div class="title">
-				<h3>Danh mục sản phẩm</h3>					
-			</div>
-		</div>
-		<div class="col-md-9">
-			<div class="title">
-				<h3>Hot Product</h3>				
-			</div>
-		</div>
-	</div>
 	<!--Row 2-->
-	<div class="row content">
+	<div class="row">
 		<div class="col-md-3">	
-			<div class="category">
+			<div class="row">
+				<div class="title title-product">
+					<h3>Danh mục sản phẩm</h3>					
+				</div>
+			</div>
+			<div class="row category">
 				<ul>
 					<li><a href="#">Apple</a></li>
 					<li><a href="#">AstellandKern</a></li>
@@ -96,10 +83,15 @@
 			</div>			
 		</div>
 
-		<div class="col-md-9">
+		<div class="col-md-9 right-wrapper">
+			<div class="row">
+				<div class="title">
+					<h3>Hot Product</h3>				
+				</div>
+			</div>
 			<!--Hot Product-->			
-			<div class="product hot">
-				<ul>
+			<div class="row hot-product">
+				<ul id = "product-hot">
 					<li><a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a></li>
 					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
 					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>

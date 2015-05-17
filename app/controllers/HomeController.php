@@ -19,7 +19,7 @@ class HomeController extends BaseController {
 	{	
 		DB::update("UPDATE page  SET view = view + 1  WHERE id = 1");
 
-		return View::make('master');
+		return View::make('homepage');
 	}
 
 }

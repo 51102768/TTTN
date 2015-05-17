@@ -1,4 +1,3 @@
-
 <nav class = "navbar navbar-default navbar-fixed-top" id = "navBar">
 	<div class = "navbar-header">
 		<a class = "navbar-brand" href="/public">Mỡ Shop</a>

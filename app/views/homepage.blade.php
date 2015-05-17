@@ -64,11 +64,21 @@
 		<div class="col-md-2">
 			<!--Search-->			
 			<div class="search box">
-				<h2>Search</h2>
+				<form>
+					<input type="text" name="keyword" text="Search ..."><input type="submit" value="Search">					
+				</form>
 			</div>			
+		</div>
+
+		<div class="col-md-8">
+			<!--Hot Product-->			
+			<div class="hot-product">
+				<h2>Hot Product</h2>
+			</div>
 		</div>
 	</div>		
 	<!--Footer-->
 	<div class="row">
+
 	</div>
 @stop

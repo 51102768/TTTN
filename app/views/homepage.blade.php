@@ -6,7 +6,6 @@
 		rel="stylesheet"
 		href="{{ asset("css/carousel.css") }}"
 		/>
-	<script type="text/javascript" src="{{ asset("js/jquery.jcarousel.pack.js")}}"></script>
 @stop
 
 @section('content')

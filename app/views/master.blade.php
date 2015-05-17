@@ -21,6 +21,8 @@
 		type="text/javascript"
 		src="{{ asset("bootstrap/dist/js/bootstrap.js") }}"
 		></script>
+		<script	src="/public/bootstrap/js/bootstrap.min.js"
+		></script>
 		<link
 		type="text/css"
 		rel="stylesheet"

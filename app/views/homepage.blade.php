@@ -67,12 +67,22 @@
 		</div>
 	</div>
 
-	<!--Content-->
-	<div class="row">
+	<!--Row 1-->
+	<div class="row label">
 		<div class="col-md-3">			
 			<div class="title">
 				<h3>Danh mục sản phẩm</h3>					
 			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="title">
+				<h3>Hot Product</h3>				
+			</div>
+		</div>
+	</div>
+	<!--Row 2-->
+	<div class="row content">
+		<div class="col-md-3">	
 			<div class="category">
 				<ul>
 					<li><a href="#">Apple</a></li>
@@ -88,13 +98,11 @@
 
 		<div class="col-md-9">
 			<!--Hot Product-->			
-			<div class="title">
-				<h3>Hot Product</h3>				
-			</div>
 			<div class="product hot">
 				<ul>
 					<li><a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a></li>
 					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
 					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
 				</ul>
 			</div>

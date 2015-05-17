@@ -36,6 +36,7 @@
 }
 .product ul{
 	list-style-type: none;
+	
 }
 .product ul li{
 	position: relative;
@@ -44,9 +45,15 @@
 	border: solid 1px green;
 	float: left;
 	overflow: hidden;
-	width: 230px;
-	height: 180px;
+	width: 20%;
+	height: 100px;
 }
 .product ul li.last{
 	margin-right: 0px;
+}
+.lable{
+	float: left;
+}
+.content{
+	float: left;
 }

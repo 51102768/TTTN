@@ -1,0 +1,22 @@
+.slider{	
+	position: relative;
+	overflow: hidden;
+}
+.slider-holder{
+	width:720px; 	
+	position:relative; 
+	overflow:hidden; 
+}
+#slider-holder ul{ 
+	width:720px; 	
+	position:relative; 
+	overflow:hidden; 
+	list-style-type: none;
+}
+#slider-holder ul li{ 
+	width:720px; 	
+	position:relative; 
+	overflow:hidden; 
+	float:left; 
+}
+#slider-holder .jcarousel-clip{ width:720px; height:252px; position:relative; overflow:hidden; }

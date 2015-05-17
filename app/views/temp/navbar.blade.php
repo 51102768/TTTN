@@ -1,10 +1,10 @@
 <nav class = "navbar navbar-default navbar-fixed-top" id = "navBar">
 	<div class = "navbar-header">
-		<a class = "navbar-brand" href="/public">Mỡ Shop</a>
+		<a class = "navbar-brand" href="{{URL::to('/')}}">Mỡ Shop</a>
 	</div>
 	<div class="collapse navbar-collapse">
 		<ul class = "nav navbar-nav">
-			<li><a href="/public"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
+			<li><a href="{{URL::to('/')}}"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
 			<li><a href="#">Hướng dẫn</a></li>
 			<li><a href="#">Liên hệ</a></li>
 	</ul>

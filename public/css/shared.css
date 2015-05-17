@@ -16,6 +16,10 @@ body, .content, html{
 	max-height: 10px;
 }
 
+.navbar-right{
+	padding-right: 40px;
+}
+
 body {
 	background: url("../img/background.jpg") no-repeat center center fixed; 
 	  -webkit-background-size: cover;

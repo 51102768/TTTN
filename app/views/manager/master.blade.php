@@ -57,7 +57,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/public">Mỡ Shop</a>
+                <a class="navbar-brand" href="{{URL::to('/')}}">Mỡ Shop</a>
             </div>
             <!-- /.navbar-header -->
 

@@ -179,3 +179,11 @@ Route::get("order_check",function(){
 });
 
 Route::get("page","PageController@index");
+
+
+Route::get("item",function(){
+	$input = Input::all();
+	$product = Product::find($input["product_id"]);
+
+	return View::make("product.item",array("product"=>$product));
+});

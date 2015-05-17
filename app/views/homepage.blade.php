@@ -6,6 +6,11 @@
 		rel="stylesheet"
 		href="{{ asset("css/carousel.css") }}"
 		/>
+	<link
+	type="text/css"
+	rel="stylesheet"
+	href="{{ asset("css/content.css") }}"
+	/>
 	<script type="text/javascript" src="{{ asset("js/jquery.jcarousel.pack.js")}}"></script>
 @stop
 
@@ -13,7 +18,7 @@
 	<!--Bootstrap Carousel-->
 	<div class="row">
 		<div class="slider">
-			<div id="myCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+			<div id="myCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
 				<!-- Indicators-->
 				<ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -61,19 +66,34 @@
 
 	<!--Content-->
 	<div class="row">
-		<div class="col-md-2">
-			<!--Search-->			
-			<div class="search box">
-				<form>
-					<input type="text" name="keyword" text="Search ..."><input type="submit" value="Search">					
-				</form>
+		<div class="col-md-3">			
+			<div class="title">
+				<h3>Danh mục sản phẩm</h3>					
+			</div>
+			<div class="category">
+				<ul>
+					<li><a href="#">Apple</a></li>
+					<li><a href="#">AstellandKern</a></li>
+					<li><a href="#">AudioTechnica</a></li>
+					<li><a href="#">Bose</a></li>
+					<li><a href="#">Braven</a></li>
+					<li><a href="#">Earmac</a></li>
+					<li><a href="#">Soundmax</a></li>
+				</ul>
 			</div>			
 		</div>
 
-		<div class="col-md-8">
+		<div class="col-md-9">
 			<!--Hot Product-->			
-			<div class="hot-product">
-				<h2>Hot Product</h2>
+			<div class="title">
+				<h3>Hot Product</h3>				
+			</div>
+			<div class="product hot">
+				<ul>
+					<li><a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
+				</ul>
 			</div>
 		</div>
 	</div>		

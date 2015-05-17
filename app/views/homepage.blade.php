@@ -6,12 +6,15 @@
 		rel="stylesheet"
 		href="{{ asset("css/carousel.css") }}"
 		/>
+<<<<<<< HEAD
 	<link
 	type="text/css"
 	rel="stylesheet"
 	href="{{ asset("css/content.css") }}"
 	/>
 	<script type="text/javascript" src="{{ asset("js/jquery.jcarousel.pack.js")}}"></script>
+=======
+>>>>>>> df8dae5556c7d0ce311f8f68b811033d3d9d3083
 @stop
 
 @section('content')

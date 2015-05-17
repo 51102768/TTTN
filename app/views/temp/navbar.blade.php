@@ -66,4 +66,7 @@
     	$.validate({
 		form : '#loginForm'
 	});
+    	$('.modal').on('shown.bs.modal', function (e) {
+			$('.carousel').carousel('pause');
+	});
     </script>

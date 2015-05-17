@@ -10,6 +10,7 @@
 @stop
 
 @section('content')
+	<div class="row">
 	<div class="slider">
 		<div id="myCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
 			<!-- Indicators-->
@@ -53,11 +54,8 @@
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     			<span class="sr-only">Next</span>
 			</a>
-		</div>
-		
-		
-		
-		
+		</div>		
+	</div>
 	</div>
 	<div class="product"></div>
 	

@@ -39,12 +39,13 @@
 }
 .product ul li{
 	position: relative;
+	margin-right: 5px;
 	padding: 1px;
 	border: solid 1px green;
 	float: left;
 	overflow: hidden;
-	width: 230;
-	height: 380px;
+	width: 230px;
+	height: 180px;
 }
 .product ul li.last{
 	margin-right: 0px;

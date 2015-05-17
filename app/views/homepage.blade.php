@@ -11,7 +11,7 @@
 
 @section('content')
 	<div class="slider">
-		<div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+		<div id="myCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
 			<!-- Indicators-->
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -21,26 +21,26 @@
 			 <!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				<div class="active item">
-					<img src="/public/img/slider/apple.jpg" alt="Apple">
+					<img src="/public/img/slider/apple.jpg">
 					<div class="carousel-caption">
-						<h3>Apple</h3>
-						<p>Think different.</p>
+						<h3></h3>
+						<p></p>
 					</div>
 				</div>
 
 				<div class="item">
 					<img src="/public/img/slider/techina.jpg">
 					<div class="carousel-caption">
-						<h3>Techina</h3>
-						<p>Slogan Techina</p>
+						<h3></h3>
+						<p></p>
 					</div>
 				</div>
 
 				<div class="item">
 					<img src="/public/img/slider/philips.jpg">
 					<div class="carousel-caption">
-						<h3>Astell</h3>
-						<p>Slogan Astell</p>
+						<h3></h3>
+						<p></p>
 					</div>
 				</div>
 			</div>

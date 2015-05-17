@@ -1,9 +1,11 @@
-.carousel-inner > .item > a > img {
-	width: 70%;
+.carousel-inner > .item > a > img {	
 	margin: auto;
+	width: 200px;
+	height: 150px;
 }
 
-.carousel-inner > .item > img {
-	width: 70%;
+.carousel-inner > .item > img {	
 	margin: auto;
+	width: 200px;
+	height: 150px;
 }

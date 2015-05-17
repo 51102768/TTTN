@@ -1,22 +1,17 @@
-.slider{	
-	position: relative;
-	overflow: hidden;
+.sidebar{
+	float: left;
+	width: 230px;
 }
-.slider-holder{
-	width:720px; 	
-	position:relative; 
-	overflow:hidden; 
+.box{
+	padding: 1px;
+	border: 1px solid #dedede;
+	margin-bottom: 10px;
 }
-#slider-holder ul{ 
-	width:720px; 	
-	position:relative; 
-	overflow:hidden; 
-	list-style-type: none;
+.search{
+	min-height: 250px;
 }
-#slider-holder ul li{ 
-	width:720px; 	
-	position:relative; 
-	overflow:hidden; 
-	float:left; 
+.category{
+	width: 20%;
+	min-height: 50px;
+	float: left;
 }
-#slider-holder .jcarousel-clip{ width:720px; height:252px; position:relative; overflow:hidden; }

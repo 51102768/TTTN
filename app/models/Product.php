@@ -14,7 +14,7 @@ class Product extends Eloquent {
 	protected $guarded = ["id"];
 
 	public function orders(){
-		return $this->belongsToMany("Oder","order_item");
+		return $this->belongsToMany("Order","order_item");
 	}
 
 	public function orderItems(){

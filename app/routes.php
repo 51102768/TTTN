@@ -50,8 +50,20 @@ Route::get('user',function(){
 		$input = Input::all();
 
 		if($input["action"] == "remove"){
+
+			$orders = Order::where("account_id","=",$input['user_id'])->get();
+
+			foreach ($orders as $order) {
+				$order->orderItems()->forceDelete();
+			}
+			
+			$orders = Order::where("account_id","=",$input['user_id'])->forceDelete();
+
 			$user =  User::destroy($input['user_id']);
+
+
 			return "Success!";
+			
 		}
 		else if($input["action"] == "open"){
 			$user =  User::find($input['user_id']);

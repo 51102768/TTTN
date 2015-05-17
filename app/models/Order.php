@@ -14,7 +14,7 @@ class Order extends Eloquent {
 	protected $guarded = ["id"];
 
 	public function account(){
-		return $this->belongsTo("Account");
+		return $this->belongsTo("User");
 	}
 
 	public function orderItems(){

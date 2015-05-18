@@ -106,14 +106,26 @@
 			<!--Hot Product-->			
 			<div class="row product">
 				<ul id = "product-hot">
-					<li><a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li>
+						<div clas="product-box">
+							<a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a>
+						</div>
+					</li>
+					<li>
+						<div clas="product-box">
+							<a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a>
+						</div>
+					</li>
+					<li>
+						<div clas="product-box">
+							<a href="#"><img src="/public/img/product/Apple/ipod-shuffle.jpg"></a>
+						</div>
+					</li>
+					<li>
+						<div clas="product-box">
+							<a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a>
+						</div>
+					</li>					
 				</ul>
 			</div>
 

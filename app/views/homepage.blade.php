@@ -72,7 +72,22 @@
 			</div>
 			<div class="row category">
 				<ul>
-					<li><a href="#">Apple</a></li>
+					<li class="active has-sub"><a href="#"><span>Apple</span></a>
+						<ul>
+							<li class="has-sub"><a href="#"><span>iPhone</span></a>
+								<ul>
+									<li class="last"><a href="#"><span>iPhone 3</span></a></li>
+									<li class="last"><a href="#"><span>iPhone 4</span></a></li>
+								</ul>
+							</li>
+							<li class="has-sub"><a href="#"><span>iPad</span></a>
+								<ul>
+									<li class="last"><a href="#"><span>iPad 2</span></a></li>
+									<li class="last"><a href="#"><span>iPad Air</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
 					<li><a href="#">AstellandKern</a></li>
 					<li><a href="#">AudioTechnica</a></li>
 					<li><a href="#">Bose</a></li>

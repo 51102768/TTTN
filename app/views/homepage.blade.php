@@ -99,7 +99,7 @@
 			<div class="row product">
 				<div class="title">
 					<h3>Sản phẩm bán chạy</h3>				
-				</div>
+				</div>				
 			</div>
 			<!--Hot Product-->			
 			<div class="row product">
@@ -147,6 +147,9 @@
 						</a>
 					</li>					
 				</ul>
+				<div class="more">
+					<a href="#">Xem thêm</a>
+				</div>
 			</div>
 
 			<div class="row product">
@@ -213,6 +216,9 @@
 						</a>
 					</li>													
 				</ul>
+				<div class="more">
+					<a href="#">Xem thêm</a>
+				</div>
 			</div>
 		</div>
 	</div>		

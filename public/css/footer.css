@@ -29,11 +29,10 @@
   	margin-right: 15px;
 }
 
-.social-item img{
-	  
-		margin: auto;
-		margin-top: 50%;
-		margin-bottom: 30%;
-	  vertical-align: middle;
-	  height: 100%;
+.social-item img{	  
+	margin: auto;
+	margin-top: 50%;
+	margin-bottom: 30%;
+	vertical-align: middle;
+	height: 100%;
 }

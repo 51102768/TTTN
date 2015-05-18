@@ -4,6 +4,7 @@
 	border: solid 1px yellow;
 	margin-bottom: 10px;
 }
+
 .title h3{
 	background: #7f7f7f;
 	color: #ffff00;
@@ -18,14 +19,17 @@
 	margin-left: 10px;
 	background-color: white;
 }
+
 .category ul{
 	list-style-type: none;
 	font-size: 21px;
 }
+
 .category ul li{
 	border-bottom: dashed 1px;
 	padding: 5px 0;
 }
+
 .category ul li a{
 	color: red;
 	text-decoration: none;
@@ -33,30 +37,7 @@
 	padding-left: 40px;
 }
 
-.product{
 
-}
-.product ul{
-	list-style-type: none;
-	
-}
-.product ul li{
-	position: relative;
-	margin-right: 5px;
-	padding: 1px;
-	border: solid 1px green;
-	float: left;
-	overflow: hidden;
-	width: 20%;
-	height: 100px;
-}
-.product ul li.last{
-	margin-right: 0px;
-}
-
-.content{
-	float: left;
-}
 
 .carousel-inner > .item > a > img {	
 	margin: auto;
@@ -78,7 +59,8 @@
 	padding-left: 40px;
 }
 
-.hot-product{
+
+.product{
 	float:left;
 	margin-left: 0px;
 }
@@ -86,21 +68,55 @@
 #product-hot{
 	float: left;
 	padding-left: 0px;
+}
 
+#product-new{
+	float: left;
+	padding-left: 0px;
 }
 
 
-.hot-product ul{
+.product ul{
 	list-style-type: none;
 }
 
-.hot-product li{
+.product li{
 	float: left;
 	height: 20%;
-	width: 20%;
+	width: 25%;
+	padding: 10px 10px 10px 10px;	
 }
 
-.hot-product img{
+.product img{
 	height: 50%;
-	width: 50%;
+	width: 100%;
+}
+
+.footer-container .left{
+	float: left;
+	width: 30%;
+}
+
+.footer-container .right{
+	float: right;
+	width: 70%;
+}
+
+.footer-container .right ul{
+	list-style-type: none;
+	text-align: right;
+}
+.footer-container .right ul li{
+	display: inline;
+	padding: 10px 10px 10px 10px;
+}
+.footer-container .right ul li:hover{	
+	font-style: italic;
+	color: white;
+}
+.footer-container .right ul li .last{
+	padding-right: 20px;
+}
+.footer-container .right ul li img:hover{
+	background-color: white;
 }

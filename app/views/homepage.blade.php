@@ -84,24 +84,64 @@
 		</div>
 
 		<div class="col-md-9 right-wrapper">
-			<div class="row">
+			<div class="row product">
 				<div class="title">
-					<h3>Hot Product</h3>				
+					<h3>Sản phẩm bán chạy</h3>				
 				</div>
 			</div>
 			<!--Hot Product-->			
-			<div class="row hot-product">
+			<div class="row product">
 				<ul id = "product-hot">
 					<li><a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a></li>
 					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
 					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
 					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+				</ul>
+			</div>
+
+			<div class="row product">
+				<div class="title">
+					<h3>Sản phẩm mới</h3>
+				</div>
+			</div>
+			<div class="row product">
+				<ul id="product-new">
+					<li><a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
 				</ul>
 			</div>
 		</div>
 	</div>		
-	<!--Footer-->
-	<div class="row">
-
-	</div>
+	<!--Footer-->	
+	<div class="footer">			
+		<div class="footer-container">
+			<div class="left">
+			</div>
+			<div class="right">				
+				<ul>
+					<li>Thông tin </li>
+					<li>Liên hệ </li>
+					<li>Hướng dẫn mua hàng</li>
+				</ul>
+				<p></p>
+				<ul>
+					<li><img src="/public/img/rsz_fbicon.png"></li>
+					<li><img src="/public/img/rsz_twiticon.png"></li>
+					<li><img src="/public/img/rsz_skypicon.png"></li>
+				</ul>
+				<p>© 2015, CSE11</p>
+			</div>
+		</div>
+	</div>		
+	
 @stop

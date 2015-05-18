@@ -27,12 +27,7 @@
 		type="text/css"
 		rel="stylesheet"
 		href="{{ asset("css/shared.css") }}"
-		/>
-		<link
-		type="text/css"
-		rel="stylesheet"
-		href="{{ asset("css/footer.css") }}"
-		/>
+		/>	
 		@yield('header')
 	</head>
 	<body>

@@ -1,15 +1,11 @@
 @extends('master')
 
 @section('header')
-
-<<<<<<< HEAD
 	<link
 	type="text/css"
 	rel="stylesheet"
 	href="{{ asset("css/content.css") }}"
 	/>
-=======
->>>>>>> df8dae5556c7d0ce311f8f68b811033d3d9d3083
 @stop
 
 @section('content')

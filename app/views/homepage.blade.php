@@ -64,12 +64,7 @@
 
 	<!--Row 2-->
 	<div class="row">
-		<div class="col-md-3">	
-			<div class="row">
-				<div class="title title-product">
-					<h3>Danh mục sản phẩm</h3>					
-				</div>
-			</div>
+		<div class="col-md-3">				
 			<div class="row category">
 				<div id='cssmenu'>
 				<ul>

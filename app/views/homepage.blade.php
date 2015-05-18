@@ -108,43 +108,43 @@
 						<a href="#">					
 							<img src="/public/img/product/Apple/earpods.jpg">									
 							<p class="caption">Tai nghe Earpods</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">						
 						</a>
-						<img src="/public/img/mua-ngay.jpg" class="buynow">
 					</li>
 					<li class="product-box">
 						<a href="#">					
 							<img src="/public/img/product/Apple/headphones.jpg">									
 							<p class="caption">Tai nghe Headphones</br>200,000 đ</p>
-						</a>
-						<img src="/public/img/mua-ngay.jpg" class="buynow">
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>						
 					</li>
 					<li class="product-box">
 						<a href="#">					
 							<img src="/public/img/product/Apple/ipod-touch.jpg">									
 							<p class="caption">Ipod Touch</br>300,000 đ</p>
-						</a>
-						<img src="/public/img/mua-ngay.jpg" class="buynow">
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>						
 					</li>
 					<li class="product-box">
 						<a href="#">					
 							<img src="/public/img/product/Bose/IE2.jpg">									
 							<p class="caption">Tai nghe IE2</br>600,000 đ</p>
-						</a>
-						<img src="/public/img/mua-ngay.jpg" class="buynow">
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>						
 					</li>
 					<li class="product-box">
 						<a href="#">					
 							<img src="/public/img/product/Bose/QC25.jpg">									
 							<p class="caption">Tai nghe QC25</br>550,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
 						</a>
-						<img src="/public/img/mua-ngay.jpg" class="buynow">
 					</li>
 					<li class="product-box">
 						<a href="#">					
 							<img src="/public/img/product/Shure/se112.jpg">									
 							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
 						</a>
-						<img src="/public/img/mua-ngay.jpg" class="buynow">
 					</li>					
 				</ul>
 			</div>
@@ -156,14 +156,62 @@
 			</div>
 			<div class="row product">
 				<ul id="product-new">
-					<li><a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
-					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li class="product-box">
+						<a href="#">					
+							<img src="/public/img/product/Apple/earpods.jpg">							
+							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>
+					</li>		
+					<li class="product-box">
+						<a href="#">					
+							<img src="/public/img/product/Apple/ipod-touch.jpg">							
+							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>
+					</li>		
+					<li class="product-box">
+						<a href="#">					
+							<img src="/public/img/product/Shure/se112.jpg">									
+							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>
+					</li>		
+					<li class="product-box">
+						<a href="#">					
+							<img src="/public/img/product/Shure/se112.jpg">									
+							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>
+					</li>		
+					<li class="product-box">
+						<a href="#">					
+							<img src="/public/img/product/Shure/se112.jpg">									
+							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>
+					</li>		
+					<li class="product-box">
+						<a href="#">					
+							<img src="/public/img/product/Apple/ipod-touch.jpg">							
+							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>
+					</li>		
+					<li class="product-box">
+						<a href="#">					
+							<img src="/public/img/product/Shure/se112.jpg">									
+							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>
+					</li>		
+					<li class="product-box">
+						<a href="#">					
+							<img src="/public/img/product/Bose/SIE2.jpg">								
+							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="/public/img/mua-ngay.jpg" class="buynow">
+						</a>
+					</li>													
 				</ul>
 			</div>
 		</div>

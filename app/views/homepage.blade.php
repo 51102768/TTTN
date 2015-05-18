@@ -26,7 +26,7 @@
 				 <!-- Wrapper for slides -->
 				<div class="carousel-inner">
 					<div class="active item">
-						<img src="/public/img/slider/apple.jpg">
+						<img src="/public/img/banner/banner_earpods.jpg">
 						<div class="carousel-caption">
 							<h3></h3>
 							<p></p>
@@ -34,7 +34,7 @@
 					</div>
 
 					<div class="item">
-						<img src="/public/img/slider/techina.jpg">
+						<img src="/public/img/banner/beats_banner.jpg">
 						<div class="carousel-caption">
 							<h3></h3>
 							<p></p>
@@ -42,7 +42,7 @@
 					</div>
 
 					<div class="item">
-						<img src="/public/img/slider/philips.jpg">
+						<img src="/public/img/banner/lehmann_banner.jpg">
 						<div class="carousel-caption">
 							<h3></h3>
 							<p></p>

@@ -71,6 +71,7 @@
 				</div>
 			</div>
 			<div class="row category">
+				<div id='cssmenu'>
 				<ul>
 					<li class="active has-sub"><a href="#"><span>Apple</span></a>
 						<ul>
@@ -95,6 +96,7 @@
 					<li><a href="#">Earmac</a></li>
 					<li><a href="#">Soundmax</a></li>
 				</ul>
+				</div>
 			</div>			
 		</div>
 

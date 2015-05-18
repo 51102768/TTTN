@@ -19,6 +19,10 @@
 		></script>
 		<script
 		type="text/javascript"
+		src="{{ asset("js/script.js") }}"
+		></script>
+		<script
+		type="text/javascript"
 		src="{{ asset("bootstrap/dist/js/bootstrap.js") }}"
 		></script>
 		<script src="/bootstrap/js/bootstrap.min.js"

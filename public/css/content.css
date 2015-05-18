@@ -256,9 +256,12 @@
 .product-box a img{  
   width: 80%;
   height: 80%;
-  margin: auto;
 }
 
+.product-box{
+	text-align: center;
+	padding-bottom: 20px;
+}
 .footer-container .left{
 	float: left;
 	width: 30%;

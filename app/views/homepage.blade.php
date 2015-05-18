@@ -104,25 +104,17 @@
 			<!--Hot Product-->			
 			<div class="row product">
 				<ul id = "product-hot">
-					<li>
-						<div class="product-box">
-							<a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a>
-						</div>						
+					<li class="product-box">
+							<a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a>				
 					</li>
-					<li>
-						<div class="product-box">
-							<a href="#"><img src="/public/img/product/Apple/headphones.jpg"></a>
-						</div>						
+					<li class="product-box">
+							<a href="#"><img src="/public/img/product/Apple/headphones.jpg"></a>					
 					</li>
-					<li>
-						<div class="product-box">
-							<a href="#"><img src="/public/img/product/Apple/ipod-nano.jpg"></a>
-						</div>						
+					<li class="product-box">
+							<a href="#"><img src="/public/img/product/Apple/ipod-nano.jpg"></a>				
 					</li>
-					<li>
-						<div class="product-box">
-							<a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a>
-						</div>						
+					<li class="product-box">
+							<a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a>					
 					</li>
 					
 				</ul>

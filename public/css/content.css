@@ -247,20 +247,17 @@
 	padding: 10px 10px 10px 10px;	
 }
 
-.product ul li .product-box a {
+.product-box a {
   float: left;
-	width: 25%;
-	height: 20%
+  width: 200px;
+  height: 200px;	
+}
+.product-box a img{  
+  width: 80%;
+  height: 80%;
+  margin: auto;
 }
 
-.product ul li .product-box:hover{
-	border: red 5px;
-}
-
-.product ul li .product-box a img{
-	height: 25%;
-	width: 25%;
-}
 .footer-container .left{
 	float: left;
 	width: 30%;

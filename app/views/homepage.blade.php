@@ -65,7 +65,10 @@
 	<!--Row 2-->
 	<div class="row">
 		<div class="col-md-3">	
-			<div class="row">				
+			<div class="row">
+				<div class="title title-product">
+					<h3>Danh mục sản phẩm</h3>					
+				</div>
 			</div>
 			<div class="row category">
 				<div id='cssmenu'>
@@ -106,26 +109,14 @@
 			<!--Hot Product-->			
 			<div class="row product">
 				<ul id = "product-hot">
-					<li>
-						<div class="product-box">
-							<a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a>
-						</div>
-					</li>
-					<li>
-						<div class="product-box">
-							<a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a>
-						</div>
-					</li>
-					<li>
-						<div class="product-box">
-							<a href="#"><img src="/public/img/product/Apple/ipod-shuffle.jpg"></a>
-						</div>
-					</li>
-					<li>
-						<div class="product-box">
-							<a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a>
-						</div>
-					</li>					
+					<li><a href="#"><img src="/public/img/product/Apple/earpods.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Bose/SIE2.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
+					<li><a href="#"><img src="/public/img/product/Apple/ipod-touch.jpg"></a></li>
 				</ul>
 			</div>
 

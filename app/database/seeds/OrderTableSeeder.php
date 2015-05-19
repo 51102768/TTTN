@@ -13,11 +13,12 @@ class OrderTableSeeder extends DatabaseSeeder {
 
 		$faker = $this->getFaker();
 
-		$accounts = Account::all();
+		$accounts = User::all();
 
-		for($i = 0; $i < rand(10,20); $i++){
+		for($i = 0; $i < rand(0,5); $i++){
+			$user =  User::all();
 			Order::create([
-				"account_id" => rand(1,5)
+				"account_id" => $user[$i]->id
 			]);
 		}
 	}

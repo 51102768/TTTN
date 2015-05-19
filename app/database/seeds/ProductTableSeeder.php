@@ -16,7 +16,8 @@ class ProductTableSeeder extends DatabaseSeeder {
 		$categories = Category::where("brand", "=","Sennheiser")->first();
 
 		Product::create([
-			"name"		=>"Sennheiser MX 686G Sport",
+			"name"		=>"Sennheiser MX 686G",
+			"type_id"		=>3,
 			"stock"		=>"1",
 			"origin"	=>"Germany",
 			"url"		=>"img/product/Sennheiser/mx686g.jpg",
@@ -38,9 +39,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"Sennheiser CX200 Street II",
+			"name"		=>"Sennheiser CX200",
 			"stock"		=>"7",
 			"origin"	=>"Germany",
 			"url"		=>"img/product/Sennheiser/cx200-streetII.jpg",
@@ -50,9 +52,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"Sennheiser HDR 120 Expansion",
+			"name"		=>"Sennheiser HDR 120",
 			"stock"		=>"3",
 			"origin"	=>"Germany",
 			"url"		=>"img/product/Sennheiser/HDR120.jpg",
@@ -62,6 +65,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
 			"name"		=>"Sennheiser HD 280 Pro",
@@ -74,11 +78,12 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		$categories = Category::where("brand", "=","Audio Technica")->first();
 
 		Product::create([
-			"name"		=>"Audio Technica ATH-M50x Professional Foldable Studio Monitor Headphones - Black",
+			"name"		=>"ATH-M50x",
 			"stock"		=>"25",
 			"origin"	=>"Japan",
 			"url"		=>"img/product/AudioTechnica/ATH-M50X.jpg",
@@ -88,10 +93,11 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 
 		Product::create([
-			"name"		=>"Audio Technica ATH-M30x Professional Monitor Headphones - Black",
+			"name"		=>"ATH-M30x",
 			"stock"		=>"35",
 			"origin"	=>"Japan",
 			"url"		=>"img/product/AudioTechnica/ATH-M30X.jpg",
@@ -101,9 +107,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"Audio Technica ATH-SPORT 3",
+			"name"		=>"ATH-SPORT 3",
 			"stock"		=>"15",
 			"origin"	=>"Japan",
 			"url"		=>"img/product/AudioTechnica/ATH-SPORT3.jpg",
@@ -113,9 +120,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"Audio Technica ATH-M40x Professional Monitor Headphones - Black",
+			"name"		=>"ATH-M40x",
 			"stock"		=>"35",
 			"origin"	=>"Japan",
 			"url"		=>"img/product/AudioTechnica/ATH-M40X.jpg",
@@ -125,10 +133,11 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 
 		]);
 		Product::create([
-			"name"		=>"Audio Technica ATH-IM50 Dual Symphonic",
+			"name"		=>"ATH-IM50",
 			"stock"		=>"31",
 			"origin"	=>"Japan",
 			"url"		=>"img/product/AudioTechnica/ATH-IM50.jpg",
@@ -138,10 +147,11 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		$categories = Category::where("brand", "=","Bose")->first();
 		Product::create([
-			"name"		=>"Bose IE2 In-Ear only Headphones - Black/White",
+			"name"		=>"Bose IE2 In-Ear",
 			"stock"		=>"11",
 			"origin"	=>"US",
 			"url"		=>"img/product/Bose/IE2.jpg",
@@ -151,9 +161,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"Bose SIE2 sport headphones (Green)",
+			"name"		=>"Bose SIE2",
 			"stock"		=>"14",
 			"origin"	=>"US",
 			"url"		=>"img/product/Bose/SIE2.jpg",
@@ -163,9 +174,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"Bose QuietComfort QC25 Acoustic Noise Cancelling",
+			"name"		=>"Bose QC25",
 			"stock"		=>"54",
 			"origin"	=>"US",
 			"url"		=>"img/product/Bose/QC25.jpg",
@@ -175,9 +187,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"BOSE SoundLink Mini Bluetooth Music Player Sterio Wireless Speaker",
+			"name"		=>"BOSE Bluetooth MP3 Player",
 			"stock"		=>"19",
 			"origin"	=>"US",
 			"url"		=>"img/product/Bose/SoundlinkMini.jpg",
@@ -187,9 +200,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		Product::create([
-			"name"		=>"BOSE Companion® 2 Series III multimedia speaker system",
+			"name"		=>"BOSE Companion 2",
 			"stock"		=>"18",
 			"origin"	=>"US",
 			"url"		=>"img/product/Bose/companion.jpg",
@@ -199,10 +213,11 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		$categories = Category::where("brand", "=","Philips")->first();
 		Product::create([
-			"name"		=>"Phillips Fidelio On-ear headband headset",
+			"name"		=>"Phillips Fidelio",
 			"stock"		=>"7",
 			"origin"	=>"Netherlands",
 			"url"		=>"img/product/Phillips/fidelio.jpg",
@@ -212,6 +227,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
 			"name"		=>"Phillips SHE3595PP/28",
@@ -224,9 +240,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"Phillips Vibe 8GB MP3/MP4 player Fullsound",
+			"name"		=>"Phillips Vibe",
 			"stock"		=>"45",
 			"origin"	=>"Netherlands",
 			"url"		=>"img/product/Phillips/vibe-mp3.jpg",
@@ -236,9 +253,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"Phillips Raga 4GB MP3 Player",
+			"name"		=>"Phillips Raga",
 			"stock"		=>"17",
 			"origin"	=>"Netherlands",
 			"url"		=>"img/product/Phillips/raga-mp3.jpg",
@@ -248,9 +266,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 		]);
 		Product::create([
-			"name"		=>"Phillips Ariaz 16GB MP3 Player",
+			"name"		=>"Phillips Ariaz",
 			"stock"		=>"37",
 			"origin"	=>"Netherlands",
 			"url"		=>"img/product/Phillips/ariaz-mp3.jpg",
@@ -260,6 +279,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 
 		]);
 		$categories = Category::where("brand", "=","Apple")->first();
@@ -274,6 +294,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 		]);
 		Product::create([
 			"name"		=>"Apple iPod Nano",
@@ -286,6 +307,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 		]);
 		Product::create([
 			"name"		=>"Apple iPod Touch",
@@ -298,9 +320,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 		]);
 		Product::create([
-			"name"		=>"Apple EarPods with Remote and Mic",
+			"name"		=>"Apple EarPods",
 			"stock"		=>"11",
 			"origin"	=>"US",
 			"url"		=>"img/product/Apple/earpods.jpg",
@@ -310,9 +333,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
-			"name"		=>"Apple In-Ear Headphones with Remote and Mic",
+			"name"		=>"Apple In-Ear",
 			"stock"		=>"61",
 			"origin"	=>"US",
 			"url"		=>"img/product/Apple/headphones.jpg",
@@ -322,10 +346,11 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		$categories = Category::where("brand", "=","Lehman Audio")->first();
 		Product::create([
-			"name"		=>"LEHMANN AUDIO LINEAR - HEADPHONE AMPLIFIER",
+			"name"		=>"LehmanAudio Linear",
 			"stock"		=>"11",
 			"origin"	=>"Germany",
 			"url"		=>"img/product/LehmanAudio/linear.jpg",
@@ -335,9 +360,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		Product::create([
-			"name"		=>"LEHMANN AUDIO TRAVELLER - PORTABLE HEADPHONE AMPLIFIER",
+			"name"		=>"LehmanAudio Traveller",
 			"stock"		=>"16",
 			"origin"	=>"Germany",
 			"url"		=>"img/product/LehmanAudio/traveller.jpg",
@@ -347,9 +373,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		Product::create([
-			"name"		=>"LEHMANN AUDIO - BLACK CUBE SE II",
+			"name"		=>"LehmanAudio black cube",
 			"stock"		=>"6",
 			"origin"	=>"Germany",
 			"url"		=>"img/product/LehmanAudio/black-cube.jpg",
@@ -359,9 +386,10 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		Product::create([
-			"name"		=>"LEHMANN AUDIO - RHINELANDER",
+			"name"		=>"Lehman Audio Rhinelander",
 			"stock"		=>"3",
 			"origin"	=>"Germany",
 			"url"		=>"img/product/LehmanAudio/rhinelander.jpg",
@@ -371,9 +399,11 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
+
 		]);
 		Product::create([
-			"name"		=>"LEHMANN AUDIO LINEAR SE - HEADPHONE AMPLIFIER",
+			"name"		=>"Lehman Audio linear-se",
 			"stock"		=>"11",
 			"origin"	=>"Germany",
 			"url"		=>"img/product/LehmanAudio/linear-se.png",
@@ -383,6 +413,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		$categories = Category::where("brand", "=","Astelln Kern")->first();
 		Product::create([
@@ -396,6 +427,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 		]);
 		Product::create([
 			"name"		=>"AK 240",
@@ -408,6 +440,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 		]);
 		Product::create([
 			"name"		=>"AK 500N",
@@ -420,6 +453,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 		]);
 		Product::create([
 			"name"		=>"AK JR",
@@ -432,6 +466,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 		]);
 		Product::create([
 			"name"		=>"AK 100 II",
@@ -444,6 +479,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>2,
 		]);
 		$categories = Category::where("brand", "=","Braven")->first();
 		Product::create([
@@ -457,6 +493,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		Product::create([
 			"name"		=>"Braven 805",
@@ -469,6 +506,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		Product::create([
 			"name"		=>"Braven 770",
@@ -481,6 +519,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		Product::create([
 			"name"		=>"Braven 570",
@@ -493,6 +532,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		Product::create([
 			"name"		=>"Braven BRV Bank",
@@ -505,6 +545,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		$categories = Category::where("brand", "=","NuForce")->first();
 		Product::create([
@@ -518,6 +559,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
 			"name"		=>"NuForce NE750M",
@@ -530,6 +572,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
 			"name"		=>"NuForce NE800M",
@@ -542,6 +585,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
 			"name"		=>"NuForce uDAC3",
@@ -554,6 +598,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		Product::create([
 			"name"		=>"NuForce HA-200",
@@ -566,6 +611,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>1,
 		]);
 		$categories = Category::where("brand", "=","Shure")->first();
 		Product::create([
@@ -579,6 +625,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
 			"name"		=>"Shure SE846",
@@ -591,6 +638,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
 			"name"		=>"Shure SE112",
@@ -603,6 +651,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
 			"name"		=>"Shure SE535LTD",
@@ -615,6 +664,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 		Product::create([
 			"name"		=>"Shure SRH750DJ",
@@ -627,6 +677,7 @@ class ProductTableSeeder extends DatabaseSeeder {
 			"guarantee"	=>'2"',
 			"category_id" =>$categories->id,
 			"buytime" =>$faker->numberBetween(5,40),
+			"type_id"		=>3,
 		]);
 	}
 }

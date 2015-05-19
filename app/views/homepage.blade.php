@@ -58,28 +58,15 @@
 			<div class="row category">
 				<div id='cssmenu'>
 				<ul>
-					<li class="active has-sub"><a href="#"><span>Apple</span></a>
-						<ul>
-							<li class="has-sub"><a href="#"><span>iPhone</span></a>
-								<ul>
-									<li class="last"><a href="#"><span>iPhone 3</span></a></li>
-									<li class="last"><a href="#"><span>iPhone 4</span></a></li>
-								</ul>
-							</li>
-							<li class="has-sub"><a href="#"><span>iPad</span></a>
-								<ul>
-									<li class="last"><a href="#"><span>iPad 2</span></a></li>
-									<li class="last"><a href="#"><span>iPad Air</span></a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="#">AstellandKern</a></li>
-					<li><a href="#">AudioTechnica</a></li>
-					<li><a href="#">Bose</a></li>
-					<li><a href="#">Braven</a></li>
-					<li><a href="#">Earmac</a></li>
-					<li><a href="#">Soundmax</a></li>
+					@foreach($categories as $category)
+						<li class="active has-sub"><a href="#">{{$category->brand}}</a>
+							<ul>
+							@foreach($category->types as $type)
+								<li><a href="#"><span>{{$type->name}}</span></a></li>
+							@endforeach
+							</ul>
+						</li>
+					@endforeach
 				</ul>
 				</div>
 			</div>			
@@ -94,49 +81,16 @@
 			<!--Hot Product-->			
 			<div class="row product">
 				<ul id = "product-hot">
+					@foreach($hot_products as $hot_product)
 					<li class="product-box">
 						<a href="#">					
-							<img src="/public/img/product/Apple/earpods.jpg">									
-							<p class="caption">Tai nghe Earpods</br>300,000 đ</p>
+							<img src="{{$hot_product->url}}">									
+							<p class="caption">{{$hot_product->name}}</br>{{$hot_product->price}} đ</p>
 							<input type="button" value="Mua ngay">
 						</a>
 					</li>
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Apple/headphones.jpg">									
-							<p class="caption">Tai nghe Headphones</br>200,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>						
-					</li>
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Apple/ipod-touch.jpg">									
-							<p class="caption">Ipod Touch</br>300,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>						
-					</li>
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Bose/IE2.jpg">									
-							<p class="caption">Tai nghe IE2</br>600,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>						
-					</li>
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Bose/QC25.jpg">									
-							<p class="caption">Tai nghe QC25</br>550,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>
-					</li>
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Shure/se112.jpg">									
-							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>
-					</li>					
-				</ul>
+					@endforeach
+		
 				<div class="more">
 					<a href="#">Xem thêm</a>
 				</div>
@@ -149,62 +103,15 @@
 			</div>
 			<div class="row product">
 				<ul id="product-new">
+					@foreach($new_products as $new_product)
 					<li class="product-box">
 						<a href="#">					
-							<img src="/public/img/product/Apple/earpods.jpg">							
-							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
+							<img src="{{$new_product->url}}">							
+							<p class="caption">{{$new_product->name}}</br>{{$new_product->price}} đ</p>
 							<input type="button" value="Mua ngay">
 						</a>
-					</li>		
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Apple/ipod-touch.jpg">							
-							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>
-					</li>		
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Shure/se112.jpg">									
-							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>
-					</li>		
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Shure/se112.jpg">									
-							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>
-					</li>		
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Shure/se112.jpg">									
-							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>
-					</li>		
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Apple/ipod-touch.jpg">							
-							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>
-					</li>		
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Shure/se112.jpg">									
-							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>
-					</li>		
-					<li class="product-box">
-						<a href="#">					
-							<img src="/public/img/product/Bose/SIE2.jpg">								
-							<p class="caption">Tai nghe SE112</br>300,000 đ</p>
-							<input type="button" value="Mua ngay">
-						</a>
-					</li>													
+					</li>
+					@endforeach															
 				</ul>
 				<div class="more">
 					<a href="#">Xem thêm</a>

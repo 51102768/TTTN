@@ -134,7 +134,7 @@ Route::post("category_remove",function(){
 	if(Request::ajax()){
 		$input = Input::all();
 
-		DB::delete('delete from category where id ='.$input['category_id']);
+		DB::delete('delete from categories where id ='.$input['category_id']);
 		DB::delete('delete from product where category_id ='.$input['category_id']);
 
 		return "Success!";

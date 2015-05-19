@@ -26,6 +26,7 @@ class CreatProductTable extends Migration {
 			$table->integer("buytime");
 			$table->string("description");
 			$table->integer("category_id");
+			$table->integer("type_id");
 			$table->timestamps();
 			$table->dateTime("deleted_at");
 		});

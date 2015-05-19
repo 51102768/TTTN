@@ -6,10 +6,10 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Category extends Eloquent {
+class Type extends Eloquent {
 	use SoftDeletingTrait;
 
-	protected $table = "categories";
+	protected $table = "types";
 
 	protected $guarded = ["id"];
 
@@ -19,7 +19,7 @@ class Category extends Eloquent {
 		return $this->hasMany("Product");
 	}
 
-	public function types(){
-		return $this->belongsToMany("Type");
+	public function category(){
+		return $this->belongsToMany("Category");
 	}
 }

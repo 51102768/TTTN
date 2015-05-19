@@ -19,7 +19,15 @@ class HomeController extends BaseController {
 	{	
 		DB::update("UPDATE page  SET view = view + 1  WHERE id = 1");
 
-		return View::make('homepage');
+		$hot_products = Product::orderBy('buytime','desc')->take(8)->get();
+
+		$new_products = Product::orderBy("created_at",'desc')->take(8)->get();
+
+		$categories = Category::all();	
+
+		return View::make('homepage',array("categories"=>$categories,
+							"hot_products"=>$hot_products,
+							"new_products"=>$new_products));
 	}
 
 }

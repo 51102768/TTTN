@@ -9,9 +9,10 @@ class CategoryTableSeeder extends DatabaseSeeder {
 	 */
 	public function run()
 	{
-		DB::table('category')->delete();
+		DB::table('categories')->delete();
 
 		Category::create([
+			"id"=>1,
 			"brand"=>"Sennheiser",
 			"url"=>"img\brand\Sennheiser509.jpg"
 		]);

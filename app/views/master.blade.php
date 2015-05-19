@@ -51,7 +51,6 @@
 			<script>
 				alert('{{Session::get("message");}}');
 			</script>
-		@endif
-		
+		@endif		
 	</body>
 </html>

@@ -6,7 +6,7 @@
 		<ul class = "nav navbar-nav">
 			<li><a href="{{URL::to('/')}}"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
 			<li><a href="#">Hướng dẫn</a></li>
-			<li><a href="#">Liên hệ</a></li>
+			<li><a href="{{URL::to('/contact')}}">Liên hệ</a></li>
 	</ul>
 	<ul class = "nav navbar-nav navbar-right">
 	<li><a href="#"  role = "button" data-toggle="modal" data-target = "#loginModal">

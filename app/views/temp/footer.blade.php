@@ -1,3 +1,8 @@
+<style type="text/css">
+  .footer{
+    background-color:#587185;
+  }
+</style>
 <div class="footer">      
     <div class="footer-container">
       <div class="left">
@@ -11,11 +16,10 @@
         </ul>
         <p></p>
         <ul>
-          <li><img src="/public/img/rsz_fbicon.png"></li>
-          <li><img src="/public/img/rsz_twiticon.png"></li>
-          <li><img src="/public/img/rsz_skypicon.png"></li>
-        </ul>
-        
+          <li><a href="#"><img src="/public/img/rsz_fbicon.png"></a></li>
+          <li><a href="#"><img src="/public/img/rsz_twiticon.png"></a></li>
+          <li><a href="#"><img src="/public/img/rsz_skypicon.png"></a></li>
+        </ul>        
       </div>
     </div>
 

@@ -19,6 +19,8 @@ class PageController extends \BaseController {
 
 		$num_view = Page::find(1)->view;
 
+		$num_login = Page::find(1)->login;
+
 		$user_new = DB::select("select * from account where created_at between DATE_SUB(CURDATE(),INTERVAL (DAY(CURDATE())-1) DAY) and LAST_DAY(NOW())");
 
 		$num_users_new = count($user_new);
@@ -26,6 +28,7 @@ class PageController extends \BaseController {
 
 		return View::make("manager.page")->with("messages",$messages)
 								->with("users",$users)
+								->with("num_login",$num_login)
 								->with("order_num",$order_num)
 								->with("num_view",$num_view)
 								->with("num_users_new",$num_users_new);

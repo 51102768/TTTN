@@ -8,6 +8,14 @@
 				<li><a href="{{URL::to('/')}}"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
 				<li><a href="intruction">Hướng dẫn</a></li>
 				<li><a href="contact">Liên hệ</a></li>
+				<li>
+					<div class="input-group search">
+						<input type="text" class="form-control" placeholder="Search for...">
+						<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Go!</button>
+						</span>
+					</div>
+				</li>
 		</ul>
 		<ul class = "nav navbar-nav navbar-right">
 				<li class="dropdown">

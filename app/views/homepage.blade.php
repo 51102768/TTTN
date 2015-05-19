@@ -1,29 +1,20 @@
 @extends('master')
 
 @section('header')
-
-<<<<<<< HEAD
 	<link
 	type="text/css"
 	rel="stylesheet"
 	href="{{ asset("css/content.css") }}"
 	/>
-=======
->>>>>>> df8dae5556c7d0ce311f8f68b811033d3d9d3083
+
 @stop
 
 @section('content')
+
 	<!--Bootstrap Carousel-->
 	<div class="row">
 		<div class="slider">
 			<div id="myCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
-				<!-- Indicators-->
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>			
-					<li data-target="#myCarousel" data-slide-to="2"></li>	
-				</ol>
-				 <!-- Wrapper for slides -->
 				<div class="carousel-inner">
 					<div class="active item">
 						<img src="/public/img/banner/banner_earpods.jpg">

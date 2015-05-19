@@ -103,7 +103,7 @@
                    		<i class="fa fa-male fa-5x"></i>
                    		</div>
                    		<div class="row">
-                   			<h4>Có {{$num_view}} lượt đăng nhập</h4>
+                   			<h4>Có {{$num_login}} lượt đăng nhập</h4>
                    		</div>
                    	</a>
                    </div>

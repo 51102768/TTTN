@@ -19,10 +19,13 @@ class ManagerController extends \BaseController {
 
 		$num_view = Page::find(1)->view;
 
+		$num_login = Page::find(1)->login;
+
 		return View::make('manager.index',
 			array("messages"=>$messages,
 				"num_mess"=>$num_mess,
 				"count_user_new"=>$count_user_new,
+				"num_login"=>$num_login,
 				"user_new"=>$user_new,
 				"order_num"=>$order_num,
 				"num_view"=>$num_view));

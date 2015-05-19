@@ -1,4 +1,4 @@
-#homeIcon {
+#BarIcon {
 	margin-right: 15px;
 }
 
@@ -10,14 +10,54 @@ body, .content, html{
 	height: 100%;
 }
 
+.btn.btn-group.btn-group-justified{
+	padding: 0px;
+	background-color: #666666;
+
+}
+
+.search{
+	margin-top: 5px;
+	margin-left: 100px;
+	width: 200px;
+}
+
 #navBar {
+	opacity: 0.7;
+    	filter: alpha(opacity=70);
 	background-color: #323440;
 	border-bottom: 0px;
 	max-height: 10px;
 }
 
+ ul.nav-justified > li > a{
+	color: black;
+}
+
+.header-links ul{
+	margin: 0;
+ 	 list-style-type: none;
+	width: 100%;
+	overflow: hidden;
+
+}
+
+
+
+.header-item{
+	margin: 0px;
+	display: list-item;
+}
+
 .navbar-right{
 	padding-right: 40px;
+}
+
+.logo{
+	background: url("../img/top-background.jpg");
+	 background-size: 100% 100%;
+   	 background-repeat: repeat-x;
+   	 width: 100%;
 }
 
 body {
@@ -37,8 +77,11 @@ body {
 }
 
 .container{
-	margin-top: 2%;
 	height: 100%;
+}
+
+.logo{
+	float:left;
 }
 
 #wrapper-top{

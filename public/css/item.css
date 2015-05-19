@@ -1,0 +1,27 @@
+.product-wrapper{
+	color: #AB6E6E;
+}
+
+.price{
+	color:#db0000; 
+	font-size:25px;
+	font-family:'UTMCafetaRegular';
+	line-height:25px;
+}
+
+.img-wrapper{
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+.note{
+	font-size: 9px;
+	margin-top: 5px;
+	color:#AE8787 ;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.description_info{
+	display: none;
+}

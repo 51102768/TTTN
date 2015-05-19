@@ -187,5 +187,8 @@ Route::get("item",function(){
 	$input = Input::all();
 	$product = Product::find($input["product_id"]);
 
-	return View::make("product.item",array("product"=>$product));
+	$categories = Category::all();	
+
+	return View::make("product.item",array("product"=>$product,
+						"categories"=>$categories));
 });

@@ -20,6 +20,18 @@ body, .content, html{
 }
 
 
+#bread {
+  background-color: transparent;
+  padding: 0px;
+
+}
+
+.breadcrumb > li + li:before {
+  padding: 5 5px;
+  color: #ffffff;
+  content: none;
+}
+
 .search{
 	margin-top: 8px;
 	margin-left: 100px;

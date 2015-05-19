@@ -1,8 +1,8 @@
 <header>
-    <div class="row logo">
-      <div class="span12">
+    <div class="row ">
+      <div class="logo">
             <a href="{{URL::to("/")}}"><img src="img/logo.png"></a> 
-          </div>
+            </div>
     </div>
     <div class="row">
             <div class="btn btn-group btn-group-justified">

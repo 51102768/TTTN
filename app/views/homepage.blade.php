@@ -6,10 +6,6 @@
 	rel="stylesheet"
 	href="{{ asset("css/content.css") }}"
 	/>
-<<<<<<< HEAD
-
-=======
->>>>>>> 7a618ac664b71aaa6fed6a7f52198281646d9574
 @stop
 
 @section('content')

@@ -10,10 +10,11 @@
 				<li><a href="contact">Liên hệ</a></li>
 				<li>
 					<div class="input-group search">
-						<input type="text" class="form-control" placeholder="Search for...">
-						<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Go!</button>
-						</span>
+					  <span class="input-group-addon" id="basic-addon1"><i class ="glyphicon glyphicon-search"></i></span>
+					  <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-describedby="basic-addon1">
+					  <span class="input-group-btn">
+        <a class="btn btn-default" type="button">Go!</a>
+      </span>
 					</div>
 				</li>
 		</ul>

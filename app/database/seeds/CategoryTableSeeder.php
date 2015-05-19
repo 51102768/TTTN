@@ -11,46 +11,99 @@ class CategoryTableSeeder extends DatabaseSeeder {
 	{
 		DB::table('categories')->delete();
 
-		Category::create([
+		DB::table('types')->delete();
+
+		$loa = Type::create([
+			"name"=>"Loa và Âm li",
+		]);
+
+		$mp3 = Type::create([
+			"name"=>"Máy nghe nhạc",
+		]);
+
+		$hphone = Type::create([
+			"name"=>"Tai nghe",
+		]);
+
+		$sen = Category::create([
 			"id"=>1,
 			"brand"=>"Sennheiser",
 			"url"=>"img\brand\Sennheiser509.jpg"
 		]);
-		Category::create([
+
+		$sen->types()->save($hphone);
+
+		$sen->types()->save($mp3);
+
+		$at = Category::create([
 			"brand"=>"Audio Technica",
 			"url"=>"img\brand\Audio-Technica.jpg"
 		]);
-		Category::create([
+
+		$at->types()->save($hphone);
+
+		$bose = Category::create([
 			"brand"=>"Bose",
 			"url"=>"img\brand\logo-bose.jpg"
 		]);
-		Category::create([
+
+		$bose->types()->save($loa);
+
+		$bose->types()->save($hphone);
+
+		$phi = Category::create([
 			"brand"=>"Philips",
 			"url"=>"img\brand\Philips.jpg"
 		]);
-		Category::create([
+
+		$phi->types()->save($mp3);
+
+		$phi->types()->save($hphone);
+
+		$apple = Category::create([
 			"brand"=>"Apple",
 			"url"=>"img\brand\Apple-logo4876.jpg"
 		]);
-		Category::create([
+
+		$apple->types()->save($mp3);
+
+		$apple->types()->save($hphone);
+
+		$leh = Category::create([
 			"brand"=>"Lehman Audio",
 			"url"=>"img\brand\lehmannaudio_logo.gif"
 		]);
-		Category::create([
+
+		$leh->types()->save($loa);
+
+		$ak = Category::create([
 			"brand"=>"Astelln Kern",
 			"url"=>"img\brand\AstellnKern.gif"
 		]);
-		Category::create([
+
+		$ak->types()->save($mp3);
+
+		$bra = Category::create([
 			"brand"=>"Braven",
 			"url"=>"img\brand\BRAVEN-logo5783.jpg"
 		]);
-		Category::create([
+
+		$bra->types()->save($loa);
+
+		$nu = Category::create([
 			"brand"=>"NuForce",
 			"url"=>"img\brand\Nuforce-K-1.jpg"
 		]);
-		Category::create([
+
+		$nu->types()->save($loa);
+
+		$nu->types()->save($hphone);
+
+		$shu = Category::create([
 			"brand"=>"Shure",
 			"url"=>"img\brand\shure-logo.gif"
 		]);
+
+		$shu->types()->save($hphone);
 	}
 }

@@ -1,9 +1,21 @@
-@extends("master")
-
-@section("header")
+@extends('master')
+@section('header')
+	<link
+	type="text/css"
+	rel="stylesheet"
+	href="{{ asset("css/content.css") }}"
+	/>
 @stop
+@section('content')
+	@include("temp.carousel")
 
- @section("content")
+	<div class="row">
+		@include("temp.sidebar")
 
- @stop
+		<div class="col-md-9 right-wrapper">
 
+		</div>
+
+	</div>
+
+@stop

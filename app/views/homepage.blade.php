@@ -54,23 +54,7 @@
 
 	<!--Row 2-->
 	<div class="row">
-		<div class="col-md-3">				
-			<div class="row category">
-				<div id='cssmenu'>
-				<ul>
-					@foreach($categories as $category)
-						<li class="active has-sub"><a href="#">{{$category->brand}}</a>
-							<ul>
-							@foreach($category->types as $type)
-								<li><a href="#"><span>{{$type->name}}</span></a></li>
-							@endforeach
-							</ul>
-						</li>
-					@endforeach
-				</ul>
-				</div>
-			</div>			
-		</div>
+		@include("temp.sidebar")
 
 		<div class="col-md-9 right-wrapper">
 			<div class="row product">
@@ -83,7 +67,7 @@
 				<ul id = "product-hot">
 					@foreach($hot_products as $hot_product)
 					<li class="product-box">
-						<a href="#">					
+						<a href="item?product_id={{$hot_product->id}}">					
 							<img src="{{$hot_product->url}}">									
 							<p class="caption">{{$hot_product->name}}</br>{{$hot_product->price}} đ</p>
 							<input type="button" value="Mua ngay">
@@ -105,7 +89,7 @@
 				<ul id="product-new">
 					@foreach($new_products as $new_product)
 					<li class="product-box">
-						<a href="#">					
+						<a href="item?product_id={{$hot_product->id}}">					
 							<img src="{{$new_product->url}}">							
 							<p class="caption">{{$new_product->name}}</br>{{$new_product->price}} đ</p>
 							<input type="button" value="Mua ngay">

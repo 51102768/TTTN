@@ -19,7 +19,9 @@ class ContactController extends BaseController {
 	{	
 		DB::update("UPDATE page  SET view = view + 1  WHERE id = 1");
 
-		return View::make('contact');
+		$categories = Category::all();	
+
+		return View::make('contact',array("categories"=>$categories));
 	}
 
 }

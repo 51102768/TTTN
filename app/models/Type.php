@@ -19,7 +19,7 @@ class Type extends Eloquent {
 		return $this->hasMany("Product");
 	}
 
-	public function category(){
+	public function categories(){
 		return $this->belongsToMany("Category");
 	}
 }

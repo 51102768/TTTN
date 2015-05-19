@@ -44,6 +44,7 @@
 		<div class="content">
 			<div class="container">
 				@include("temp.header");
+					
 				@yield('content')
 			</div>
 		</div>

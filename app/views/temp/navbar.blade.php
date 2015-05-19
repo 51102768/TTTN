@@ -7,6 +7,14 @@
 			<li><a href="{{URL::to('/')}}"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
 			<li><a href="#">Hướng dẫn</a></li>
 			<li><a href="{{URL::to('/contact')}}">Liên hệ</a></li>
+			<li>
+				<div class="input-group search">
+				  <span class="input-group-addon" id="basic-addon1"><i class ="glyphicon glyphicon-search"></i></span>
+				  <input type="text" class="form-control" placeholder="Tìm kiếm..." ẩi-describedby="basic-addon1">
+				  <span class="input-group-btn">
+        <a class="btn btn-default" type="button">Go!</a>
+				</div>
+			</li>
 	</ul>
 	<ul class = "nav navbar-nav navbar-right">
 	<li><a href="#"  role = "button" data-toggle="modal" data-target = "#loginModal">

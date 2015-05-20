@@ -27,9 +27,11 @@
 					@foreach($products as $product)
 					<li class="product-box">
 						<a href="item?product_id={{$product->id}}">					
-							<img src="{{$product->url}}">									
-							<p class="caption">{{$product->name}}</br>{{$product->price}} đ</p>
-							<input type="button" value="Mua ngay">
+							<img class ="img-thumbnail" src="{{$product->url}}">
+							<div class="caption-span">			
+							<p class="caption">{{$product->name}}</br>{{$product->price}} VNĐ</p>
+							</div>	
+							<img src="/public/img/mua-ngay.jpg">
 						</a>
 					</li>
 					@endforeach

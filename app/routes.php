@@ -197,7 +197,9 @@ Route::post("order_list",function(){
 	$input = Input::all();
 	$product = Product::find($input["product_id"]);
 
+	$cart = Cart::add($product->id, $product->name, $input["quantity"], $product->price);
 
+	return "asdasd";
 });
 
 Route::post("customer-message",function(){
@@ -237,4 +239,13 @@ Route::get("brand",function(){
 								"categories"=>$categories,
 								"category_link"=>$category_link));
 	}
+});
+
+
+Route::post("remove_cart",function(){
+	$input = Input::all();
+
+	Cart::remove($input["rowid"]);
+
+	return "Success";
 });

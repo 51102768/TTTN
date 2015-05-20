@@ -39,8 +39,37 @@
 			<li>
 				<a href="logout">Đăng xuất</a>
 			</li>
-		<li><a href=""><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+			<li>
+			<a href="" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+			Bạn đã đặt {{Cart::count()}} sản phẩm
+			<span class="glyphicon glyphicon-shopping-cart"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+			@foreach(Cart::content() as $row)
+				<li style = "padding: 10px 10px 10px 10px"><span>{{$row->name}}</span><span style = "float: right">{{$row->qty}} <a id = "remove_cart" data-cart = "{{$row->rowid}}"><div class= "glyphicon glyphicon-remove-circle"></div></a>
+				</span></li>
+			@endforeach
+			 <li role="presentation" class="divider"></li>
+			 <li><a>Tổng số tiền: {{Cart::total()}} VNĐ</a></li>
+			 <li><a href="payment">Thanh toán</a></li>
+			</ul>
+		</li>
 		</ul>
 		</div>
 	</div>
 </nav>
+
+<script>
+	$("#remove_cart").click(function(){
+		var d = $(this).attr("data-cart");
+		$.ajax({
+			type:'POST',
+			url:'remove_cart',
+			data:"rowid="+d,
+			success:function(data){
+				console.log(data);
+				location.reload();
+			}
+		});
+	});
+</script>

@@ -25,8 +25,6 @@
 		type="text/javascript"
 		src="{{ asset("bootstrap/dist/js/bootstrap.js") }}"
 		></script>
-		<script src="/bootstrap/js/bootstrap.min.js"
-		></script>
 		<link
 		type="text/css"
 		rel="stylesheet"
@@ -44,7 +42,7 @@
 		<div class="content">
 			<div class="container">
 				@include("temp.header");
-					
+
 				@yield('content')
 			</div>
 		</div>

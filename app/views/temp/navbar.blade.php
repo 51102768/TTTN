@@ -10,7 +10,7 @@
 			<li>
 				<div class="input-group search">
 				  <span class="input-group-addon" id="basic-addon1"><i class ="glyphicon glyphicon-search"></i></span>
-				  <input type="text" class="form-control" placeholder="Tìm kiếm..." ẩi-describedby="basic-addon1">
+				  <input type="text" class="form-control" placeholder="Tìm kiếm...">
 				  <span class="input-group-btn">
         <a class="btn btn-default" type="button">Go!</a>
 				</div>
@@ -25,7 +25,23 @@
 		<span class="glyphicon glyphicon-plus"></span> Đăng kí
 		</a>
 	</li>
-	<li><a href=""><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+	<li>
+		<a href="" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+			Bạn đã đặt {{Cart::count()}} sản phẩm
+			<span class="glyphicon glyphicon-shopping-cart"></span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+		@foreach(Cart::content() as $row)
+			<li style = "padding: 10px 10px 10px 10px"><span>{{$row->name}}</span><span style = "float: right">{{$row->qty}} 
+			<a  id = "remove_cart" data-cart = "{{$row->rowid}}"><div class= "glyphicon glyphicon-remove-circle"></div></a>
+			</span></li>
+		@endforeach
+		 <li role="presentation" class="divider"></li>
+		 <li><a>Tổng số tiền: {{Cart::total()}} VNĐ</a></li>
+		 <li><a href="payment">Thanh toán</a></li>
+		</ul>
+
+	</li>
 	</ul>
 	</div>
 </nav>
@@ -77,4 +93,17 @@
     	$('.modal').on('shown.bs.modal', function (e) {
 			$('.carousel').carousel('pause');
 	});
-    </script>
+    	
+	$("#remove_cart").click(function(){
+		var d = $(this).attr("data-cart");
+		$.ajax({
+			type:'POST',
+			url:'remove_cart',
+			data:"rowid="+d,
+			success:function(data){
+				console.log(data);
+				location.reload();
+			}
+		});
+	});
+</script>

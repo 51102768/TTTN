@@ -27,3 +27,16 @@
 .description_info{
 	display: none;
 }
+
+.product_info{
+	color: black;
+	font-style: italic;
+}
+.description_info{
+	color: black;
+	font-style: italic;
+}
+.addvice_info{
+	color: black;
+	font-style: italic;
+}

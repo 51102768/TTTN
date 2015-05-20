@@ -13,7 +13,7 @@
 			<div class="row">
 			<ol class="breadcrumb" id = "bread">
 				<li><a href="{{URL::to('/')}}">Trang chủ </a><span class = "glyphicon glyphicon-circle-arrow-right"></span></li>
-				<li><a href="brand?{{$product->category->id}}">{{$product->category->brand}} </a><span class = "glyphicon glyphicon-circle-arrow-right"></span></li>
+				<li><a href="brand?category_id={{$product->category->id}}">{{$product->category->brand}} </a><span class = "glyphicon glyphicon-circle-arrow-right"></span></li>
 				<li class = "active">{{$product->name}} </li>
 			</ol>
 			</div>
@@ -39,8 +39,11 @@
 					</p>
 					<p>Số lượng còn lại: {{$product->stock}}</p>
 					<p>
+					Số lượng cần đặt: 
+					<input type ="text" id = "quantity" value = "1">
+					<br>
 					<div class="btn-group-vertical" role="group">
-						<a class="btn btn-success" id = "order">Đặt lên kệ hàng</a>
+						<a class="btn btn-success" id = "order_list">Đặt lên kệ hàng</a>
 						<a class="btn btn-info" id = "view_info">Xem thêm thông tin sản phẩm</a>
 					</div>
 					</p>
@@ -66,7 +69,7 @@
 				<div class="description_info" style="display:none;">
 					<div class="panel panel-default">
 					<div class="panel-body">
-					{{$product->description}}
+					<p>{{$product->description}}</p>
 					</div>
 					</div>
 				</div>
@@ -75,8 +78,7 @@
 				                <!-- /.panel-heading -->
 				                <div class="panel-body">
 				                      {{Form::open(array('url' => 'customer-message'))}}
-				                    <div class="input-group">
-							<input type="text" class="form-control" id="name" placeholder="Nhập Họ tên">		
+				                    <div class="input-group">		
 							{{ Form::text('name','',array('id'=>'name','class'=>'form-control','placeholder'=>'Nhập Họ tên'))}}
 
 							{{ Form::text('phone','',array('id'=>'phone','class'=>'form-control','placeholder'=>'Nhập số điện thoại'))}}
@@ -137,15 +139,18 @@
 		link = $("#info");
 	});
 
-	$("#order").click(function(e){
-		e.preventDefault();
-		alert("Bạn đã đặt thành công 1 sản phẩm!");		
-		d = {{$product->id}}
+	$("#order_list").click(function(e){
+		e.preventDefault();	
+		var d = {{$product->id}};
+		var quantity = $("#quantity").attr("value");
 		$.ajax({
 			type:'POST',
 			url:'order_list',
-			data:"product_id="+d,
+			data:"product_id="+d+"&quantity="+quantity,
 			success:function(data){
+				console.log(data);
+				location.reload();
+				alert("Bạn đã đặt thành công 1 sản phẩm!");	
 			}
 		});
 

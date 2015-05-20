@@ -71,7 +71,7 @@ class ProductController extends \BaseController {
 		$product->stock = $input['stock'];
 		$product->price = $input["price"];
 		$product->category_id = $input["category_id"];
-		$product->type_id = $input["type_id"];
+		$product->type_id = $input["type"];
 
 		if(Input::hasFile('product_image')){
 			$file = Input::file('product_image');

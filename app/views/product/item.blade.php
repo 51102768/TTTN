@@ -159,6 +159,6 @@
 
 	</script>
 
-
+@include('temp.footer')
 
 @stop

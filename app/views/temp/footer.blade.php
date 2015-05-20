@@ -18,15 +18,8 @@
 </style>
 <footer class = "foot">
  <div class="container-fluid">
-      <div class="col-lg-3">
-            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-            <p style="text-align:center; margin-top:20px;">
-              <img src="http://placehold.it/500x330" class="img-responsive" alt="">
-            </p>
-          </div>
-        
-      </div>
-       <div class="col-lg-3">
+     
+       <div class="col-lg-6">
             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
             <p style="text-align:center; margin-top:20px;">
               <img src="img/logo.png" class="img-responsive" alt="">

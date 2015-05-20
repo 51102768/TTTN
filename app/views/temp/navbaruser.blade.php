@@ -6,7 +6,7 @@
 		<div class="collapse navbar-collapse">
 			<ul class = "nav navbar-nav">
 				<li><a href="{{URL::to('/')}}"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
-				<li><a href="intruction">Hướng dẫn</a></li>
+				<li><a href="guide">Hướng dẫn</a></li>
 				<li><a href="contact">Liên hệ</a></li>
 				<li>
 					{{Form::open(array("url"=>"search"))}}

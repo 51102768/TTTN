@@ -15,8 +15,8 @@
                       <a href="{{URL::to('contact')}}" class = "btn btn-danger">
                     <span class = "glyphicon glyphicon-phone" id = "BarIcon"></span>Liên hệ</a>
                     </a>
-                <a href="{{URL::to('/')}}" class = "btn btn-danger">
-                    <span class = "glyphicon glyphicon-usd" id = "BarIcon"></span>Thanh toán</a>
+                <a href="{{URL::to('payment')}}" class = "btn btn-danger">
+                    <span class = "glyphicon glyphicon-usd" id = "BarIcon"></span>Đặt hàng</a>
                     </a>
               <a href="{{URL::to('promotion')}}" class = "btn btn-danger">
                     <span class = "glyphicon glyphicon-star-empty" id = "BarIcon"></span>Khuyến mãi</a>

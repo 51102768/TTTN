@@ -68,16 +68,14 @@
 					@foreach($hot_products as $hot_product)
 					<li class="product-box">
 						<a href="item?product_id={{$hot_product->id}}">					
-							<img src="{{$hot_product->url}}">									
-							<p class="caption">{{$hot_product->name}}</br>{{$hot_product->price}} đ</p>
+							<img class ="img-thumbnail" src="{{$hot_product->url}}">					
+							<div class = "caption-span">		
+							<p class="caption">{{$hot_product->name}}</br>{{$hot_product->price}} VNĐ</p>
+							</div>
 							<img src="/public/img/mua-ngay.jpg">
 						</a>
 					</li>
 					@endforeach
-		
-				<div class="more">
-					<a href="#">Xem thêm</a>
-				</div>
 			</div>
 
 			<div class="row product">
@@ -90,16 +88,15 @@
 					@foreach($new_products as $new_product)
 					<li class="product-box">
 						<a href="item?product_id={{$hot_product->id}}">					
-							<img src="{{$new_product->url}}">							
-							<p class="caption">{{$new_product->name}}</br>{{$new_product->price}} đ</p>
+							<img class ="img-thumbnail" src="{{$new_product->url}}">
+							<div class = "caption-span">			
+							<p class="caption">{{$new_product->name}}</br>{{$new_product->price}} VNĐ</p>
+							</div>
 							<img src="/public/img/mua-ngay.jpg">
 						</a>
 					</li>
 					@endforeach															
 				</ul>
-				<div class="more">
-					<a href="#">Xem thêm</a>
-				</div>
 			</div>
 		</div>
 	</div>		

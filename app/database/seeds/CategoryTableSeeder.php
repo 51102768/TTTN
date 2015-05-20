@@ -41,8 +41,6 @@ class CategoryTableSeeder extends DatabaseSeeder {
 
 		$sen->types()->save($hphone);
 
-		$sen->types()->save($mp3);
-
 		$at = Category::create([
 			"brand"=>"Audio Technica",
 			"url"=>"img\brand\Audio-Technica.jpg"

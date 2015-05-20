@@ -257,16 +257,29 @@
 
 .product-box{
   text-align: center;
-  width: 25%; 
+  width: 23%; 
+  height: 110%;
+  margin:2px 2px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 20px;
+  padding-top: 10px;
+   padding-bottom: 10px;
   font-weight: bold;
+  box-shadow:   inset 0 0 10px #625656;
+}
+
+.product-box:hover {
+	opacity: 0.7;
+}
+
+.product-box a{
+	text-decoration: none;
 }
 
 .product-box img{  
   width: 100%;
   height: 100%;  
+
 }
 
 
@@ -285,6 +298,10 @@
   color: red;
   font-size: 14px;
   padding-top: 10px;
+}
+
+.caption-span{
+	height: 80px;
 }
 .buynow{
   width: 180px;  

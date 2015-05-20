@@ -253,3 +253,39 @@ Route::post("remove_cart",function(){
 
 	return "Success";
 });
+
+Route::get("payment",function(){
+	if(Auth::guest()){
+		return Redirect::to("login")->with("message","Mời bạn đăng nhập trước!");
+	}
+	else{
+		$categories = Category::all();
+		return View::make("product.payment",array("categories"=>$categories));
+	}
+});
+
+Route::get("delete_cart",function(){
+	Cart::destroy();
+	return Redirect::to("/")->with("message","Bạn đã xóa thành công!");
+});
+
+Route::get("ordered",function(){
+	$carts = Cart::content();
+	$user = Auth::user();
+	
+	$order = Order::create([
+		"account_id"=>$user->id]);
+	
+	foreach($carts as $cart){
+	
+	OrderItem::create([
+		"order_id"=>$order->id,
+		"product_id"=>$cart->id,
+		"quantity"=>$cart->qty,
+		"price"=>$cart->price]);
+	}
+
+	Cart::destroy();
+
+	return Redirect::to("/")->with("message","Cảm ơn bạn đã đặt hàng của chúng tôi");
+});

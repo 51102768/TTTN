@@ -150,7 +150,7 @@
 			success:function(data){
 				console.log(data);
 				location.reload();
-				alert("Bạn đã đặt thành công 1 sản phẩm!");	
+				alert("Bạn đã thêm thành công 1 sản phẩm vào giỏ hàng!");	
 			}
 		});
 

@@ -17,8 +17,7 @@
 				<div class="title">
 					<h3>Khuyến mãi</h3>				
 					<h1>Hiện tại không có chương trình khuyến mãi.</h1>
-				</div>				
-
+					</div>				
 			</div>			
 		</div>
 	</div>	

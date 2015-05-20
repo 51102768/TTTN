@@ -58,7 +58,7 @@
 			</div>
 			</div>
 		</div>
-
+		</div>
 	</div>
-
+	@include('temp.footer')
 @stop

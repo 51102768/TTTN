@@ -50,7 +50,7 @@
 
 				@yield('content')
 
-				@include("temp.footer")
+				
 			</div>	
 		</div>
 		

@@ -100,6 +100,5 @@
 			</div>
 		</div>
 	</div>		
-	<!--Footer-->	
-	
+	@include('temp.footer')	
 @stop

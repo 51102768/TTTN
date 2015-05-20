@@ -39,10 +39,4 @@
 		</div>
 	</div>
 </div>
-@if(Session::has('message'))
-	<script>
-		alert('{{Session::get("message");}}');
-	</script>
-@endif
-
 @stop

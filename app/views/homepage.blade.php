@@ -70,7 +70,7 @@
 						<a href="item?product_id={{$hot_product->id}}">					
 							<img src="{{$hot_product->url}}">									
 							<p class="caption">{{$hot_product->name}}</br>{{$hot_product->price}} đ</p>
-							<input type="button" value="Mua ngay">
+							<img src="/public/img/mua-ngay.jpg">
 						</a>
 					</li>
 					@endforeach
@@ -92,7 +92,7 @@
 						<a href="item?product_id={{$hot_product->id}}">					
 							<img src="{{$new_product->url}}">							
 							<p class="caption">{{$new_product->name}}</br>{{$new_product->price}} đ</p>
-							<input type="button" value="Mua ngay">
+							<img src="/public/img/mua-ngay.jpg">
 						</a>
 					</li>
 					@endforeach															

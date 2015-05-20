@@ -523,4 +523,10 @@
   border-top-color: #666666;
 }
 
+.guide{
+  float: left;
+}
 
+.guide img{
+  width: 100%;
+}

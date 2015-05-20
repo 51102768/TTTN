@@ -40,7 +40,7 @@
 					<p>Số lượng còn lại: {{$product->stock}}</p>
 					<p>
 					<div class="btn-group-vertical" role="group">
-						<a class="btn btn-success">Đặt lên kệ hàng</a>
+						<a class="btn btn-success" id = "order">Đặt lên kệ hàng</a>
 						<a class="btn btn-info" id = "view_info">Xem thêm thông tin sản phẩm</a>
 					</div>
 					</p>
@@ -92,6 +92,21 @@
 	$("#view_info").click(function(){
 		$(".product_info").show(100);
 		$("#info").addClass("active");
+	});
+
+	$("#order").click(function(e){
+		e.preventDefault();
+		alert("Bạn đã đặt thành công 1 sản phẩm!");		
+		d = {{$product->id}}
+		$.ajax({
+			type:'POST',
+			url:'order_list',
+			data:"product_id="+d,
+			success:function(data){
+			}
+		});
+
+
 	});
 
 	</script>

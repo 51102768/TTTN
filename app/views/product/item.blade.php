@@ -43,7 +43,7 @@
 					<input type ="text" id = "quantity" value = "1">
 					<br>
 					<div class="btn-group-vertical" role="group">
-						<a class="btn btn-success" id = "order_list">Đặt lên kệ hàng</a>
+						<a class="btn btn-success" id = "order_list">Đặt vào giỏ hàng</a>
 						<a class="btn btn-info" id = "view_info">Xem thêm thông tin sản phẩm</a>
 					</div>
 					</p>

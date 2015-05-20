@@ -19,10 +19,9 @@
 				</div>				
 			</div>			
 			<div class="row cold-md-4">
-				<h4>Bước 1:</h4>
-				<h4>Bước 1:</h4>
-				<h4>Bước 1:</h4>
-				<h4>Bước 1:</h4>
+				<h4>Bước 1: Tìm kiếm sản phẩm</h4>
+				<h4>Bước 2: Chọn sản phẩm</h4>
+				<h4>Bước 3: Thanh toán</h4>				
 			</div>
 		</div>
 	</div>	

@@ -11,12 +11,14 @@ class ProductController extends \BaseController {
 	{
 		$messages = Message::orderBy('created_at','desc')->get();
 		$categories = Category::orderBy('id','desc')->get();
+		$types = Type::lists('name','id');
 		$order_num = Order::all()->count();
 
 		return View::make('manager.product',
 			array("messages"=>$messages,
 				"categories"=>$categories,
-				"order_num"=>$order_num));
+				"order_num"=>$order_num,
+				"types"=>$types));
 	}
 
 	public function postImg(){
@@ -69,6 +71,7 @@ class ProductController extends \BaseController {
 		$product->stock = $input['stock'];
 		$product->price = $input["price"];
 		$product->category_id = $input["category_id"];
+		$product->type_id = $input["type_id"];
 
 		if(Input::hasFile('product_image')){
 			$file = Input::file('product_image');

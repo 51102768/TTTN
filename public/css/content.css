@@ -227,6 +227,7 @@
 
 .right-wrapper{
 	padding-left: 40px;
+	color:#F0DFDF;
 }
 
 
@@ -260,7 +261,7 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 20px;
-
+  font-weight: bold;
 }
 
 .product-box img{  
@@ -275,7 +276,8 @@
 .caption{
   text-align: center;
   color: red;
-  font-size: 23;
+  font-size: 14px;
+  padding-top: 10px;
 }
 .buynow{
   width: 180px;  

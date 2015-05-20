@@ -239,7 +239,7 @@ Túi đựng với kiểu dáng thiết kế mới mẻ, dễ dàng cầm tay."
 - Ear cup cực kỳ êm ái giúp đeo lâu vẫn không bị nóng tai hay khó chịu."
 		]);
 		Product::create([
-			"name"		=>"BOSE Bluetooth MP3 Player",
+			"name"		=>"BOSE Bluetooth Player",
 			"stock"		=>"19",
 			"origin"	=>"US",
 			"url"		=>"img/product/Bose/SoundlinkMini.jpg",

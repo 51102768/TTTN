@@ -192,3 +192,49 @@ Route::get("item",function(){
 	return View::make("product.item",array("product"=>$product,
 						"categories"=>$categories));
 });
+
+Route::post("order_list",function(){
+	$input = Input::all();
+	$product = Product::find($input["product_id"]);
+
+
+});
+
+Route::post("customer-message",function(){
+	$input = Input::all();
+
+	$message = new UserMessage();
+
+	$message->name = $input["name"];
+	$message->text = $input['message'];
+	$message->phone = $input["phone"];
+	$message->email = $input["email"];
+
+	$message->save();
+	
+
+	return Redirect::back()->with("message","Cảm ơn bạn đã phản hồi");
+});
+
+
+Route::get("brand",function(){
+	$input = Input::all();
+
+	$categories = Category::all();	
+
+	$category_link = Category::find($input["category_id"]);
+
+	if(array_key_exists("type_id", $input)){
+		$products = Product::where(["category_id"=>$input["category_id"],
+						"type_id"=>$input["type_id"]])->get();
+		return View::make("product.brand",array("products"=>$products,
+								"categories"=>$categories,
+								"category_link"=>$category_link));
+	}else{
+		$products = Category::find($input["category_id"])->products;
+
+		return View::make("product.brand",array("products"=>$products,
+								"categories"=>$categories,
+								"category_link"=>$category_link));
+	}
+});

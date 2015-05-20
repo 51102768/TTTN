@@ -14,16 +14,24 @@ class CategoryTableSeeder extends DatabaseSeeder {
 		DB::table('types')->delete();
 
 		$loa = Type::create([
+			"id"=>1,
 			"name"=>"Loa và Âm li",
 		]);
 
 		$mp3 = Type::create([
+			"id"=>2,
 			"name"=>"Máy nghe nhạc",
 		]);
 
 		$hphone = Type::create([
+			"id"=>3,
 			"name"=>"Tai nghe",
 		]);
+
+		$orther = Type::create([
+			"id"=>4,
+			"name"=>"Khác",
+		]);		
 
 		$sen = Category::create([
 			"id"=>1,

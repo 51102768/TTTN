@@ -177,6 +177,11 @@
 				{{ Form::text('price','',array('id'=>'price','class'=>'form-control','placeholder'=>'Giá VNĐ ','data-validation'=>'required number','data-validation-error-msg-required'=>'Vui lòng điền đầy đủ thông tin ',"data-validation-error-msg-number"=>"Vui lòng nhập số"))}}
 				 <p><div id = "price-error" style="display:none" class="alert alert-danger" role="alert"></div></p></p>
 			</div>
+			 <div class="form-group">
+				<p>{{Form::label('price','Giá :')}}
+				{{ Form::select('type',$types,array('class'=>"form-control"))}}
+				 <p><div id = "price-error" style="display:none" class="alert alert-danger" role="alert"></div></p></p>
+			</div>
 			<div class="form-group">
 				<p>{{Form::label('brandimg','Hình ảnh :')}}
 				{{Form::file('product_image',array( "data-validation"=>"required","data-validation-allowing"=>"jpg, png, gif","data-validation-error-msg-required"=>"Hãy chọn file ","data-validation-error-msg-extension"=>"Phải là file hình ảnh"))}}</p>

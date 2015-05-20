@@ -50,15 +50,16 @@
 			</div>
 			<div class="row">
 				<ul class="nav nav-tabs">
-				  <li role="presentation" id="info"><a class = "btn" id = "info">Thông tin thêm</a></li>
+				  <li role="presentation" id="info"><a class = "btn" id = "info-btn">Thông tin thêm</a></li>
 				  <li role="presentation" id = "des"><a class = "btn" id = "description">Lời miêu tả</a></li>
+				  <li role="presentation" id = "add"><a class = "btn" id = "advice">Góp ý</a></li>
 				</ul>
 				<div class="product_info" style="display:none;">
 						<ul class="list-group">
 						<li class="list-group-item">Tên sản phẩm <p style="float: right">{{$product->name}}</p></li>
 						<li class="list-group-item">Xuất xứ <p style="float: right">{{$product->origin}}</p></li>
 						<li class="list-group-item">Màu <p style="float: right">{{$product->color}}</p></li>
-						<li class="list-group-item">Trọng lượng <p style="float: right">{{$product->weight}}</p></li>
+						<li class="list-group-item">Trọng lượng <p style="float: right">{{$product->weight}} gram</p></li>
 						<li class="list-group-item">Thời gian bảo hành <p style="float: right">{{$product->guarantee}} năm</p></li>
 						</ul>
 				</div>
@@ -69,29 +70,71 @@
 					</div>
 					</div>
 				</div>
+				<div class="addvice_info" style="display:none;">
+					  <div class="panel panel-danger">
+				                <!-- /.panel-heading -->
+				                <div class="panel-body">
+				                      {{Form::open(array('url' => 'customer-message'))}}
+				                    <div class="input-group">
+							<input type="text" class="form-control" id="name" placeholder="Nhập Họ tên">		
+							{{ Form::text('name','',array('id'=>'name','class'=>'form-control','placeholder'=>'Nhập Họ tên'))}}
+
+							{{ Form::text('phone','',array('id'=>'phone','class'=>'form-control','placeholder'=>'Nhập số điện thoại'))}}
+
+							{{ Form::text('email','',array('id'=>'email','class'=>'form-control','placeholder'=>'Nhập địa chỉ Email '))}}
+						
+				                       	 {{ Form::textarea('message','',array('id'=>'btn-input','class'=>'form-control input-sm','placeholder'=>'Nhập kí tự ở đây... '))}}
+				                            {{Form::submit('Gửi',array('class'=>'btn btn-danger','id'=>'btn-chat'))}}
+				                            {{Form::close()}}
+				                        </span>
+				                <!-- /.panel-body -->
+				                     </div>
+				                </div>
+				            </div>
+				</div>
 			</div>
 		</div>
 
 	</div>
 
 	<script >
+	link = $("#des");
 	$("#description").click(function(){
-		$("#info").removeClass("active");
-		$(".product_info").hide(200);
 		$(".description_info").show(100);
+		$(".addvice_info").hide(200);
+		$(".product_info").hide(200);
 		$("#des").addClass("active");
+		link.removeClass("active");
+		
+		link = $("#des");
 	});
 
-	$("#info").click(function(){
-		$("#des").removeClass("active");
+	$("#info-btn").click(function(){
+		
 		$(".description_info").hide(200);
+		$(".addvice_info").hide(200);
 		$(".product_info").show(100);
+		link.removeClass("active");
 		$("#info").addClass("active");
+		link = $("#info");
+	});
+
+	$("#advice").click(function(){
+		$(".addvice_info").show(100);
+		$(".product_info").hide(200);
+		$(".description_info").hide(200);
+		link.removeClass("active");
+		$("#add").addClass("active");
+		link = $("#add");
 	});
 
 	$("#view_info").click(function(){
+		$(".description_info").hide(200);
+		$(".addvice_info").hide(200);
 		$(".product_info").show(100);
+		link.removeClass("active");
 		$("#info").addClass("active");
+		link = $("#info");
 	});
 
 	$("#order").click(function(e){

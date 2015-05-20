@@ -1,5 +1,7 @@
 .product-wrapper{
 	color: #AB6E6E;
+   	 box-shadow: 10px 10px 5px #ffffff;
+   	 padding-right: 15px;
 }
 
 .price{

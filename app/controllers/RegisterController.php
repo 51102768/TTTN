@@ -8,8 +8,8 @@ class RegisterController extends BaseController {
 	 * @return Response
 	 */
 	public function index()
-	{
-		return View::make('user.register');	
+	{	$categories = Category::all();
+		return View::make('user.register',array("categories"=>$categories));	
 	}
 
 

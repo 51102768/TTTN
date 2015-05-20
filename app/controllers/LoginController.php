@@ -9,7 +9,8 @@ class LoginController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('user.login');
+		$categories = Category::all();
+		return View::make('user.login',array("categories"=>$categories));
 	}
 
 

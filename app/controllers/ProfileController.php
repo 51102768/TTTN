@@ -3,7 +3,8 @@
 class ProfileController extends \BaseController {
 
 	public function indexProfile(){
-		return View::make('user.profile');
+		$categories = Category::all();
+		return View::make('user.profile',array("categories"=>$categories));
 	}
 
 	public function postProfile(){

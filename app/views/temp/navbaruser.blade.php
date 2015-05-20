@@ -9,13 +9,15 @@
 				<li><a href="intruction">Hướng dẫn</a></li>
 				<li><a href="contact">Liên hệ</a></li>
 				<li>
+					{{Form::open(array("url"=>"search"))}}
 					<div class="input-group search">
 					  <span class="input-group-addon" id="basic-addon1"><i class ="glyphicon glyphicon-search"></i></span>
-					  <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-describedby="basic-addon1">
+					  <input type="text" class="form-control" name = "item" placeholder="Tìm kiếm...">
 					  <span class="input-group-btn">
-        <a class="btn btn-default" type="button">Go!</a>
-      </span>
+	        				 {{Form::submit('Tìm',array('class'=>'btn btn-default'))}}
+	        				 </span>
 					</div>
+					{{Form::close()}}
 				</li>
 		</ul>
 		<ul class = "nav navbar-nav navbar-right">

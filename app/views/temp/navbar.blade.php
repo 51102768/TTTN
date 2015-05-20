@@ -7,13 +7,15 @@
 			<li><a href="{{URL::to('/')}}"><span class = "glyphicon glyphicon-home" id = "homeIcon"></span>Trang chủ</a></li>
 			<li><a href="#">Hướng dẫn</a></li>
 			<li><a href="{{URL::to('/contact')}}">Liên hệ</a></li>
-			<li>
+			<li>	{{Form::open(array("url"=>"search"))}}
 				<div class="input-group search">
 				  <span class="input-group-addon" id="basic-addon1"><i class ="glyphicon glyphicon-search"></i></span>
-				  <input type="text" class="form-control" placeholder="Tìm kiếm...">
+				  <input type="text" class="form-control" name = "item" placeholder="Tìm kiếm...">
 				  <span class="input-group-btn">
-        <a class="btn btn-default" type="button">Go!</a>
+        				 {{Form::submit('Tìm',array('class'=>'btn btn-default'))}}
+        				 </span>
 				</div>
+				{{Form::close()}}
 			</li>
 	</ul>
 	<ul class = "nav navbar-nav navbar-right">

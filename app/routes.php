@@ -289,3 +289,13 @@ Route::get("ordered",function(){
 
 	return Redirect::to("/")->with("message","Cảm ơn bạn đã đặt hàng của chúng tôi");
 });
+
+
+Route::post("search",function(){
+	$categories = Category::all();
+	$input = Input::all();
+	$products = DB::select("SELECT * FROM product WHERE name LIKE '%".$input["item"]."%' ");
+
+	return View::make("product.search",array("categories"=>$categories,
+							"products"=>$products,));
+});

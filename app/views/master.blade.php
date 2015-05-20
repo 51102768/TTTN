@@ -30,6 +30,11 @@
 		rel="stylesheet"
 		href="{{ asset("css/shared.css") }}"
 		/>	
+		<link
+		type="text/css"
+		rel="stylesheet"
+		href="{{ asset("css/footer.css") }}"
+		/>	
 		@yield('header')
 	</head>
 	<body>
@@ -41,11 +46,14 @@
 
 		<div class="content">
 			<div class="container">
-				@include("temp.header");
+				@include("temp.header")
 
 				@yield('content')
-			</div>
+
+				@include("temp.footer")
+			</div>	
 		</div>
+		
 		@if(Session::has('message'))
 			<script>
 				alert('{{Session::get("message");}}');

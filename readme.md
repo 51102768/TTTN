@@ -4,13 +4,13 @@
 ##############################
 
 
-Work Task 1:
-- Lâm Hoàng Vũ: code CSS chỉnh sửa main page cho hoàn chỉnh và đẹp.
-- Phạm Nguyễn Thành Công: đọc database, xây dựng thêm bảng nếu cần thiết, nhập dữ liệu cho database.
-- Đỗ Phạm Quang Trí: Làm phần đăng nhập. (Đăng nhập, xác thực ...)
-- Nguyễn Thành Quân: Làm header và footer
-- Phạm Đăng Khoa: Design và làm trang "Liên hệ", "Hướng dẫn"
+Hướng dẫn cài đặt:
 
+- Pull project từ Github về thư mục.
+- Import file shopdb vào database.
+- Cài đặt composer trên trang https://getcomposer.org/.
+- Mở command prompt gõ composer install.
+- Mở server php để chạy.
 
 ##############################
 

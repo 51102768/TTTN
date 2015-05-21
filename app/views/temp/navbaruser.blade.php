@@ -28,7 +28,7 @@
 					</a>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownUser">
 					<li role="presentation"><a role="menuitem" tabindex="-1" href="profile">Thông tin người dùng</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Đơn hàng</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="payment">Đơn hàng</a></li>
 					@if(Auth::user()->authority == "admin")
 					<li role="presentation">
 						<a  role="menuitem" tabindex="-1"  href="manager">Trang quản lí</a>

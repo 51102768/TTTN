@@ -41,15 +41,15 @@
             <div class="col-lg-3 col-md-6">
                 <h3>Liên hệ</h3>
         <p>Có thắc mắc xin liên hệ!</p>
-        <p><a href="contact" title="Contact me!"><i class="fa fa-envelope"></i> Liên hệ</a></p>
+        <p><a href="contact" title="Contact me!"><i class="fa fa-envelope"></i>Liên hệ</a></p>
       
       
-<a href="" id="gh" target="_blank" title="Twitter"><span class="fa-stack fa-lg">
+<a href="http://twitter.com/" id="gh" target="_blank" title="Twitter"><span class="fa-stack fa-lg">
   <i class="fa fa-square-o fa-stack-2x"></i>
   <i class="fa fa-twitter fa-stack-1x"></i>
 </span>
 Twitter</a>
-<a href=""  target="_blank" title="GitHub"><span class="fa-stack fa-lg">
+<a href="http://github.com/"  target="_blank" title="GitHub"><span class="fa-stack fa-lg">
   <i class="fa fa-square-o fa-stack-2x"></i>
   <i class="fa fa-github fa-stack-1x"></i>
 </span>
@@ -67,7 +67,7 @@ GitHub</a>
       
         <hr>
         <div class="col-md-12">
-                  <p>Copyright © Your Website | <a href="">Privacy Policy</a> | <a href="">Terms of Use</a></p>
+                  <p>Copyright © MoShop | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
           </div>
           
           </div>

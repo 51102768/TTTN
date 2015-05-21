@@ -40,7 +40,9 @@ Route::get('editprofile','ProfileController@indexEditProfile');
 
 Route::post('editprofile','ProfileController@postEditProfile');
 
-Route::get('manager','ManagerController@index');
+Route::group(array('before' => 'admin'), function(){
+
+Route::get('manager', 'ManagerController@index');
 
 Route::get('message','MessageController@index');
 
@@ -185,7 +187,7 @@ Route::get("order_check",function(){
 });
 
 Route::get("page","PageController@index");
-
+});
 
 Route::get("item",function(){
 	$input = Input::all();

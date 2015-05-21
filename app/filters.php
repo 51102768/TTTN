@@ -37,14 +37,7 @@ Route::filter('auth', function()
 {
 	if (Auth::guest())
 	{
-		if (Request::ajax())
-		{
-			return Response::make('Unauthorized', 401);
-		}
-		else
-		{
-			return Redirect::guest('login');
-		}
+		return Redirect::guest('login');
 	}
 });
 
@@ -68,6 +61,18 @@ Route::filter('auth.basic', function()
 Route::filter('guest', function()
 {
 	if (Auth::check()) return Redirect::to('/');
+});
+
+
+Route::filter("admin",function(){
+	if(Auth::check()){
+		if(Auth::user()->authority == "user"){
+			return Redirect::to("/")->with("message","Bạn không có quyền truy cập trang này");
+		}
+	}
+	else{
+		return Redirect::to("login")->with("message","Bạn phải đăng nhập mới có thể vào trang này");		
+	}
 });
 
 /*

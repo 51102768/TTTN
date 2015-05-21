@@ -23,8 +23,8 @@
 						<div class="form-group">
 							<label for="name">Họ tên:</label>
 							<input type="text" class="form-control" id="name" placeholder="Nhập Họ tên">							
-							<label for="email">Điện thoại:</label>
-							<input type="text" class="form-control" id="email" placeholder="Nhập số điện thoại">
+							<label for="phone">Điện thoại:</label>
+							<input type="text" class="form-control" id="phone" placeholder="Nhập số điện thoại">
 							<label for="email">Địa chỉ Email:</label>
 							<input type="text" class="form-control" id="email" placeholder="Nhập địa chỉ Email">							
 							<label for="message">Nội dung:</label>

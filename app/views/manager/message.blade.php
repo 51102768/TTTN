@@ -63,6 +63,38 @@
                         <!-- /.panel-footer -->
                     </div>
                 </div>
+
+                <div class="col-lg-12">
+
+                    <!-- /.panel -->
+                    <div class="chat-panel panel panel-green">
+                        <div class="panel-heading">
+                            <i class="fa fa-envelope fa-fw"></i>
+                            Tin nhắn khách hàng
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="chat">
+                            @foreach($customer_messages as $message)
+                                <li class="left clearfix">
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">{{$message->name}} - {{$message->email}} - {{$message->phone}}</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> {{$message->created_at}}
+                                            </small>
+                                        </div>
+                                        <p>
+                                            {{$message->text}}
+                                        </p>
+                                    </div>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
 </div>
  @stop
 

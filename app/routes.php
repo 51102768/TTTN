@@ -178,6 +178,13 @@ Route::get("order_check",function(){
 
 		$order = Order::find($input["order_id"]);
 
+		foreach($order->orderItems as $item){
+			$product = Product::find($item->product_id);
+			$product->buytime++;
+			$product->stock = $product->stock - $item->quantity;
+			$product->save();
+		}
+
 		$order->forceDelete();
 
 		$order->orderItems()->forceDelete();

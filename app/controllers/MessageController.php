@@ -100,6 +100,7 @@ class MessageController extends BaseController {
 	}
 
 	public function delete(){
+		
 		DB::table('message')->truncate();
 
 		return Redirect::to("message");

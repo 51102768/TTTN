@@ -1,7 +1,13 @@
 <div class="col-md-3">				
 			<div class="row category">
 				<div id='cssmenu'>
-				<ul>
+				<ul>	
+					<li class = "active has-sub">
+						<a href="#">Đồng hồ</a>
+						<ul>
+						<li><a href="dongho"><span>Xem</span></a></li>
+						</ul>
+					</li>
 					@foreach($categories as $category)
 						<li class="active has-sub"><a href="#">{{$category->brand}}</a>
 							<ul>
@@ -12,6 +18,7 @@
 							</ul>
 						</li>
 					@endforeach
+
 				</ul>
 				</div>
 			</div>			

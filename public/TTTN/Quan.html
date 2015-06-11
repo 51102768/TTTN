@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Quan</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+
+<style type="text/css">
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+#c {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+</style>
+
+<script type="text/javascript" src="js/webgl-utils.js"></script>
+<script type="text/javascript">var DEBUG = true;</script>
+<script type="text/javascript" src="js/inka3d/control.js"></script>
+<script type="text/javascript" src="js/inka3d/engine.js"></script>
+<script type="text/javascript" src="Quan.js"></script>
+<script type="text/javascript">
+'use strict';
+
+// shortcuts for inka3d modules
+var control = inka3dControl;
+var engine = inka3dEngine;
+
+var canvas;
+var gl;
+
+// inka3d renderer
+var renderer;
+
+// render group
+var group;
+
+// scene loader
+var loader;
+
+// scene and scene attributes
+var scene;
+var sceneTime;
+
+// mouse/touch input handler
+var input;
+
+// parameters of user controllable camera
+var cameraTargetX = 0.156950474;
+var cameraTargetY = -4.15630341;
+var cameraTargetZ = -0.311292648;
+var cameraRotateX = -0.686583698;
+var cameraRotateY = -0.268780679;
+var cameraDistance = 25.1972942;
+
+// camera projection parameters
+var cameraProjection = new Float32Array([2.0, 1.37795, 1.41732, 0.94488, 0.0, 0.0, 0.1, 10000.0]);
+
+var startTime;
+
+// screen aspect ratio, width / height
+var aspect;
+
+// view and projection matrix
+var viewMatrix = new Float32Array(16);
+var projectionMatrix = new Float32Array(16);
+
+function waitLoad()
+{
+	if (loader.progress < 1)
+	{
+		// continue waiting...
+		requestAnimFrame(waitLoad);
+		
+		gl.clearColor(0, 0, 0, 1);
+		gl.clear(gl.COLOR_BUFFER_BIT);
+		
+		gl.enable(gl.SCISSOR_TEST);
+		var w = window.innerWidth;
+		var h = window.innerHeight;
+		gl.scissor(0, h / 2 - 10, w * loader.progress, 20);
+		gl.clearColor(1, 1, 1, 1);
+		gl.clear(gl.COLOR_BUFFER_BIT);
+		gl.disable(gl.SCISSOR_TEST);
+	}
+	else
+	{
+		// loading finished
+		
+		// install event listeners
+		input.move = function(dx, dy)
+		{
+			// rotate camera
+			cameraRotateX += dy * 2.5;
+			cameraRotateY -= dx * 2.5;		
+		};
+		input.scroll = function(dx, dy)
+		{			
+			// change distance of camera
+			cameraDistance = Math.min(Math.max(cameraDistance / Math.exp(dy / 9), 0.251972944), 2519.72949);
+		}
+		input.zoomRotate = function(zoom, rotate)
+		{
+			// change distance of camera
+			cameraDistance = Math.min(Math.max(cameraDistance / zoom, 0.251972944), 2519.72949);
+		}
+
+		// start
+		startTime = new Date().getTime() / 1000.0 - 0.041666666666666664;
+		tick();
+	}
+}
+
+function tick()
+{
+	requestAnimFrame(tick);
+	drawScene();
+}
+
+function drawScene()
+{
+	// get time
+	var time = new Date().getTime() / 1000.0 - startTime;
+	if (time > 8.3333333333333339)
+	{
+		var length = 8.3333333333333339 - 0.041666666666666664;
+		time -= length;
+		startTime += length;
+	}
+	
+	// set time
+	sceneTime[0] = time;
+	
+	// update the group (recalculates scene graph and also cameraMatrix and cameraProjection)
+	group.update();
+	
+	// calculate view matrix from camera parameters
+	control.cameraY(cameraTargetX, cameraTargetY, cameraTargetZ, cameraRotateX, cameraRotateY, 0,
+		cameraDistance, viewMatrix);
+
+	// calculate projection matrix from camera projection parameters and screen aspect ratio
+	engine.matrix4x4Projection(cameraProjection, aspect, projectionMatrix);
+
+	// clear default render target
+	gl.clearColor(0, 0, 0, 1);
+	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+	// render the group using render layer "color"
+	gl.viewport(0, 0, canvas.width, canvas.height);
+	gl.enable(gl.DEPTH_TEST);
+	group.render(viewMatrix, projectionMatrix, 'color');
+}
+
+function resize()
+{
+	var width = canvas.offsetWidth;
+	var height = canvas.offsetHeight;
+	canvas.width = width;
+	canvas.height = height;
+	aspect = width / height;
+}
+
+function webGLStart()
+{
+	// get canvas
+	canvas = document.getElementById("c");
+
+	// get webgl context
+	gl = WebGLUtils.setupWebGL(canvas);
+
+	// create mouse/touch input handler
+	input = new control.Input(canvas);
+
+	// create renderer with given number of pre-allocated render jobs
+	renderer = new engine.Renderer(138);
+	
+	// create a render group
+	group = renderer.createGroup();
+
+	// set resize handler
+	window.onresize = resize;
+	resize();
+	
+	// load scene container that is embedded into this html via script tag.
+	// pass 0 or 1 as 4th parameter to select first or second texture set
+	loader = engine.loadEmbedded(Quan, '', 'Quan', 0, function (container)
+	{
+		// loading finished: check if successful. possible errors are
+		//   3: maximum number of textures is exceeded
+		//   4: maximum number of vertex textures is exceeded
+		//   5: float textures are not supported
+		//   4xx: HTTP error
+		if (this.status != 0)
+		{
+			if (this.status == 3)
+				alert('WebGL error: more than ' + gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS) + ' texture units not supported');
+			else if (this.status == 4)
+				alert('WebGL error: more than ' + gl.getParameter(gl.MAX_VERTEX_TEXTURE_IMAGE_UNITS) + ' vertex texture units not supported');
+			else if (this.status == 5)
+				alert('WebGL error: float textures not supported');
+			else if ((this.status / 100 | 0) == 4)
+				alert('HTTP error: ' + this.status);
+		}
+
+		// create scene
+		scene = container.createScene("Quan", group);
+		sceneTime = scene.getFloatVector("time", 1);
+
+	});
+
+	// wait until loading is finished
+	waitLoad();
+}
+
+</script>
+</head>
+<body onload="webGLStart();">
+	<canvas id="c"></canvas>
+</body>
+</html>
+

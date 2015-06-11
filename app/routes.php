@@ -308,3 +308,10 @@ Route::post("search",function(){
 	return View::make("product.search",array("categories"=>$categories,
 							"products"=>$products,));
 });
+
+Route::get("dongho",function(){
+
+	$categories = Category::all();	
+
+	return View::make("product.dongho",array("categories"=>$categories));
+});
